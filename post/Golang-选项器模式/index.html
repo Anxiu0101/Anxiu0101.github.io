@@ -1,0 +1,525 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GOLANG-选项模式 | Anxiu-Blog</title>
+<link rel="shortcut icon" href="https://anxiu0101.github.io/favicon.ico?v=1658502968999">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://anxiu0101.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="GOLANG-选项模式 | Anxiu-Blog - Atom Feed" href="https://anxiu0101.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="函数选项器模式是 Go 开发中经常使用的一种方式，可以更加便捷地整合配置信息，适用于可选项配置中。
+
+GOLANG-选项模式
+初遇函数式选项模式
+第一次在应用中接触到 go 的选项模式是在 gRPC 入门学习时，开启 gRPC 服务端和客户..." />
+    <meta name="keywords" content="Code,Golang" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://anxiu0101.github.io">
+  <img class="avatar" src="https://anxiu0101.github.io/images/avatar.png?v=1658502968999" alt="">
+  </a>
+  <h1 class="site-title">
+    Anxiu-Blog
+  </h1>
+  <p class="site-description">
+    安身立命，修身养性
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/Anxiu0101" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              GOLANG-选项模式
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-07-08
+              </span>
+              <span>
+                7 min read
+              </span>
+              
+                <a href="https://anxiu0101.github.io/tag/TN7BWcHkk/" class="post-tag">
+                  # Code
+                </a>
+              
+                <a href="https://anxiu0101.github.io/tag/3j7FFxcj-/" class="post-tag">
+                  # Golang
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://anxiu0101.github.io/post-images/Golang-选项器模式.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>函数选项器模式是 Go 开发中经常使用的一种方式，可以更加便捷地整合配置信息，适用于可选项配置中。</p>
+<!--more-->
+<h1 id="golang-选项模式">GOLANG-选项模式</h1>
+<h2 id="初遇函数式选项模式">初遇函数式选项模式</h2>
+<p>第一次在应用中接触到 go 的选项模式是在 gRPC 入门学习时，开启 gRPC 服务端和客户端时使用的 <code>grpc.ServerOption</code> 以及 <code>grpc.DialOption</code> 这两个选项。</p>
+<blockquote>
+<p>The Go (Golang) Functiona Options Pattern is a way, a pattern of structuring your structs in Go by designing a very expressive and flexible set of APIs that will help with the configuration and initialisation of your struct.<br>
+Go 函数式选项模式 是一种在 Go 中构建结构的模式，它通过设计一组非常富有表现力和灵活的 API 来帮助配置和初始化结构<br>
+来自：<a href="https://golang.cafe/blog/golang-functional-options-pattern.html">Golang Functional Options Pattern | Golang Cafe</a></p>
+</blockquote>
+<p>这是我在使用 <code>grpc.ServerOption</code> 时的代码片段，</p>
+<pre><code class="language-go">var opts []grpc.ServerOption
+
+// 使用证书文件和密钥文件为服务端构造 TLS 凭证
+certs, err := credentials.NewServerTLSFromFile(&quot;../certs/memo.pem&quot;, &quot;../certs/memo.key&quot;)
+if err != nil {
+    log.Printf(&quot;Failed to generate credentials %v&quot;, err)
+}
+
+opts = append(opts, grpc.Creds(certs))
+
+// 使用一元拦截器（grpc.UnaryInterceptor），验证请求
+var interceptor grpc.UnaryServerInterceptor = func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
+    // 拦截普通方法请求，验证 Token
+    log.Println(&quot;filter:&quot;, info)
+    username, err := service.CheckAuthority(ctx)
+    if err != nil {
+        log.Fatalf(&quot;interceptor err: %v&quot;, err)
+        return nil, err
+    } else {
+        log.Printf(&quot;%v pass Authority&quot;, username)
+    }
+    // 继续处理请求
+    return handler(ctx, req)
+}
+
+opts = append(opts, grpc.UnaryInterceptor(interceptor))
+
+// 创建新 grpc 服务
+server := grpc.NewServer(opts...)
+</code></pre>
+<p>可以看到我新建了一个服务器选项切片 <mark>ServerOption Slice</mark>，在每次调取函数设置选项后将选项插入到选项切片中，并在最后创建 gRPC 服务时传入该选项切片。</p>
+<p>这样使得代码结构可读性更高。</p>
+<h2 id="选项模式结构">选项模式结构</h2>
+<p>看以下来自 <a href="https://golang.cafe/blog/golang-functional-options-pattern.html">Golang Functional Options Pattern | Golang Cafe</a> 中的代码，</p>
+<p>我们首先为 Server 创建一个构造函数，函数参数为不定参数类型的 Server 方法函数，返回一个 Server 类型的指针。然后为 Server 的字段建立名为 <code>Withxxx</code> 的函数</p>
+<blockquote>
+<p>参考了 <a href="https://segmentfault.com/a/1190000041262739/en">Option pattern of common design patterns in Golang</a></p>
+</blockquote>
+<pre><code class="language-go">package server
+
+import (
+    &quot;errors&quot;
+    &quot;log&quot;
+    &quot;time&quot;
+)
+
+const (
+    defaultHost    = &quot;127.0.0.1&quot;
+    defaultPort    = 8000
+    defaultTimeout = time.Minute
+    defaultMaxConn = 120
+)
+
+type Server struct {
+    Host    string
+    Port    int
+    Timeout time.Duration
+    MaxConn int
+}
+
+// All server attribute can edit
+type ServerOptions struct {
+    Host    string
+    Port    int
+    Timeout time.Duration
+    MaxConn int
+}
+
+type ServerOption interface {
+    apply(*ServerOptions)
+}
+
+type funcServerOption struct {
+    f func(*ServerOptions)
+}
+
+func (fo funcServerOption) apply(option *ServerOptions) {
+    fo.f(option)
+}
+
+func newFuncServerOption(f func(*ServerOptions)) *funcServerOption {
+    return &amp;funcServerOption{
+        f: f,
+    }
+}
+
+// All Withxx function to edit option
+func WithHost(host string) ServerOption {
+    return newFuncServerOption(func(option *ServerOptions) {
+        option.Host = host
+    })
+}
+
+func WithPort(port int) ServerOption {
+    return newFuncServerOption(func(option *ServerOptions) {
+        option.Port = port
+    })
+}
+
+func WithTimeout(timeout time.Duration) ServerOption {
+    return newFuncServerOption(func(option *ServerOptions) {
+        option.Timeout = timeout
+    })
+}
+
+func WithMaxConn(maxConn int) ServerOption {
+    return newFuncServerOption(func(option *ServerOptions) {
+        option.MaxConn = maxConn
+    })
+}
+
+// Create New Object with option parameters
+func NewServer(opts ...ServerOption) *Server {
+    options := ServerOptions{
+        Host:    defaultHost,
+        Port:    defaultPort,
+        Timeout: defaultTimeout,
+        MaxConn: defaultMaxConn,
+    }
+
+    for _, opt := range opts {
+        opt.apply(&amp;options)
+    }
+
+    return &amp;Server{
+        Host:    defaultHost,
+        Port:    defaultPort,
+        Timeout: defaultTimeout,
+        MaxConn: defaultMaxConn,
+    }
+}
+
+func (s *Server) Start() error {
+    log.Printf(&quot;Server: %v&quot;, s)
+    return errors.New(&quot;Error&quot;)
+}
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202206151131934.png" alt="image-20220615113124817" loading="lazy"></figure>
+<pre><code class="language-go">package main
+
+import (
+    &quot;log&quot;
+    &quot;time&quot;
+
+    &quot;example.com/server&quot;
+)
+
+func main() {
+    // Init options
+    var opts []server.ServerOption
+
+    // Add options
+    opts = append(opts, server.WithHost(&quot;localhost&quot;))
+    opts = append(opts, server.WithPort(8081))
+    opts = append(opts, server.WithTimeout(time.Minute))
+    opts = append(opts, server.WithMaxConn(120))
+
+    // Create Object
+    svr := server.NewServer(opts...)
+    if err := svr.Start(); err != nil {
+        log.Fatal(err)
+    }
+}
+</code></pre>
+<p>我们定义 <code>ServerOptions</code> 结构来配置默认参数。因为这几个字段有默认参数，所以 <code>ServerOptions</code> 的定义与 <code>Server</code> 的定义相同。但是，<mark>结构中可能存在一些具有一定复杂性的参数没有默认参数</mark>，<mark>必须由用户配置</mark>。这时候 <code>ServerOptions</code> 中的字段会比较少，可以根据需要定义。</p>
+<p>同时，我们还定义了一个 <code>ServerOption</code> 接口和一个实现该接口的 <code>FuncServerOption</code> 结构。它们的作用是允许我们通过 <code>apply</code> 方法为 <code>ServerOptions</code> 结构单独配置一个参数。</p>
+<p>我们可以为每个默认参数定义一个 <code>WithXXX</code> 函数来配置参数，比如这里定义的 <code>WithHost</code> 和 <code>WithPort</code>，这样用户就可以通过调用 <code>WithXXX</code> 函数来自定义需要覆盖的默认参数。</p>
+<p>这时候在构造函数 <code>NewServer</code> 中定义了默认参数。构造函数接收一个变长参数，类型为 <code>ServerOption</code>。在构造函数内部，通过for循环调用每个传入的 <code>ServerOption</code> 对象的apply方法，将用户配置的参数依次赋值给构造函数内部的默认参数对象 options，替换默认参数。执行完 for 循环后，得到的 options 对象就是最终的配置。依次将其属性分配给 Server 以生成新对象。</p>
+<h2 id="attachment">Attachment</h2>
+<pre><code class="language-shell">├─server
+│  └─server.go
+└─main.go
+</code></pre>
+<h3 id="servergo">server.go</h3>
+<pre><code class="language-go">package server
+
+import (
+    &quot;errors&quot;
+    &quot;log&quot;
+    &quot;time&quot;
+)
+
+const (
+    defaultHost    = &quot;127.0.0.1&quot;
+    defaultPort    = 8000
+    defaultTimeout = time.Minute
+    defaultMaxConn = 120
+)
+
+type Server struct {
+    Host    string
+    Port    int
+    Timeout time.Duration
+    MaxConn int
+}
+
+type ServerOptions struct {
+    Host    string
+    Port    int
+    Timeout time.Duration
+    MaxConn int
+}
+
+type ServerOption interface {
+    apply(*ServerOptions)
+}
+
+type funcServerOption struct {
+    f func(*ServerOptions)
+}
+
+func (fo funcServerOption) apply(option *ServerOptions) {
+    fo.f(option)
+}
+
+func newFuncServerOption(f func(*ServerOptions)) *funcServerOption {
+    return &amp;funcServerOption{
+        f: f,
+    }
+}
+
+func WithHost(host string) ServerOption {
+    return newFuncServerOption(func(option *ServerOptions) {
+        option.Host = host
+    })
+}
+
+func WithPort(port int) ServerOption {
+    return newFuncServerOption(func(option *ServerOptions) {
+        option.Port = port
+    })
+}
+
+func WithTimeout(timeout time.Duration) ServerOption {
+    return newFuncServerOption(func(option *ServerOptions) {
+        option.Timeout = timeout
+    })
+}
+
+func WithMaxConn(maxConn int) ServerOption {
+    return newFuncServerOption(func(option *ServerOptions) {
+        option.MaxConn = maxConn
+    })
+}
+
+func NewServer(opts ...ServerOption) *Server {
+    options := ServerOptions{
+        Host:    defaultHost,
+        Port:    defaultPort,
+        Timeout: defaultTimeout,
+        MaxConn: defaultMaxConn,
+    }
+
+    for _, opt := range opts {
+        opt.apply(&amp;options)
+    }
+
+    return &amp;Server{
+        Host:    defaultHost,
+        Port:    defaultPort,
+        Timeout: defaultTimeout,
+        MaxConn: defaultMaxConn,
+    }
+}
+
+func (s *Server) Start() error {
+    log.Printf(&quot;Server: %v&quot;, s)
+    return errors.New(&quot;Error&quot;)
+}
+</code></pre>
+<h3 id="maingo">main.go</h3>
+<pre><code class="language-go">package main  
+
+import (  
+   &quot;GoSketch/OptionPattern/server&quot;  
+   &quot;log&quot;   &quot;time&quot;)  
+
+func main() {  
+   var opts []server.ServerOption  
+
+   opts = append(opts, server.WithHost(&quot;localhost&quot;))  
+   opts = append(opts, server.WithPort(8081))  
+   opts = append(opts, server.WithTimeout(time.Minute))  
+   opts = append(opts, server.WithMaxConn(120))  
+
+   svr := server.NewServer(opts...)  
+   if err := svr.Start(); err != nil {  
+      log.Fatal(err)  
+   }  
+}
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#golang-%E9%80%89%E9%A1%B9%E6%A8%A1%E5%BC%8F">GOLANG-选项模式</a>
+<ul>
+<li><a href="#%E5%88%9D%E9%81%87%E5%87%BD%E6%95%B0%E5%BC%8F%E9%80%89%E9%A1%B9%E6%A8%A1%E5%BC%8F">初遇函数式选项模式</a></li>
+<li><a href="#%E9%80%89%E9%A1%B9%E6%A8%A1%E5%BC%8F%E7%BB%93%E6%9E%84">选项模式结构</a></li>
+<li><a href="#attachment">Attachment</a>
+<ul>
+<li><a href="#servergo">server.go</a></li>
+<li><a href="#maingo">main.go</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://anxiu0101.github.io/post/CS253FZ-2021-Exam/">
+              <h3 class="post-title">
+                CS253FZ-2021-Exam
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '6fb251b98720fbe0a796',
+    clientSecret: 'b9fcdb0b290e32739733ab1ffa8a6c1fc46e035e',
+    repo: 'Anxiu0101.github.io',
+    owner: 'Anxiu0101',
+    admin: ['Anxiu0101'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank"> Gridea</a><br/>
+<a href="https://icp.gov.moe/?keyword=20221030" target="_blank">萌ICP备20221030号</a>
+  <a class="rss" href="https://anxiu0101.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

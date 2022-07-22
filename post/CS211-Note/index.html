@@ -1,0 +1,301 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CS211-Note | Anxiu-Blog</title>
+<link rel="shortcut icon" href="https://anxiu0101.github.io/favicon.ico?v=1658502968999">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://anxiu0101.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="CS211-Note | Anxiu-Blog - Atom Feed" href="https://anxiu0101.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="CS211-Note 算法与数据结构
+
+Lecture-10 Graphs I
+
+
+Learn different types of graphs and their properties 学习不同类型的图表及其属性
+Learn Graph..." />
+    <meta name="keywords" content="Algorithm" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://anxiu0101.github.io">
+  <img class="avatar" src="https://anxiu0101.github.io/images/avatar.png?v=1658502968999" alt="">
+  </a>
+  <h1 class="site-title">
+    Anxiu-Blog
+  </h1>
+  <p class="site-description">
+    安身立命，修身养性
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/Anxiu0101" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              CS211-Note
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-07-08
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://anxiu0101.github.io/tag/EiKi6CqVY/" class="post-tag">
+                  # Algorithm
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>CS211-Note 算法与数据结构</p>
+<!--more-->
+<h1 id="lecture-10-graphs-i">Lecture-10 Graphs I</h1>
+<hr>
+<ul>
+<li>Learn different types of graphs and their properties 学习不同类型的图表及其属性</li>
+<li>Learn Graph ADT and different presentations of graphs 学习 Graph ADT 和图形的不同表示</li>
+<li>Build edge list structure 建立边缘列表结构</li>
+<li>Build adjacency list 建立邻接表</li>
+<li>Build adjacency matrix 建立邻接矩阵</li>
+</ul>
+<hr>
+<h2 id="graph">Graph</h2>
+<p>Graphs are one of the most versatile structures used in computer programming and are used to solve the more interesting problems.</p>
+<p>have two type:</p>
+<ul>
+<li>Unweighted graphs where the links between nodes are equal.</li>
+<li>Weighted graphs where the links are each associated with an individual weight.</li>
+</ul>
+<h3 id="graph-structure">Graph Structure</h3>
+<ul>
+<li>Nodes are called <mark>vertices</mark>.</li>
+<li><mark>Edges</mark> link vertices.</li>
+<li>Vertices are labeled in some way, often with letters.</li>
+<li>Each edge has two vertices at its ends.</li>
+<li>The graph represents which vertices are connected to each other.</li>
+</ul>
+<p>A graph is a pair <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(V, E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>, where</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span> is a set of nodes called vertices.</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span> is a collection of pairs of vertices, called edges.</li>
+<li>Vertices and edges are positions and store elements.</li>
+</ul>
+<p>Graph 在实际生活中的应用有：Electronic circuits、Transportation networks、Computer networks、Databases</p>
+<h3 id="terminology">Terminology</h3>
+<ul>
+<li>End vertices (or endpoints) of an edge: U and V are the endpoints of a</li>
+<li>Edges incident on a vertex: a, d, and b are incident on V</li>
+<li>Adjacent vertices: U and V are adjacent</li>
+<li>Degree of a vertex: X has degree 5</li>
+<li>Parallel edges: h and i are parallel edges</li>
+<li>Self-loop: j is a self-loop</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207042156667.png" alt="image-20220704215629637" loading="lazy"></figure>
+<ul>
+<li>
+<p>Path</p>
+<ul>
+<li>The sequence of alternating vertices and edges</li>
+<li>begins with a vertex</li>
+<li>ends with a vertex</li>
+<li>each edge is preceded and followed by its endpoints</li>
+</ul>
+</li>
+<li>
+<p>Simple path: A path such that all its vertices and edges are distinct</p>
+</li>
+<li>
+<p>Example: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mn>1</mn><mo>=</mo><mo>(</mo><mi>V</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>X</mi><mo separator="true">,</mo><mi>h</mi><mo separator="true">,</mo><mi>Z</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">P1=(V,b,X,h,Z)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">h</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="mclose">)</span></span></span></span> is a simple path; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mn>2</mn><mo>=</mo><mo>(</mo><mi>U</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo><mi>W</mi><mo separator="true">,</mo><mi>e</mi><mo separator="true">,</mo><mi>X</mi><mo separator="true">,</mo><mi>g</mi><mo separator="true">,</mo><mi>Y</mi><mo separator="true">,</mo><mi>f</mi><mo separator="true">,</mo><mi>W</mi><mo separator="true">,</mo><mi>d</mi><mo separator="true">,</mo><mi>V</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">P2=(U,c,W,e,X,g,Y,f,W,d,V)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mclose">)</span></span></span></span> is a path that is not simple.</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207042206016.png" alt="image-20220704220542696" loading="lazy"></figure>
+</li>
+<li>
+<p>Cycle</p>
+<ul>
+<li>circular sequence of alternating vertices and edges</li>
+<li>each edge is preceded and followed by its endpoints</li>
+</ul>
+</li>
+<li>
+<p>Simple cycle: cycle such that all its vertices and edges are distinct</p>
+</li>
+<li>
+<p>Examples: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mn>1</mn><mo>=</mo><mo>(</mo><mi>V</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>X</mi><mo separator="true">,</mo><mi>g</mi><mo separator="true">,</mo><mi>Y</mi><mo separator="true">,</mo><mi>f</mi><mo separator="true">,</mo><mi>W</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo><mi>U</mi><mo separator="true">,</mo><mi>a</mi><mo separator="true">,</mo><mi mathvariant="normal">¿</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">C1=(V,b,X,g,Y,f,W,c,U,a,¿)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">¿</span><span class="mclose">)</span></span></span></span> is a simple cycle <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mn>2</mn><mo>=</mo><mo>(</mo><mi>U</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo><mi>W</mi><mo separator="true">,</mo><mi>e</mi><mo separator="true">,</mo><mi>X</mi><mo separator="true">,</mo><mi>g</mi><mo separator="true">,</mo><mi>Y</mi><mo separator="true">,</mo><mi>f</mi><mo separator="true">,</mo><mi>W</mi><mo separator="true">,</mo><mi>d</mi><mo separator="true">,</mo><mi>V</mi><mo separator="true">,</mo><mi>a</mi><mo separator="true">,</mo><mi mathvariant="normal">¿</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">C 2=(U,c,W,e,X,g,Y,f,W,d,V,a,¿)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">¿</span><span class="mclose">)</span></span></span></span> is a cycle that is not simple</p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207042208152.png" alt="image-20220704220855120" loading="lazy"></figure>
+</li>
+</ul>
+<h3 id="edge-types">Edge Types</h3>
+<ul>
+<li>Directed edge</li>
+<li>Undirected edge</li>
+<li>Directed graph</li>
+<li>Undirected graph</li>
+</ul>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#lecture-10-graphs-i">Lecture-10 Graphs I</a>
+<ul>
+<li><a href="#graph">Graph</a>
+<ul>
+<li><a href="#graph-structure">Graph Structure</a></li>
+<li><a href="#terminology">Terminology</a></li>
+<li><a href="#edge-types">Edge Types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://anxiu0101.github.io/post/2019-CS211-Autumn/">
+              <h3 class="post-title">
+                2019-CS211-Autumn
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '6fb251b98720fbe0a796',
+    clientSecret: 'b9fcdb0b290e32739733ab1ffa8a6c1fc46e035e',
+    repo: 'Anxiu0101.github.io',
+    owner: 'Anxiu0101',
+    admin: ['Anxiu0101'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank"> Gridea</a><br/>
+<a href="https://icp.gov.moe/?keyword=20221030" target="_blank">萌ICP备20221030号</a>
+  <a class="rss" href="https://anxiu0101.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

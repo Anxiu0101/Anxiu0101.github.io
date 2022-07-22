@@ -1,0 +1,433 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CS253-Note | Anxiu-Blog</title>
+<link rel="shortcut icon" href="https://anxiu0101.github.io/favicon.ico?v=1658502968999">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://anxiu0101.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="CS253-Note | Anxiu-Blog - Atom Feed" href="https://anxiu0101.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="CS253-Note
+
+Lecture-1 CPU
+Types of computer
+Harvard:
+Memory to store instructions (operators) is separate to the memory ..." />
+    <meta name="keywords" content="Compilation" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://anxiu0101.github.io">
+  <img class="avatar" src="https://anxiu0101.github.io/images/avatar.png?v=1658502968999" alt="">
+  </a>
+  <h1 class="site-title">
+    Anxiu-Blog
+  </h1>
+  <p class="site-description">
+    安身立命，修身养性
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/Anxiu0101" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              CS253-Note
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-07-08
+              </span>
+              <span>
+                11 min read
+              </span>
+              
+                <a href="https://anxiu0101.github.io/tag/5jxT5l59do/" class="post-tag">
+                  # Compilation
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>CS253-Note</p>
+<!--more-->
+<h1 id="lecture-1-cpu">Lecture-1 CPU</h1>
+<h2 id="types-of-computer">Types of computer</h2>
+<p>Harvard:</p>
+<p>Memory to store instructions (operators) is separate to the memory used for data (operands). 存储指令（操作符）的内存与用于数据（操作数）的内存是分开的。</p>
+<p>Von Neumann:</p>
+<p>There is only one memory used for both data and instructions. Looking at bytes in memory it would difficult to tell with certainty which stores code and which stores data. 只有一个内存用于数据和指令。 查看内存中的字节，很难确定哪些存储代码，哪些存储数据。</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207021017909.png" alt="image-20220702101749819" loading="lazy"></figure>
+<p>ALU: Arithmetic Logic Unit 算术逻辑单元<br>
+Registers：寄存器<br>
+Bus Interface: 总线接口<br>
+Instructions: 指示集<br>
+Data: 数据</p>
+<h3 id="organisation-of-a-von-neumann-digital-electronic-computer">Organisation of a von Neumann digital electronic computer</h3>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207021041961.png" alt="image-20220702104135928" loading="lazy"></figure>
+<h2 id="assembly-language">Assembly Language</h2>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207021042297.png" alt="image-20220702104206262" loading="lazy"></figure>
+<h2 id="organisation-of-a-digital-computer">Organisation of a digital computer</h2>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207021046453.png" alt="image-20220702104652414" loading="lazy"></figure>
+<p>The CPU has two main function blocks</p>
+<p>BIU: Bus Interface Unit BIU： 总线接口单元<br>
+The BIU sends outs addresses fetches instructions from memory and reads and writes to ports and to memory. BIU 发送出地址，从内存中获取指令并读取和写入端口和内存。</p>
+<p>EU: Execution Unit The EU instructs the BIU where to fetch instructions, it decodes instructions and executes instructions. 执行单元 EU 指示 BIU 从何处获取指令，它对指令进行解码并执行指令。<br>
+The EU contains both the ALU and Control Circuitry. EU 包含 ALU 和控制电路。</p>
+<p>The A-Bus, B-Bus and C-Bus are high speed data paths contained within the Microprocessor itself. A-Bus、B-Bus 和 C-Bus 是包含在微处理器本身内的高速数据路径。</p>
+<h3 id="control-circuits-eu">Control Circuits (EU)</h3>
+<p>The control unit fetches instructions from the queue. The queue is a first in first out store of 6 bytes. 控制单元从队列中获取指令。该队列是一个6字节的先入先出存储器。<br>
+The store is kept full by the BIU. This means that main memory is not accessed for each byte of each instruction. The technique is known as <mark>pipleling</mark>. 存储器由BIU保持完整。这意味着每条指令的每个字节都不需要访问主内存。这种技术被称为 &quot;流水线&quot;。<br>
+Some instructions such as conditional jumps and call to subroutines can not be pipelined (more later). 一些指令，如条件性跳转和调用子程序，不能进行流水线处理 (后面会详细介绍)。</p>
+<h3 id="the-alu-eu">The ALU (EU)</h3>
+<p>The ALU in the 8086 can ADD, Subtract, AND, OR, XOR, increment, decrement, complement and shift 16-bit binary numbers.</p>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207021054859.png" alt="image-20220702105409830" loading="lazy"></figure>
+<h3 id="后面的一部分关于数电的看不懂">后面的一部分关于数电的看不懂</h3>
+<h1 id="lecture-2-assembly-language">Lecture-2 Assembly Language</h1>
+<h2 id="general-purpose-registers">General Purpose Registers</h2>
+<p>The 8086 has eight general purpose registers. As a programmer you can think of them as eight variables. Al is the accumulator and there are more instructions associated with it than any other register. Each register is eight bits wide. However some instructions can uses registers in pairs, giving 16 bit operation. 8086有八个通用的寄存器。作为一个程序员，你可以把它们想象成八个变量。Al是累加器，与它相关的指令比任何其他寄存器都多。每个寄存器都是8位宽。然而，有些指令可以成对使用寄存器，提供16位的操作。</p>
+<h1 id="lecture-3-assembly-language">Lecture-3 Assembly Language</h1>
+<h1 id="lecture-4-assembly-language">Lecture-4 Assembly Language</h1>
+<h1 id="lecture-5-assemply-languagedata-types-intergers-real-and-string">Lecture-5 Assemply Language(Data Types, Intergers, Real and String)</h1>
+<h1 id="lecture-6-assembly-languagefloating-point-8087">Lecture-6 Assembly Language(Floating Point, 8087)</h1>
+<h1 id="lecture-7-semiconductors-pn-junction-diode">Lecture-7 Semiconductors PN Junction diode</h1>
+<h1 id="lecture-8-transistors-and-fets">Lecture-8 Transistors and FETS</h1>
+<h1 id="lecture-9-digital-io">Lecture-9 Digital I/O</h1>
+<h2 id="interrupts">Interrupts</h2>
+<p>Most advanced microprocessors allow normal linear program operation to be interrupted by some external signal or by a special instruction in the program. 大多数先进的微处理器允许正常的线性程序操作被一些外部信号或程序中的特殊指令中断。</p>
+<p>When Interrupted the microprocessor,</p>
+<ul>
+<li>suspends execution of the main program,</li>
+<li>calls a procedure which services the interrupt (interrupt handler or interrupt service routine),</li>
+<li>returns control to the mainline program.</li>
+</ul>
+<h3 id="interrputs-type">Interrputs Type</h3>
+<p>The three types of Interrupt 8086:</p>
+<ul>
+<li>
+<p>Hardware Interrupts</p>
+<p>An external signal applied to the INTR (interrupt) pin or NMI (interrupt) pin of the processor causes an interrupt. 施加到处理器的 INTR（中断）引脚或 NMI（中断）引脚的外部信号会导致中断。</p>
+</li>
+<li>
+<p>Exception Interrupts</p>
+<p>Triggered by internal errors such as divide by zero, normally to print an error message. 由内部错误触发，例如除以零，通常打印错误消息。</p>
+</li>
+<li>
+<p>Software Interrupts</p>
+<p>Caused by the execution of an assembly language INT command. Simply a call to a function in BIOS. 由执行汇编语言 INT 命令引起。只需调用 BIOS 中的函数。</p>
+</li>
+</ul>
+<h3 id="interrupt-processing-sequence">Interrupt Processing Sequence</h3>
+<p>Hardware requests service routine by bringing IRQx low. 硬件通过降低 IRQx 来请求服务程序。</p>
+<p>The 8259A signals to CPU via INTR line. 8259A 通过 INTR 线向 CPU 发送信号。</p>
+<p>The CPU responds with Interrupt Acknowledge signal (INTA). CPU 以中断确认信号 (INTA) 进行响应。</p>
+<p>The Acknowledge signal causes the 8259A to place the interrupt number (0-255) on the data bus. Acknowledge 信号使 8259A 将中断号 (0-255) 放置在数据总线上。</p>
+<p>CPU reads the data. CPU 读取数据。</p>
+<p>CPU hardware related registers onto the stack, including current CS:IP,SP and Flags. CPU 硬件相关寄存器入栈，包括当前 <code>CS:IP,SP</code> 和 <code>Flags</code>。</p>
+<p>CPU multiplies Interrupt No.(Type) by 4 and looks up the jump address in the vector table. CS and IP are changed. CPU 将中断号(类型)乘以 4 并在向量表中查找跳转地址。CS 和 IP 变化。</p>
+<p>Execution of the interrupt service routine continues until IRET. 中断服务程序的执行一直持续到 IRET。</p>
+<p>IRET registers to be restored to their former values. IRET 寄存器恢复到它们以前的值。</p>
+<p>CS and IP are restored and the main program continues. CS和IP恢复，主程序继续。</p>
+<h1 id="lecture-10-masm-code-for-interrupts">Lecture-10 MASM Code for Interrupts</h1>
+<h1 id="lecture-11-memory-hierarchy-dynamic-and-static-ram">Lecture-11 Memory Hierarchy &amp; Dynamic and Static RAM</h1>
+<h2 id="main-memory">Main Memory</h2>
+<h3 id="static-ram">Static RAM</h3>
+<ul>
+<li>Construction based on Flip Flops 基于触发器的结构</li>
+<li>Each memory cell uses up a lot of real estate 每个存储单元都占用了大量的空间</li>
+<li>Memory is volatile, but does not need refreshing 内存是不稳定的，但不需要刷新</li>
+<li>Much faster than Dynamic Ram, used for caches, 10nS 比动态RAM快得多，用于缓存，10nS</li>
+</ul>
+<h3 id="dynamic-ram">Dynamic RAM</h3>
+<ul>
+<li>Construction based on charge stored on the gate of a FET. 基于存储在 FET 栅极上的电荷的构造。</li>
+<li>Much higher densities possible (larger memory) 可能的密度更高（更大的内存）</li>
+<li>Lower Cost 更低的开销</li>
+<li>But requires extra refresh control signal. 但需要额外的刷新控制信号。</li>
+<li>Typically 60nS, no dissipation when not accessed. 通常为 60nS，未访问时无耗散。</li>
+</ul>
+<h1 id="lecture-12-memory-management-cache-strategies">Lecture-12 Memory Management Cache strategies</h1>
+<h1 id="lecture-13-the-hard-disk-cd-rom">Lecture-13 The hard disk CD-ROM</h1>
+<h2 id="disk-layout">Disk Layout</h2>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207031319777.png" alt="image-20220703131930714" loading="lazy"></figure>
+<p>512 Byte block x Cylinders 12495 x 16 Heads x 63 sectors = 6GByte</p>
+<h1 id="lecture-14-ciscrisc-vector-processors-parallel-processors">Lecture-14 CISC/RISC Vector Processors Parallel Processors</h1>
+<h1 id="lecture-15-buses">Lecture-15 Buses</h1>
+<h1 id="doc-flash-ram-and-fpga">Doc-Flash RAM and FPGA</h1>
+<h2 id="solid-state-drivessd">Solid State Drive(SSD)</h2>
+<p>Flash-based media are based on a <a href="https://whatis.techtarget.com/definition/silicon-Si">silicon</a> substrate and therefore are known as solid-state devices. They are widely used in both consumer electronics and large data storage systems.</p>
+<p>There are three SSD form factors widely used in personal computers:</p>
+<ul>
+<li>SSDs that fit into the same slots used by traditional hard disk drives (HDDs) and uses the standard HDD  interfaces such as SATA or SCSI.</li>
+<li>Solid-state cards built on a printed circuit board and use a standard I/O interface, such as Peripheral Component Interconnect Express (<a href="https://searchdatacenter.techtarget.com/definition/PCI-Express">PCIe</a>).</li>
+<li>Solid-state modules that fit in a dual inline memory module (DIMM) or small outline dual inline memory module using a standard HDD interface, such as SATA.</li>
+</ul>
+<p>An additional subcategory is a <a href="https://searchstorage.techtarget.com/feature/Hybrid-drive-vs-SSD-Whats-best-for-your-organization">hybrid hard drive</a> that combines a conventional HDD with a NAND flash module. The flash part provides very fast I/O while the HDD part can store a large amount of data.</p>
+<h2 id="flash-memory">Flash memory</h2>
+<p>Here are some advantages of flash memory:</p>
+<ol>
+<li>
+<p>Flash is the least expensive form of semiconductor memory.</p>
+</li>
+<li>
+<p>Unlike dynamic random access memory (<a href="https://searchstorage.techtarget.com/definition/DRAM">DRAM</a>) and static RAM (<a href="https://whatis.techtarget.com/definition/SRAM-static-random-access-memory">SRAM</a>), flash memory is non-volatile, offers lower power consumption and can be erased in large blocks.</p>
+</li>
+<li>
+<p>NOR flash offers increased random read speeds, while NAND flash is fast with serial reads and writes.</p>
+</li>
+<li>
+<p>An SSD with NAND flash memory chips delivers significantly higher performance than traditional storage media, such as HDDs, compact discs and tape.</p>
+</li>
+<li>
+<p>Flash drives are more reliable than HDDs as they have no moving parts.</p>
+</li>
+<li>
+<p>Enterprise storage systems equipped with flash drives are capable of low latency, which is measured in microseconds or milliseconds.</p>
+</li>
+</ol>
+<p>The major disadvantages of flash memory are:</p>
+<ul>
+<li>
+<p>SSDs are much more expensive compared to equivalent HDDs.</p>
+</li>
+<li>
+<p>Also, at the present, HDDs have a larger capacity. HDD of 12 TB can be obtained, but the largest SSD has a capacity of only 2 TB.</p>
+</li>
+<li>
+<p>The <a href="https://searchstorage.techtarget.com/definition/NAND-flash-wear-out">wear-out</a> mechanism where memory cells can fail with excessively high numbers of <a href="https://searchstorage.techtarget.com/definition/P-E-cycle">program/erase cycles</a>, which eventually break down the oxide layer that traps electrons.</p>
+</li>
+<li>
+<p>Once enough bits are lost, the whole drive can become inoperable.</p>
+</li>
+<li>
+<p>Unlike HDD where the magnetized patterns on the platters do not get destroyed when parts of the HDD break down, SSD memory cells become very difficult to read when random cells are destroyed.</p>
+</li>
+<li>
+<p>Thus, recovering data from spoilt HDD can be quite easily done, while data in an inoperable SSD is almost impossible to recover.</p>
+</li>
+</ul>
+<p>Thus manufacturers make sure that SSDs do not wear out without warning. They typically contain control circuitry that can be checked for possible breakdown.</p>
+<h2 id="fpga">FPGA</h2>
+<p>FPGAs are solid-state devices that can be configured to have different functions. Unlike microcontrollers, which are fixed circuits that are controlled by a program to perform different functions, FPGAs can be programmed to become different digital circuits.<br>
+Just like a microcontroller, an FPGA can also be re-programmed to be another circuit that has a totally different function.<br>
+When prototyping a product, such as a microwave oven or a washing machine, engineers can write software for a microcontroller to control the functions of the system, or choose an FPGA and write a hardware description language (HDL) program to control the system.<br>
+For mass consumer products, it is cheaper to prototype using FPGA as the HDL program can be used to set up the mask to build an application specific integrated circuit (ASIC) chip which will be very cheap to produce.</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#lecture-1-cpu">Lecture-1 CPU</a>
+<ul>
+<li><a href="#types-of-computer">Types of computer</a>
+<ul>
+<li><a href="#organisation-of-a-von-neumann-digital-electronic-computer">Organisation of a von Neumann digital electronic computer</a></li>
+</ul>
+</li>
+<li><a href="#assembly-language">Assembly Language</a></li>
+<li><a href="#organisation-of-a-digital-computer">Organisation of a digital computer</a>
+<ul>
+<li><a href="#control-circuits-eu">Control Circuits (EU)</a></li>
+<li><a href="#the-alu-eu">The ALU (EU)</a></li>
+<li><a href="#%E5%90%8E%E9%9D%A2%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%E5%85%B3%E4%BA%8E%E6%95%B0%E7%94%B5%E7%9A%84%E7%9C%8B%E4%B8%8D%E6%87%82">后面的一部分关于数电的看不懂</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#lecture-2-assembly-language">Lecture-2 Assembly Language</a>
+<ul>
+<li><a href="#general-purpose-registers">General Purpose Registers</a></li>
+</ul>
+</li>
+<li><a href="#lecture-3-assembly-language">Lecture-3 Assembly Language</a></li>
+<li><a href="#lecture-4-assembly-language">Lecture-4 Assembly Language</a></li>
+<li><a href="#lecture-5-assemply-languagedata-types-intergers-real-and-string">Lecture-5 Assemply Language(Data Types, Intergers, Real and String)</a></li>
+<li><a href="#lecture-6-assembly-languagefloating-point-8087">Lecture-6 Assembly Language(Floating Point, 8087)</a></li>
+<li><a href="#lecture-7-semiconductors-pn-junction-diode">Lecture-7 Semiconductors PN Junction diode</a></li>
+<li><a href="#lecture-8-transistors-and-fets">Lecture-8 Transistors and FETS</a></li>
+<li><a href="#lecture-9-digital-io">Lecture-9 Digital I/O</a>
+<ul>
+<li><a href="#interrupts">Interrupts</a>
+<ul>
+<li><a href="#interrputs-type">Interrputs Type</a></li>
+<li><a href="#interrupt-processing-sequence">Interrupt Processing Sequence</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#lecture-10-masm-code-for-interrupts">Lecture-10 MASM Code for Interrupts</a></li>
+<li><a href="#lecture-11-memory-hierarchy-dynamic-and-static-ram">Lecture-11 Memory Hierarchy &amp; Dynamic and Static RAM</a>
+<ul>
+<li><a href="#main-memory">Main Memory</a>
+<ul>
+<li><a href="#static-ram">Static RAM</a></li>
+<li><a href="#dynamic-ram">Dynamic RAM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#lecture-12-memory-management-cache-strategies">Lecture-12 Memory Management Cache strategies</a></li>
+<li><a href="#lecture-13-the-hard-disk-cd-rom">Lecture-13 The hard disk CD-ROM</a>
+<ul>
+<li><a href="#disk-layout">Disk Layout</a></li>
+</ul>
+</li>
+<li><a href="#lecture-14-ciscrisc-vector-processors-parallel-processors">Lecture-14 CISC/RISC Vector Processors Parallel Processors</a></li>
+<li><a href="#lecture-15-buses">Lecture-15 Buses</a></li>
+<li><a href="#doc-flash-ram-and-fpga">Doc-Flash RAM and FPGA</a>
+<ul>
+<li><a href="#solid-state-drivessd">Solid State Drive(SSD)</a></li>
+<li><a href="#flash-memory">Flash memory</a></li>
+<li><a href="#fpga">FPGA</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://anxiu0101.github.io/post/CS240-Note/">
+              <h3 class="post-title">
+                CS240 Note
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '6fb251b98720fbe0a796',
+    clientSecret: 'b9fcdb0b290e32739733ab1ffa8a6c1fc46e035e',
+    repo: 'Anxiu0101.github.io',
+    owner: 'Anxiu0101',
+    admin: ['Anxiu0101'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank"> Gridea</a><br/>
+<a href="https://icp.gov.moe/?keyword=20221030" target="_blank">萌ICP备20221030号</a>
+  <a class="rss" href="https://anxiu0101.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
