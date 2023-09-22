@@ -1,0 +1,102 @@
+site_name: Anxiu's Note
+site_url: https://anxiu0101.github.io
+site_author: Anxiu
+site_description: 安修(Anxiu)的笔记站
+# repo_name: Anxiu.0101/note
+# repo_url: https://github.com/Anxiu0101/note
+# edit_url: tree/master/docs
+copyright: Copyright &copy; 2023 <a href="https://github.com/Anxiu0101" target="_blank" rel="noopener">Anxiu</a>
+
+theme:
+  name: material
+  language: 'zh'
+  icon:
+    logo: material/notebook-outline
+  # custom_dir: overrides
+  features:
+  - content.code.annotate
+  - navigation.tracking
+  - navigation.tabs
+  - navigation.indexes
+  - navigation.top
+  font: false
+  palette:
+  - scheme: default
+
+markdown_extensions:
+- toc:
+    permalink: true
+    toc_depth: 4
+- meta
+- def_list
+- attr_list
+- md_in_html
+- sane_lists
+- admonition
+- pymdownx.keys
+- pymdownx.mark
+- pymdownx.tilde
+- pymdownx.critic
+- pymdownx.details
+- pymdownx.snippets
+- pymdownx.magiclink
+- pymdownx.superfences
+- pymdownx.inlinehilite
+- pymdownx.emoji:
+    emoji_index: !!python/name:materialx.emoji.twemoji
+    emoji_generator: !!python/name:materialx.emoji.to_svg
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.arithmatex:
+    generic: true
+
+# extra:
+#   social:
+#   - icon: fontawesome/brands/github
+#     link: https://github.com/Anxiu0101
+#   - icon: fontawesome/solid/rss
+#     link:
+#   - icon: fontawesome/solide/home
+#     link: https://anxiu0101.github.io
+#   # analytics:
+# #   provider: custom
+# #   property: G-DYETCPM289
+
+# extra_css:
+# - style/css/card.css
+
+# extra_javascript:
+# - style/js/katex.js
+
+plugins:
+- rss
+- search
+- glightbox:
+    width: 80%
+- statistics
+# - git-revision-date-localized
+# - social
+
+nav:
+- Home:
+  - index.md
+- Computer Science:
+  - cs/index.md
+  - 编程语言:
+    - Python:
+      - cs/lang/py/Python-venv.md
+- Machine Learning:
+  - ml/index.md
+- Security:
+  - sec/index.md
+- Web Dev:
+  - web/index.md
+- Others:
+  - oth/index.md
+  - Blog Build:
+    - oth/blog/Markdown-Grammar.md
+    - oth/blog/MkDocs.md
