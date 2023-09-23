@@ -6,7 +6,7 @@
 
 # IDE index files
 /.idea
-/overrides/.idea
+/.obsidian
 
 # offline site
 /site
