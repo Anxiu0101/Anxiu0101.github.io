@@ -4,7 +4,7 @@ site_author: Anxiu
 site_description: 安修(Anxiu)的笔记站
 repo_name: Anxiu0101/note
 repo_url: https://github.com/Anxiu0101/note
-edit_url: tree/master/docs
+edit_uri: tree/master/docs
 copyright: Copyright &copy; 2023 <a href="https://github.com/Anxiu0101" target="_blank" rel="noopener">Anxiu</a>
 
 theme:
@@ -27,7 +27,18 @@ theme:
   - toc.follow
   font: false
   palette:
-  - scheme: default
+    - scheme: default # 日间模式
+      primary: deep
+      accent: blue # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: Dark # 鼠标悬浮提示
+    - scheme: slate # 夜间模式
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Light
 
 markdown_extensions:
   - toc:
@@ -39,12 +50,17 @@ markdown_extensions:
   - md_in_html
   - sane_lists
   - admonition
+  - footnotes
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.snippets
+  - pymdownx.superfences
   - pymdownx.magiclink
   - pymdownx.superfences
   - pymdownx.inlinehilite
@@ -56,6 +72,8 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.highlight:
+      linenums: true # 显示行号
+      auto_title: true # 显示编程语言名称
       anchor_linenums: true
   - pymdownx.arithmatex:
       generic: true
@@ -79,45 +97,42 @@ extra:
 
 extra_css:
   - stylesheets/childpage_card_grid.css
-# - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
-# - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
-# - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-#- css/katex.min.css
-#- css/jetbrainsmono.css
-#- css/lxgwscreen.css
-#- css/tasklist.css
-#- css/custom.css
-#- css/card.css
-#- css/flink.css
-#- css/changelog_extra.css
-# - css/heti.css
+  - stylesheets/tasklist.css
+  - stylesheets/custom.css
+  - stylesheets/card.css
+  - stylesheets/flink.css
+  - stylesheets/changelog_extra.css
 
-#extra_javascript:
-# - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
-#- js/katex.min.js
-#- js/katex.js
-# - js/heti.js
-# - js/scheme.js # this is in template 'base.html'
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
+  - javascripts/mathjax.js
 
 plugins:
   - rss
   - glightbox:
       width: 80%
   - statistics
-  - search
+  - search:
+      lang:
+        - en
+        - ja
+      separator: '[\s\u200b\-]'
   - social
   - offline
   - tags
-# - git-revision-date-localized
+#  - info
+  - git-revision-date-localized
 
 nav:
 - Home:
   - index.md
 - Computer Science:
   - cs/index.md
-  - 编程语言:
+# — 编程语言 ——————————————————————————————————————————————————————
+  - Program Lang:
     - Python:
-      - PythonVirtualEnv: cs/lang/py/Python-venv.md
+      - Python Virtual Environment: cs/lang/py/Python-venv.md
 - Machine Learning:
   - ml/index.md
 - Security:
@@ -126,6 +141,9 @@ nav:
   - web/index.md
 - Others:
   - oth/index.md
+#  - Resume:
+#      - cv.pdf
+# — 建站记录 ——————————————————————————————————————————————————————
   - Blog Build:
     - oth/blog/Markdown-Grammar.md
     - oth/blog/MkDocs.md

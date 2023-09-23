@@ -8,33 +8,28 @@ Gopher, also interesting in ML/IOT/Security Tech.<br/>
 Currently studying at MIEC, FZU.<br/>
 That's creating some interesting projects!
 
-<div class="grid cards" markdown>
 
--   :material-connection: &nbsp; __[Project]()__
+---
 
-    ---
+:material-connection: &nbsp; __[Project](https://github.com/Anxiu0101)__
 
-    The offline plugin adds support for building offline-capable documentation,
-    so you can distribute the [`site` directory][mkdocs.site_dir] as a `.zip`
-    file that can be downloaded.
+The offline plugin adds support for building offline-capable documentation,
+so you can distribute the [`site` directory][mkdocs.site_dir] as a `.zip`
+file that can be downloaded.
 
-    ---
+[:octicons-arrow-right-24: __Project Collection__](https://github.com/Anxiu0101)
 
-    [:octicons-arrow-right-24: __Project Collection__](https://github.com/Anxiu0101)
+---
 
--   :material-file-tree: &nbsp; __[Publication]()__
+:material-file-tree: &nbsp; __[Publication](https://www.researchgate.net/profile/Yuchen-Fang-13/research)__
 
-    ---
+The meta plugin makes it easy to [boost][meta.search.boost] specific
+sections in search results or to [exclude][meta.search.exclude] them
+entirely from being indexed, giving more granular control over search.
 
-    The meta plugin makes it easy to [boost][meta.search.boost] specific
-    sections in search results or to [exclude][meta.search.exclude] them
-    entirely from being indexed, giving more granular control over search.
+[:octicons-arrow-right-24: __Publication List__](https://www.researchgate.net/profile/Yuchen-Fang-13/research)
 
-    ---
-
-    [:octicons-arrow-right-24: __Publication List__](https://www.researchgate.net/profile/Yuchen-Fang-13/research)
-
-</div>
+---
 
 本站共有 {{ pages }} 个页面，{{ words }} 个字，{{ codes }} 行代码。
 

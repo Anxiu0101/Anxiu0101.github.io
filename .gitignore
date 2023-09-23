@@ -13,3 +13,6 @@
 
 # cache
 /.cache
+
+# change log
+/changelog
