@@ -34,22 +34,45 @@ pip install mkdocs-statistics-plugin
 pip install mkdocs-git-revision-date-localized-plugin
 ```
 
+You might meet the error like following during open the social plugin, it means you need some dependency libs to enable the function of card generation. Just install iot.
+```shell
+Required dependencies of "social" plugin not found. Install with: pip install pillow cairosvg
+```
+
+The official document also support this content,
+```shell
+pip install "mkdocs-material[imaging]"
+```
+Actually, both of them are same one.
+https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/
 
 
 ## Plugins
 
 [mkdocs-git-revision-date-localized-plugin (timvink.github.io)](https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/index.html)
+
 [MkDocs RSS Plugin (guts.github.io)](https://guts.github.io/mkdocs-rss-plugin/)
+
 https://wohugb.github.io/pymdown-extensions/
+
 https://juejin.cn/post/7273037222437208064
+
 https://hellowac.github.io/mkdocs-docs-zh/user-guide/plugins/
+
 https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
+
 https://github.com/squidfunk/mkdocs-material
+
 [squidfunk.github.io](https://squidfunk.github.io/mkdocs-material/)
+
 [Setting up social cards - Material for MkDocs (squidfunk.github.io)](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
+
 [unverbuggt/mkdocs-encryptcontent-plugin: A MkDocs plugin that encrypt/decrypt markdown content with AES (github.com)](https://github.com/unverbuggt/mkdocs-encryptcontent-plugin)
+
 [matheart.github.io](https://matheart.github.io/matheart-note/cs/markdown/)
+
 [TonyCrane/mkdocs-toolchain: My personal mkdocs toolchain (github.com)](https://github.com/TonyCrane/mkdocs-toolchain)
+
 [TonyCrane/note: TonyCrane's Public Notebook (github.com)](https://github.com/TonyCrane/note)
 
 https://www.cnblogs.com/yang877/p/5860798.html

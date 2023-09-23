@@ -2,9 +2,9 @@ site_name: Anxiu's Note
 site_url: https://anxiu0101.github.io
 site_author: Anxiu
 site_description: 安修(Anxiu)的笔记站
-# repo_name: Anxiu.0101/note
-# repo_url: https://github.com/Anxiu0101/note
-# edit_url: tree/master/docs
+repo_name: Anxiu0101/note
+repo_url: https://github.com/Anxiu0101/note
+edit_url: tree/master/docs
 copyright: Copyright &copy; 2023 <a href="https://github.com/Anxiu0101" target="_blank" rel="noopener">Anxiu</a>
 
 theme:
@@ -12,74 +12,103 @@ theme:
   language: 'zh'
   icon:
     logo: material/notebook-outline
-  # custom_dir: overrides
+  custom_dir: overrides
   features:
   - content.code.annotate
+  - content.code.copy
   - navigation.tracking
   - navigation.tabs
+  - navigation.path
   - navigation.indexes
   - navigation.top
+  - navigation.footer
+  - search.share
+  - search.suggest
+  - toc.follow
   font: false
   palette:
   - scheme: default
 
 markdown_extensions:
-- toc:
-    permalink: true
-    toc_depth: 4
-- meta
-- def_list
-- attr_list
-- md_in_html
-- sane_lists
-- admonition
-- pymdownx.keys
-- pymdownx.mark
-- pymdownx.tilde
-- pymdownx.critic
-- pymdownx.details
-- pymdownx.snippets
-- pymdownx.magiclink
-- pymdownx.superfences
-- pymdownx.inlinehilite
-- pymdownx.emoji:
-    emoji_index: !!python/name:materialx.emoji.twemoji
-    emoji_generator: !!python/name:materialx.emoji.to_svg
-- pymdownx.tabbed:
-    alternate_style: true
-- pymdownx.tasklist:
-    custom_checkbox: true
-- pymdownx.highlight:
-    anchor_linenums: true
-- pymdownx.arithmatex:
-    generic: true
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
 
-# extra:
-#   social:
-#   - icon: fontawesome/brands/github
-#     link: https://github.com/Anxiu0101
-#   - icon: fontawesome/solid/rss
-#     link:
-#   - icon: fontawesome/solide/home
-#     link: https://anxiu0101.github.io
-#   # analytics:
-# #   provider: custom
-# #   property: G-DYETCPM289
+extra:
+  annotation:
+    json: [.s2]
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Anxiu0101
+    - icon: fontawesome/solid/rss
+      link: https://rss.anxiu.cloud
+    - icon: fontawesome/solid/inbox
+      link: mailto:anxiu.fyc@foxmail.com
+  link:
+    - icon: fontawesome/solid/home
+      link: https://anxiu0101.github.io
+#  analytics:
+#    provider: custom
+#    property: G-DYETCPM289
 
-# extra_css:
-# - style/css/card.css
+extra_css:
+  - stylesheets/childpage_card_grid.css
+# - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+# - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+# - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+#- css/katex.min.css
+#- css/jetbrainsmono.css
+#- css/lxgwscreen.css
+#- css/tasklist.css
+#- css/custom.css
+#- css/card.css
+#- css/flink.css
+#- css/changelog_extra.css
+# - css/heti.css
 
-# extra_javascript:
-# - style/js/katex.js
+#extra_javascript:
+# - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+#- js/katex.min.js
+#- js/katex.js
+# - js/heti.js
+# - js/scheme.js # this is in template 'base.html'
 
 plugins:
-- rss
-- search
-- glightbox:
-    width: 80%
-- statistics
+  - rss
+  - glightbox:
+      width: 80%
+  - statistics
+  - search
+  - social
+  - offline
+  - tags
 # - git-revision-date-localized
-# - social
 
 nav:
 - Home:
@@ -88,7 +117,7 @@ nav:
   - cs/index.md
   - 编程语言:
     - Python:
-      - cs/lang/py/Python-venv.md
+      - PythonVirtualEnv: cs/lang/py/Python-venv.md
 - Machine Learning:
   - ml/index.md
 - Security:
