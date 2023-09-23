@@ -1,4 +1,15 @@
+# IOS storage file
 .DS_Store
 
 # python virtual environment
 /venv
+
+# IDE index files
+/.idea
+/overrides/.idea
+
+# offline site
+/site
+
+# cache
+/.cache
