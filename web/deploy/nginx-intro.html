@@ -51,8 +51,6 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/childpage_card_grid.css">
-    
       <link rel="stylesheet" href="../../stylesheets/tasklist.css">
     
       <link rel="stylesheet" href="../../stylesheets/custom.css">
@@ -918,8 +916,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -948,8 +944,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -958,30 +952,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#nginx-using-intro" class="md-nav__link">
+    Nginx using Intro
+  </a>
+  
+    <nav class="md-nav" aria-label="Nginx using Intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#basic-knowledge" class="md-nav__link">
     简单介绍 Basic Knowledge
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#install" class="md-nav__link">
     安装 Install
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#command" class="md-nav__link">
     常用指令 Command
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
     修改 nginx 配置
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1552,7 +1559,7 @@
         
   
   <span class="md-ellipsis">
-    Build your MkDocs Site
+    Build your personal MkDocs Site
   </span>
   
 
@@ -1594,8 +1601,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1604,30 +1609,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#nginx-using-intro" class="md-nav__link">
+    Nginx using Intro
+  </a>
+  
+    <nav class="md-nav" aria-label="Nginx using Intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#basic-knowledge" class="md-nav__link">
     简单介绍 Basic Knowledge
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#install" class="md-nav__link">
     安装 Install
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#command" class="md-nav__link">
     常用指令 Command
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#nginx" class="md-nav__link">
     修改 nginx 配置
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1649,12 +1667,14 @@
   
 
 
-<h1 id="nginx-using-intro">Nginx using Intro<a class="headerlink" href="#nginx-using-intro" title="Permanent link">&para;</a></h1>
+  <h1>Nginx Introduction</h1>
+
+<h3 id="nginx-using-intro">Nginx using Intro<a class="headerlink" href="#nginx-using-intro" title="Permanent link">#</a></h3>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 649 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 61 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
 </div>
 <p>笔者作为一个前端新手，正在为项目搭建环境。此帖记录了一些 Nginx 配置的相关过程。环境为阿里云的 Alibaba Cloud Linux 3.2104 LTS 64位，兼容 CentOS。</p>
-<h2 id="basic-knowledge">简单介绍 Basic Knowledge<a class="headerlink" href="#basic-knowledge" title="Permanent link">&para;</a></h2>
+<h4 id="basic-knowledge">简单介绍 Basic Knowledge<a class="headerlink" href="#basic-knowledge" title="Permanent link">#</a></h4>
 <p>Nginx是一款高性能的http 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器。</p>
 <p>应用场景有</p>
 <ul>
@@ -1663,7 +1683,7 @@
 <li>反向代理，负载均衡。当网站的访问量达到一定程度后，单台服务器不能满足用户的请求时，需要用多台服务器集群可以使用 nginx 做反向代理。并且多台服务器可以平均分担负载。</li>
 </ul>
 <p>你的前端项目在写完编译后，生成一个 <code>dist/</code> 文件夹的内容，它们需要服务器软件(例如 nginx，tomcat)才能完成部署。</p>
-<h2 id="install">安装 Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<h4 id="install">安装 Install<a class="headerlink" href="#install" title="Permanent link">#</a></h4>
 <p>你可从官方网站下载压缩包自行解压 <a href="http://nginx.org/en/download.html">nginx: download</a></p>
 <p>答主使用的 <code>yum</code> 下载，配置更加容易。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nginx
@@ -1686,7 +1706,7 @@
 <p>然后访问你的服务器 IP，或者本地 <code>localhost</code> 即可。(如果和笔者一样用的服务器的话，记得把 <code>80</code> 端口放行，否则也是不行的。)</p>
 <p>成功则出现以下界面。</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202305101410099.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20230510141051953" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202305101410099.png" /></a></p>
-<h2 id="command">常用指令 Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h2>
+<h4 id="command">常用指令 Command<a class="headerlink" href="#command" title="Permanent link">#</a></h4>
 <p>以下是几个常用的指令，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -1733,7 +1753,7 @@
 <a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">  </span>-g<span class="w"> </span>directives<span class="w"> </span>:<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global<span class="w"> </span>directives<span class="w"> </span>out<span class="w"> </span>of<span class="w"> </span>configuration<span class="w"> </span>file
 </code></pre></div></td></tr></table></div>
 <p>从帮助列表中可见，<code>-s</code> 指的是向 nginx 发送一个信号。</p>
-<h2 id="nginx">修改 nginx 配置<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h2>
+<h4 id="nginx">修改 nginx 配置<a class="headerlink" href="#nginx" title="Permanent link">#</a></h4>
 <p>使用指令了解 nginx 配置地址，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>➜<span class="w">  </span>~<span class="w"> </span>whereis<span class="w"> </span>nginx

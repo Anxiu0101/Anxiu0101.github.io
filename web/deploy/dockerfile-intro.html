@@ -51,8 +51,6 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/childpage_card_grid.css">
-    
       <link rel="stylesheet" href="../../stylesheets/tasklist.css">
     
       <link rel="stylesheet" href="../../stylesheets/custom.css">
@@ -1582,7 +1580,7 @@
         
   
   <span class="md-ellipsis">
-    Build your MkDocs Site
+    Build your personal MkDocs Site
   </span>
   
 
@@ -1739,8 +1737,8 @@
 <p>Go 项目创建 Dockerfile</p>
 <!--more-->
 
-<h2 id="dockerfile">Dockerfile 的主要结构<a class="headerlink" href="#dockerfile" title="Permanent link">&para;</a></h2>
-<h3 id="from">FROM<a class="headerlink" href="#from" title="Permanent link">&para;</a></h3>
+<h4 id="dockerfile">Dockerfile 的主要结构<a class="headerlink" href="#dockerfile" title="Permanent link">#</a></h4>
+<h5 id="from">FROM<a class="headerlink" href="#from" title="Permanent link">#</a></h5>
 <p><code>FROM</code> 为你要定制的镜像选择基础镜像</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1755,7 +1753,7 @@
 <li>该<code>tag</code>或<code>digest</code>值是可选的。如果您省略其中任何一个，构建器默认使用一个<code>latest</code>标签。如果找不到该<code>tag</code>值，构建器将返回错误。</li>
 </ul>
 <p><code>--platform</code>可以指定构建的目标平台，可以指定<code>linux/amd64</code>, <code>linux/arm64</code>, <code>windows/amd64</code>, 默认使用当前平台（<code>--platform=$BUILDPLATFORM</code>）</p>
-<h3 id="run">RUN<a class="headerlink" href="#run" title="Permanent link">&para;</a></h3>
+<h5 id="run">RUN<a class="headerlink" href="#run" title="Permanent link">#</a></h5>
 <p><code>RUN</code> 用于执行后面跟着的命令行格式，有 <code>shell</code> 和 <code>exec</code> 两种格式，</p>
 <ul>
 <li>shell: 使用 Linux平台的<code>/bin/sh -c</code> 或 windows平台的<code>cmd /S /S</code>执行命令</li>
@@ -1795,7 +1793,7 @@
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>redis.tar.gz<span class="w"> </span><span class="s2">&quot;http://download.redis.io/releases/redis-5.0.3.tar.gz&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>redis.tar.gz
 </code></pre></div></td></tr></table></div>
-<h3 id="expose">EXPOSE<a class="headerlink" href="#expose" title="Permanent link">&para;</a></h3>
+<h5 id="expose">EXPOSE<a class="headerlink" href="#expose" title="Permanent link">#</a></h5>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">&lt;port&gt; [&lt;port&gt;/&lt;protocol&gt;...]</span>
 </code></pre></div></td></tr></table></div>
 <p><code>EXPOSE</code>指令通知 Docker , 容器在运行时侦听指定的网络端口。可以指定端口是监听TCP还是UDP，如果不指定协议，默认为TCP。</p>
@@ -1810,7 +1808,7 @@
 <blockquote>
 <p><mark>docker network</mark> 命令支持创建用于容器间通信的网络，而无需公开或发布特定端口，因为接到该网络的容器可以通过任何端口相互通信。</p>
 </blockquote>
-<h3 id="env">ENV<a class="headerlink" href="#env" title="Permanent link">&para;</a></h3>
+<h5 id="env">ENV<a class="headerlink" href="#env" title="Permanent link">#</a></h5>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">ENV</span><span class="w"> </span>&lt;key&gt;<span class="o">=</span>&lt;value&gt;<span class="w"> </span>...
 </code></pre></div></td></tr></table></div>
 <p><code>ENV</code>设置环境变量，用在后续构建阶段的环境中，也用在许多变量内联替换中。</p>
@@ -1818,7 +1816,7 @@
 <p>如果仅在构建阶段使用到这个变量，而不是在最终的镜像中，可以在单个命令中设置该值，而非设置成环境变量。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">RUN</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>...
 </code></pre></div></td></tr></table></div>
-<h3 id="cmd">CMD<a class="headerlink" href="#cmd" title="Permanent link">&para;</a></h3>
+<h5 id="cmd">CMD<a class="headerlink" href="#cmd" title="Permanent link">#</a></h5>
 <p>一个<code>Dockerfile</code>只能指定一个<code>CMD</code>指令，若是有多个<code>CMD</code>指令，只有最后一个是生效的。<code>CMD</code>指令的目的是为了给“执行容器”一个默认的执行程序。</p>
 <p><code>CMD</code> 指令有三种形式：</p>
 <ul>
@@ -1826,7 +1824,7 @@
 <li><code>CMD ["param1","param2"]</code>（作为 ENTRYPOINT 的默认参数）</li>
 <li><code>CMD command param1 param2</code>（shell 形式）</li>
 </ul>
-<h3 id="entrypoint">ENTRYPOINT<a class="headerlink" href="#entrypoint" title="Permanent link">&para;</a></h3>
+<h5 id="entrypoint">ENTRYPOINT<a class="headerlink" href="#entrypoint" title="Permanent link">#</a></h5>
 <p>ENTRYPOINT有两种形式：</p>
 <p>优先选用EXEC形式：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;executable&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param2&quot;</span><span class="p">]</span>
@@ -1866,7 +1864,7 @@
 <blockquote>
 <p>如果CMD是在基础镜像中定义的，ENTRYPOINT将会重置CMD。在这种情况下，CMD必须在当前镜像中重新定义一个新值。</p>
 </blockquote>
-<h2 id="_1">影响镜像大小的原因<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h4 id="_1">影响镜像大小的原因<a class="headerlink" href="#_1" title="Permanent link">#</a></h4>
 <ul>
 <li>选择的基础镜像的大小会影响定制镜像的大小</li>
 </ul>
