@@ -29,3 +29,4 @@
 - [ ] gitbook 样式
 - [ ] mint 样式
 - [ ] 代码块字体设置 `Fira Code`. 
+- [ ] 主页间距修改，home.html 重写，文字左下或左居中

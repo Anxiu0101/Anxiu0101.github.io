@@ -57,7 +57,7 @@ Commands:
 
 - `mkdocs new [dir-name]` - Create a new project. 创建新项目文件，生成项目的空白布局，其中 `mkdocs.yml` 是站点的配置文件，`docs/` 目录是文档的根目录。
   
-  ```python
+  ```powershell
   (venv) PS X:\example\site> tree /f
   # Project layout
   mkdocs.yml		# The configuration file.
@@ -84,9 +84,9 @@ PS X:\anxiu> cd .\site\
 ```
 
 ???
-我推荐使用 python 的 virtual environment 功能做到环境的隔离，方便排查包括依赖版本之类的问题，详细内容可以查看 [Python-venv](docs/cs/lang/py/Python-venv.md)，
+我推荐使用 python 的 virtual environment 功能做到环境的隔离，方便排查包括依赖版本之类的问题，详细内容可以查看 [Python-venv](../../cs/lang/py/Python-venv.md)，
 
-```python
+```powershell
 # 创建虚拟环境，
 PS X:\anxiu\site> python -m venv .\venv
 
@@ -162,7 +162,7 @@ mkdocs gh-deploy
 
 > TODO fill with this part of content. mainly related to the `mkdocs.yml` file and material t
 
-```python
+```shell
 pip install mkdocs-material
 pip install mkdocs-glightbox
 pip install mkdocs-rss-plugin
@@ -180,16 +180,55 @@ Required dependencies of "social" plugin not found. Install with: pip install pi
 
 这涉及到图片生成这个功能，而它需要两个相应的包 `pillow` 和 `cairosvg` 从而正常工作。[官网相应部分](https://squidfunk.github.io/mkdocs-material/plugins/requirements/image-processing/)提到了这个问题，解决方式就是直接执行如下指令，安装依赖包即可，
 
-```powershell
+```shell
 pip install "mkdocs-material[imaging]"
 ```
 当然你也可以根据报错信息分别安装对应包，两个方式没有区别。
 
 ### i18n
 
-```powershell
+```shell
 pip install mkdocs[i18n]
 ```
+
+
+
+
+
+## Writing Tips
+
+遇到了一个很愚蠢的问题，下文中`mkdocs` 的文档内容描述了 `mkdocs` 设定文章标题的顺序，
+
+> ### Meta-Data
+>
+> ### 元数据
+>
+> MkDocs包括支持YAML和MultiMarkdown两种样式的元数据（通常称为前端内容）。元数据由Markdown文档开头定义的一系列关键字和值组成，这些关键字和值在Python-Markdown处理之前从文档中删除。键/值对由MkDocs传递给页面模板。 因此，如果主题支持，则任何键的值都可以显示在页面上或用于控制页面呈现。有关可能支持哪些关键字的详细信息，请参阅相应的主题支持文档（如果有）。
+>
+> 除了在模板中显示信息之外，MkDocs还支持一些预定义的元数据键，这些键可以改变该特定页面的MkDoc的行为。支持以下键：
+>
+> - `template`:
+>
+>   The template to use with the current page.
+>
+>   用于当前页面的模板。默认情况下，MkDocs使用主题的`main.html`模板来呈现Markdown页面。您可以使用`template`元数据键为该特定页面定义不同的模板文件。模板文件必须在主题环境中定义的路径上可用。
+>
+> - `title`:
+>
+>   用于文档的“标题”。MkDocs将尝试按以下方式确定文档的标题：
+>
+>   1. 在文档的[nav](https://hellowac.github.io/mkdocs-docs-zh/user-guide/configuration/#nav)配置设置中定义的标题。
+>   2. 在文档的“title”元数据键中定义的标题。
+>   3. 文档正文第一行上的1级Markdown标题。
+>   4. 文档的文件名。
+>
+>   在找到页面的标题后，MkDoc不会继续检查上面列表中的任何其他来源。
+
+而这个顺序引发了一个问题，我所有使用 meta-data 的文章，将不存在正文第一行的1级 Markdown 标题，而导致 `mkdocs` 将文档文件名读取作为一级标题并将原文里所有标题的层级都顺延一层。
+
+这导致了我必须在所有 `index.md` 中的元数据设置它们的标题，并删除原文中的一级标题，只能说这个设计非常不合理。希望之后能写个插件修改逻辑，使得读取的第三顺位目标变为：“文档第一行上的1级 Markdown 标题或是元数据后紧接的1级 Markdown 标题”。
+
+
 
 
 

@@ -43,7 +43,7 @@ theme:
 markdown_extensions:
   - toc:
       permalink: "#"
-      baselevel: 3
+      baselevel: 4
       separator: "-"
   - meta
   - def_list
@@ -117,7 +117,6 @@ plugins:
   - search:
       lang:
         - en
-        - ja
       separator: '[\s\u200b\-]'
   - social
   - offline
@@ -127,7 +126,7 @@ plugins:
 
 nav:
 - Home:
-  - index.md
+  - Hello,<br/>I'm Anxiu: index.md
 - Computer-Sci:
   - cs/index.md
 # — 编程语言 —————————————————————————————————————————————————————

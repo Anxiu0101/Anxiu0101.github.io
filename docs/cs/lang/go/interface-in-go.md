@@ -3,9 +3,6 @@ title: 'Interface and Type Assertion in Golang'
 date: 2022-08-06 15:52:18
 tags: [Code,Golang]
 published: true
-hideInList: false
-feature: 
-isTop: false
 ---
 本文用于记录 Go 语言的接口机制和断言机制
 <!--more-->

@@ -1,10 +1,6 @@
 # Raft：一个更易理解的共识算法
 
-
-
 ## 复制状态机
-
-
 
 复制状态机（Replicated state machine）的概念
 
