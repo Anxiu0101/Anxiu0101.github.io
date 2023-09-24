@@ -1,14 +1,13 @@
 ---
-title: Hello,<br/> I'm Anxiu.
+title: Hello,<br/>I'm Anxiu.
 statistics: true
 hide:
 - navigation
 - toc
 ---
 
-
-Gopher, also interesting in ML/IOT/Security Tech.<br/>
-Currently studying at MIEC, FZU.<br/>
+Gopher, also interesting in **ML/IOT/Security** Tech.<br/>
+Currently studying at MIEC, **FZU**.<br/>
 That's creating some interesting projects!
 
 

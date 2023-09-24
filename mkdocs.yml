@@ -126,7 +126,7 @@ plugins:
 
 nav:
 - Home:
-  - Hello,<br/>I'm Anxiu: index.md
+  - index.md
 - Computer-Sci:
   - cs/index.md
 # — 编程语言 —————————————————————————————————————————————————————
@@ -137,7 +137,7 @@ nav:
       - Interface in Go: cs/lang/go/interface-in-go.md
 # — 算法原理 —————————————————————————————————————————————————————
   - Algorithm:
-      - Raft distributed Algorithm: cs/algorithm/raft.md
+      - Raft Algorithm: cs/algorithm/raft.md
 - Web-Development:
     - web/index.md
 # — 部署记录与一些开发工具的使用 —————————————————————————————————————
@@ -168,5 +168,5 @@ nav:
 #      - cv.pdf
 # — 建站记录 ——————————————————————————————————————————————————————
   - Blog Build:
-    - oth/blog/Markdown-Grammar.md
-    - oth/blog/Build your personal MkDocs Site.md
+    - Markdown 语法测试: oth/blog/Markdown-Grammar.md
+    - Mkdocs 建站指南: oth/blog/Build your personal MkDocs Site.md

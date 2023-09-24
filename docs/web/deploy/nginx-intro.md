@@ -1,6 +1,5 @@
-# Nginx using Intro
-
 笔者作为一个前端新手，正在为项目搭建环境。此帖记录了一些 Nginx 配置的相关过程。环境为阿里云的 Alibaba Cloud Linux 3.2104 LTS 64位，兼容 CentOS。
+<!--more-->
 
 ## 简单介绍 Basic Knowledge
 

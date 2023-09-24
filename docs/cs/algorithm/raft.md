@@ -1,4 +1,5 @@
-# Raft：一个更易理解的共识算法
+Raft: A easier understanded Publicity Algorithm
+<!--more-->
 
 ## 复制状态机
 

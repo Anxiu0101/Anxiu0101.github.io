@@ -1,7 +1,5 @@
----
-theme: channing-cyan
----
-# Using Docker in Development Env 
+Using Docker in Development Env 
+<!--more-->
 
 > Ref: 
 >

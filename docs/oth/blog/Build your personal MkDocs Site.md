@@ -1,6 +1,5 @@
-# Build your MkDocs Site
-
 Mkdocs 是一个使用 python 编写的静态博客生成软件，相比于 `hugo`，`hexo `等，更加满足我的需求。相对来说，`Mkdocs `会比前面二者更加简洁，上手难度应该也会更低一点。
+<!--more-->
 
 ## Installation
 
@@ -224,9 +223,14 @@ pip install mkdocs[i18n]
 >
 >   在找到页面的标题后，MkDoc不会继续检查上面列表中的任何其他来源。
 
-而这个顺序引发了一个问题，我所有使用 meta-data 的文章，将不存在正文第一行的1级 Markdown 标题，而导致 `mkdocs` 将文档文件名读取作为一级标题并将原文里所有标题的层级都顺延一层。
+`mkdocs` 对于中文的支持不完善，如果标题为中文或是携带影响识别的字符的情况下，`mkdocs` 将会无法识别一级标题然后以文档的文件名作为标题，并出现重复一级标题以及样式混乱的结果。
 
-这导致了我必须在所有 `index.md` 中的元数据设置它们的标题，并删除原文中的一级标题，只能说这个设计非常不合理。希望之后能写个插件修改逻辑，使得读取的第三顺位目标变为：“文档第一行上的1级 Markdown 标题或是元数据后紧接的1级 Markdown 标题”。
+浏览了一些讨论，我最终决定将所有的文章一级标题删除，修改为使用摘要作为开头的形式来规避这样的问题。
+
+> [!cite]
+>
+> - [How to hide page title? · mkdocs/mkdocs · Discussion #2431 (github.com)](https://github.com/mkdocs/mkdocs/discussions/2431)
+> - [markdown - mkdocs nav title different from page title - Stack Overflow](https://stackoverflow.com/questions/60215601/mkdocs-nav-title-different-from-page-title)
 
 
 
@@ -261,3 +265,10 @@ https://github.com/squidfunk/mkdocs-material
 [TonyCrane/note: TonyCrane's Public Notebook (github.com)](https://github.com/TonyCrane/note)
 
 https://www.cnblogs.com/yang877/p/5860798.html
+
+
+
+## Reference
+
+- [MkDocs中文文档 (hellowac.github.io)](https://hellowac.github.io/mkdocs-docs-zh/)
+- [MkDocs 文档 (wdk-docs.github.io)](https://wdk-docs.github.io/mkdocs-docs/)
