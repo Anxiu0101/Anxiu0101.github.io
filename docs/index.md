@@ -1,5 +1,8 @@
 ---
 statistics: true
+hide:
+#  - navigation
+  - toc
 ---
 
 # Hello,<br/> I'm Anxiu.

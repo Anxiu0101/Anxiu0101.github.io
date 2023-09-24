@@ -42,8 +42,9 @@ theme:
 
 markdown_extensions:
   - toc:
-      permalink: true
-      toc_depth: 4
+      permalink: "#"
+      baselevel: 3
+      separator: "-"
   - meta
   - def_list
   - attr_list
@@ -96,7 +97,7 @@ extra:
 #    property: G-DYETCPM289
 
 extra_css:
-  - stylesheets/childpage_card_grid.css
+#  - stylesheets/childpage_card_grid.css
   - stylesheets/tasklist.css
   - stylesheets/custom.css
   - stylesheets/card.css

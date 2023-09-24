@@ -13,11 +13,19 @@
 
 ## TODO List
 
-- code block copy
+- [x] code block copy
 - 可折叠 quota
-- 前后页
+- [x] 数学公式支持
+- [x] 前后页
 - git talk
-- GitHub page 配置
+- [x] GitHub page 配置
 - RSS 插件 warming log 消除
 - 主页配置
+  - [x] 基础文字补充
+  - [ ] 卡片化
+  - [ ] Navigation 关闭
 - 通讯卡片配置
+- 编辑跳转
+- [ ] gitbook 样式
+- [ ] mint 样式
+- [ ] 代码块字体设置 `Fira Code`. 

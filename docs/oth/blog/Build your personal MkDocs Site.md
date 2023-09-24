@@ -185,6 +185,12 @@ pip install "mkdocs-material[imaging]"
 ```
 当然你也可以根据报错信息分别安装对应包，两个方式没有区别。
 
+### i18n
+
+```powershell
+pip install mkdocs[i18n]
+```
+
 
 
 ## Plugins
