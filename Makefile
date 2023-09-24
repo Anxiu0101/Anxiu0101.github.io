@@ -7,7 +7,7 @@ run_client:
 	mkdocs build
 
 .PHONY: update
-run_server:
+update:
 	mkdocs gh-deploy
 
 # Service: MkDocs Static Website Generator.
