@@ -1680,11 +1680,11 @@
 <p>本文用于记录 Go 语言的接口机制和断言机制</p>
 <!--more-->
 
-<h4 id="interface">Interface 接口<a class="headerlink" href="#interface" title="Permanent link">#</a></h4>
+<h5 id="interface">Interface 接口<a class="headerlink" href="#interface" title="Permanent link">#</a></h5>
 <p>Go 语言是一门鸭子类型的语言，没有类似于 Java 一样的 <code>implements</code> 关键字，而是在编译期间隐式指定。只要一个结构体能够想鸭子一样跑，像鸭子一样叫，那这个结构体就是鸭子。</p>
-<h4 id="type-assertion">Type Assertion 类型断言<a class="headerlink" href="#type-assertion" title="Permanent link">#</a></h4>
+<h5 id="type-assertion">Type Assertion 类型断言<a class="headerlink" href="#type-assertion" title="Permanent link">#</a></h5>
 <p>类型断言（Type Assertion）是一个使用在接口值上的操作，用于检查接口类型变量所持有的值是否实现了期望的接口或者具体的类型。</p>
-<h4 id="_1">开发中遇到的简单例子<a class="headerlink" href="#_1" title="Permanent link">#</a></h4>
+<h5 id="_1">开发中遇到的简单例子<a class="headerlink" href="#_1" title="Permanent link">#</a></h5>
 <p>我们有三种 <code>user</code>，分别为 <code>teacher</code> <code>studnet</code> <code>parent</code>，让这三种用户都实现 <code>user</code> 接口，就能进行类似泛型的使用。</p>
 <p>时至今日，还是不敢让泛型上开发环境，继续观望一下</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -1722,7 +1722,7 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>不知道我这样的写法正不正常，仅作记录</p>
-<h5 id="_2">需要注意的点<a class="headerlink" href="#_2" title="Permanent link">#</a></h5>
+<h6 id="_2">需要注意的点<a class="headerlink" href="#_2" title="Permanent link">#</a></h6>
 <p>定义接口后，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>

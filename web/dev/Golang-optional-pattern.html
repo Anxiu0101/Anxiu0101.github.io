@@ -1715,11 +1715,11 @@
 <p>函数选项器模式是 Go 开发中经常使用的一种方式，可以更加便捷地整合配置信息，适用于可选项配置中。</p>
 <!--more-->
 
-<h3 id="golang-">GOLANG-选项模式<a class="headerlink" href="#golang-" title="Permanent link">#</a></h3>
+<h4 id="golang-">GOLANG-选项模式<a class="headerlink" href="#golang-" title="Permanent link">#</a></h4>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 710 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 269 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 6 分钟</p>
 </div>
-<h4 id="_1">初遇函数式选项模式<a class="headerlink" href="#_1" title="Permanent link">#</a></h4>
+<h5 id="_1">初遇函数式选项模式<a class="headerlink" href="#_1" title="Permanent link">#</a></h5>
 <p>第一次在应用中接触到 go 的选项模式是在 gRPC 入门学习时，开启 gRPC 服务端和客户端时使用的 <code>grpc.ServerOption</code> 以及 <code>grpc.DialOption</code> 这两个选项。</p>
 <blockquote>
 <p>The Go (Golang) Functiona Options Pattern is a way, a pattern of structuring your structs in Go by designing a very expressive and flexible set of APIs that will help with the configuration and initialisation of your struct.
@@ -1787,7 +1787,7 @@ Go 函数式选项模式 是一种在 Go 中构建结构的模式，它通过设
 </code></pre></div></td></tr></table></div>
 <p>可以看到我新建了一个服务器选项切片 <mark>ServerOption Slice</mark>，在每次调取函数设置选项后将选项插入到选项切片中，并在最后创建 gRPC 服务时传入该选项切片。</p>
 <p>这样使得代码结构可读性更高。</p>
-<h4 id="_2">选项模式结构<a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
+<h5 id="_2">选项模式结构<a class="headerlink" href="#_2" title="Permanent link">#</a></h5>
 <p>看以下来自 <a href="https://golang.cafe/blog/golang-functional-options-pattern.html">Golang Functional Options Pattern | Golang Cafe</a> 中的代码，</p>
 <p>我们首先为 Server 创建一个构造函数，函数参数为不定参数类型的 Server 方法函数，返回一个 Server 类型的指针。然后为 Server 的字段建立名为 <code>Withxxx</code> 的函数</p>
 <blockquote>
@@ -2044,14 +2044,14 @@ Go 函数式选项模式 是一种在 Go 中构建结构的模式，它通过设
 <p>同时，我们还定义了一个 <code>ServerOption</code> 接口和一个实现该接口的 <code>FuncServerOption</code> 结构。它们的作用是允许我们通过 <code>apply</code> 方法为 <code>ServerOptions</code> 结构单独配置一个参数。</p>
 <p>我们可以为每个默认参数定义一个 <code>WithXXX</code> 函数来配置参数，比如这里定义的 <code>WithHost</code> 和 <code>WithPort</code>，这样用户就可以通过调用 <code>WithXXX</code> 函数来自定义需要覆盖的默认参数。</p>
 <p>这时候在构造函数 <code>NewServer</code> 中定义了默认参数。构造函数接收一个变长参数，类型为 <code>ServerOption</code>。在构造函数内部，通过for循环调用每个传入的 <code>ServerOption</code> 对象的apply方法，将用户配置的参数依次赋值给构造函数内部的默认参数对象 options，替换默认参数。执行完 for 循环后，得到的 options 对象就是最终的配置。依次将其属性分配给 Server 以生成新对象。</p>
-<h4 id="attachment">Attachment<a class="headerlink" href="#attachment" title="Permanent link">#</a></h4>
+<h5 id="attachment">Attachment<a class="headerlink" href="#attachment" title="Permanent link">#</a></h5>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>├─server
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>│<span class="w">  </span>└─server.go
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>└─main.go
 </code></pre></div></td></tr></table></div>
-<h5 id="servergo">server.go<a class="headerlink" href="#servergo" title="Permanent link">#</a></h5>
+<h6 id="servergo">server.go<a class="headerlink" href="#servergo" title="Permanent link">#</a></h6>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -2242,7 +2242,7 @@ Go 函数式选项模式 是一种在 Go 中构建结构的模式，它通过设
 <a id="__codelineno-4-94" name="__codelineno-4-94"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;Error&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-95" name="__codelineno-4-95"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h5 id="maingo">main.go<a class="headerlink" href="#maingo" title="Permanent link">#</a></h5>
+<h6 id="maingo">main.go<a class="headerlink" href="#maingo" title="Permanent link">#</a></h6>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
