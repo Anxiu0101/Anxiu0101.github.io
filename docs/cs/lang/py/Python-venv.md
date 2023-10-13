@@ -6,7 +6,7 @@ published: true
 ---
 
 `venv`  是 python 中搭建虚拟环境的一个工具，是 python virtual environments 特性中的一部分，有时也会被缩写成 `virtualenv` 
-  
+
 ```ad-note
 Python virtual environments allow you to install Python packages in an isolated location from the rest of your system instead of installing them system-wide. Let’s look at how to use the Python venv, short for Python virtual environment, also abbreviated as _virtualenv_.
 ```
@@ -106,8 +106,24 @@ source myvenv/bin/activate
 deactivate
 ```
 
+
+
+## Migration of venv
+
+<!--update--time: 2023-10-05---->
+
+python 的虚拟环境中，启动脚本例如 `Activate.ps1` 以及 `Activate` 配置文件中均将虚拟环境的绝对路径写入启动脚本中，导致如果文件名进行了变更，将难以正常使用。例如，
+```powershell
+PS D:\Software\Vizro> .\venv\Scripts\Activate.ps1
+(venv) PS D:\Software\Vizro> pip install vizro
+Fatal error in launcher: Unable to create process using '"D:\Software\pylib\venv\Scripts\python.exe"  "D:\Software\Vizro\venv\Scripts\pip.exe" install vizro': ???????????
+```
+
+
+
 ```ad-quote
 title: 参考资料
 - [Python venv: How To Create, Activate, Deactivate, And Delete • Python Land Tutorial](https://python.land/virtual-environments/virtualenv)
 - [为python项目配置专属虚拟环境 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/463314523)
+- https://blog.csdn.net/daxia5398/article/details/123330477
 ```

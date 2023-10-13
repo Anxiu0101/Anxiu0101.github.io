@@ -110,7 +110,7 @@ extra_javascript:
   - javascripts/mathjax.js
 
 plugins:
-  - rss
+  # - rss
   - glightbox:
       width: 80%
   - statistics
@@ -122,7 +122,7 @@ plugins:
   - offline
   - tags
 #  - info
-  - git-revision-date-localized
+  # - git-revision-date-localized
 
 nav:
 - Home:
