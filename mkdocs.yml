@@ -41,11 +41,12 @@ theme:
         name: Light
 
 markdown_extensions:
-  - toc:
+  - toc:                  # Table of Content
       permalink: "#"
       baselevel: 4
       separator: "-"
-  - meta
+      # slugify: !!python/name:pymdownx.slugs.uslugify
+  - meta                  # file metadata support
   - def_list
   - attr_list
   - md_in_html
@@ -56,10 +57,11 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
+  - pymdownx.mark         # text highlight
+  - pymdownx.tilde        # remove line support
+  - pymdownx.caret        # underline support
   - pymdownx.critic
-  - pymdownx.details
+  - pymdownx.details       # Admonition fold support
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.magiclink
@@ -87,17 +89,18 @@ extra:
       link: https://github.com/Anxiu0101
     - icon: fontawesome/solid/rss
       link: https://rss.anxiu.cloud
+    - icon: fontawesome/brands/researchgate
+      link: https://www.researchgate.net/profile/Yuchen-Fang-13
     - icon: fontawesome/solid/inbox
       link: mailto:anxiu.fyc@foxmail.com
   link:
     - icon: fontawesome/solid/home
-      link: https://anxiu0101.github.io
+      link: https://anxiu0101.github.io/note
 #  analytics:
 #    provider: custom
 #    property: G-DYETCPM289
 
 extra_css:
-#  - stylesheets/childpage_card_grid.css
   - stylesheets/tasklist.css
   - stylesheets/custom.css
   - stylesheets/card.css
@@ -113,7 +116,7 @@ plugins:
   # - rss
   - glightbox:
       width: 80%
-  - statistics
+  # - statistics
   - search:
       lang:
         - en

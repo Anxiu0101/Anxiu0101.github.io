@@ -1,13 +1,13 @@
 .PHONY: run
 run:
-	mkdocs serve
+	poetry run mkdocs serve
 
 .PHONY: build
 run_client:
-	mkdocs build
+	poetry run mkdocs build
 
 .PHONY: update
 update:
-	mkdocs gh-deploy
+	poetry run mkdocs gh-deploy
 
 # Service: MkDocs Static Website Generator.

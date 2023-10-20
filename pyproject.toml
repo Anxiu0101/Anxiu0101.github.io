@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "github-com/anxiu0101/note"
 version = "0.1.0"
-description = ""
+description = "The Anxiu's Personal Website Build by Mkdocs Material."
 authors = ["Anxiu <anxiu.fyc@foxmail.com>"]
 license = "Apache 2.0"
 readme = "README.md"

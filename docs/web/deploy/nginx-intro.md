@@ -114,7 +114,7 @@ server {
     
     # default index page config in vue.
     location / { 
-        try_files $uri $uri/ /index.html; 
+        try_files $uri $uri/ /index.md; 
     }
 
     error_page 404 /404.html;
@@ -137,3 +137,4 @@ server {
 >
 > - [ ] [前端Vue项目打包部署实战教程 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/431796992)
 > - [ ] [nginx安装及其配置详细教程 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/83890573)
+> - [ ] [Using NGINX as API Gateway. Hi everyone! | by Marcos Pereira Júnior | Medium (marcospereirajr.com.br)](https://marcospereirajr.com.br/using-nginx-as-api-gateway-7bebb3614e48)

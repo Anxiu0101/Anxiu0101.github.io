@@ -1,8 +1,11 @@
 # IOS storage file
 .DS_Store
 
+# Dependencies
 # python virtual environment
 /venv
+# npm package
+/node_modules
 
 # IDE index files
 /.idea
