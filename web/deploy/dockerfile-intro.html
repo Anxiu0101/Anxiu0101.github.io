@@ -1795,63 +1795,60 @@
 <ul>
 <li>shell: 使用 Linux平台的<code>/bin/sh -c</code> 或 windows平台的<code>cmd /S /S</code>执行命令</li>
 </ul>
-<p>```dockerfile
-  RUN &lt;命令行命令&gt;
-  # &lt;命令行命令&gt; 等同于，在终端操作的 shell 命令。</p>
-<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1666 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 30 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 6 分钟</p>
-</div>
-<p>```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">RUN</span><span class="w"> </span>&lt;命令行命令&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c"># &lt;命令行命令&gt; 等同于，在终端操作的 shell 命令。</span>
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>exec</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">RUN</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;可执行文件&quot;</span>,<span class="w"> </span><span class="s2">&quot;参数1&quot;</span>,<span class="w"> </span><span class="s2">&quot;参数2&quot;</span><span class="o">]</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c"># 例如：RUN [&quot;./test.php&quot;, &quot;dev&quot;, &quot;offline&quot;] 等价于 RUN ./test.php dev offline</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">RUN</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;可执行文件&quot;</span>,<span class="w"> </span><span class="s2">&quot;参数1&quot;</span>,<span class="w"> </span><span class="s2">&quot;参数2&quot;</span><span class="o">]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c"># 例如：RUN [&quot;./test.php&quot;, &quot;dev&quot;, &quot;offline&quot;] 等价于 RUN ./test.php dev offline</span>
 </code></pre></div></td></tr></table></div>
 <p>Dockerfile 的指令每执行一次都会在 docker 上新建一层。过多无意义的层，会造成镜像膨胀过大。所以可以将部分指令进行简化，合并到同一层，</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>FROM<span class="w"> </span>centos
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>RUN<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>wget
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>RUN<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>redis.tar.gz<span class="w"> </span><span class="s2">&quot;http://download.redis.io/releases/redis-5.0.3.tar.gz&quot;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>RUN<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>redis.tar.gz
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1"># Simplified</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>FROM<span class="w"> </span>centos
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>RUN<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>wget<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>redis.tar.gz<span class="w"> </span><span class="s2">&quot;http://download.redis.io/releases/redis-5.0.3.tar.gz&quot;</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>redis.tar.gz
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>FROM<span class="w"> </span>centos
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>RUN<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>wget
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>RUN<span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>redis.tar.gz<span class="w"> </span><span class="s2">&quot;http://download.redis.io/releases/redis-5.0.3.tar.gz&quot;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>RUN<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>redis.tar.gz
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1"># Simplified</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>FROM<span class="w"> </span>centos
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>RUN<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>wget<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>wget<span class="w"> </span>-O<span class="w"> </span>redis.tar.gz<span class="w"> </span><span class="s2">&quot;http://download.redis.io/releases/redis-5.0.3.tar.gz&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>redis.tar.gz
 </code></pre></div></td></tr></table></div>
 <h6 id="expose">EXPOSE<a class="headerlink" href="#expose" title="Permanent link">#</a></h6>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">&lt;port&gt; [&lt;port&gt;/&lt;protocol&gt;...]</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">&lt;port&gt; [&lt;port&gt;/&lt;protocol&gt;...]</span>
 </code></pre></div></td></tr></table></div>
 <p><code>EXPOSE</code>指令通知 Docker , 容器在运行时侦听指定的网络端口。可以指定端口是监听TCP还是UDP，如果不指定协议，默认为TCP。</p>
 <p>该<code>EXPOSE</code>指令实际上并未暴露端口。它充当构建镜像的人和运行容器的人之间的一种文档，关于打算暴露哪些端口。要在运行容器时实际暴露端口，请在<code>docker run</code>中使用<code>-p</code>标志 来暴露和映射一个或多个端口，或者使用<code>-P</code>标志来发布所有暴露的端口并将它们映射到高阶端口。EXPOSE默认使用TCP，也能手动指定UDP。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80/tcp</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80/udp</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80/tcp</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80/udp</span>
 </code></pre></div></td></tr></table></div>
 <p>无论<code>EXPOSE</code>设置的如何，在运行时都可以用<code>-p</code>覆盖它们。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w"> </span>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80/tcp<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80/udp<span class="w"> </span>...
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w"> </span>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80/tcp<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80/udp<span class="w"> </span>...
 </code></pre></div></td></tr></table></div>
 <blockquote>
 <p><mark>docker network</mark> 命令支持创建用于容器间通信的网络，而无需公开或发布特定端口，因为接到该网络的容器可以通过任何端口相互通信。</p>
 </blockquote>
 <h6 id="env">ENV<a class="headerlink" href="#env" title="Permanent link">#</a></h6>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">ENV</span><span class="w"> </span>&lt;key&gt;<span class="o">=</span>&lt;value&gt;<span class="w"> </span>...
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">ENV</span><span class="w"> </span>&lt;key&gt;<span class="o">=</span>&lt;value&gt;<span class="w"> </span>...
 </code></pre></div></td></tr></table></div>
 <p><code>ENV</code>设置环境变量，用在后续构建阶段的环境中，也用在许多变量内联替换中。</p>
 <p>使用<code>ENV</code>设置的环境变量，将在容器运行时始终存在。使用命令<code>docker inspect</code>可以查看环境变量的值，也可以使用<code>docker run --env &lt;key&gt;=&lt;value&gt;</code>修改运行时的环境变量。</p>
 <p>如果仅在构建阶段使用到这个变量，而不是在最终的镜像中，可以在单个命令中设置该值，而非设置成环境变量。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">RUN</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>...
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">RUN</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>...
 </code></pre></div></td></tr></table></div>
 <h6 id="cmd">CMD<a class="headerlink" href="#cmd" title="Permanent link">#</a></h6>
 <p>一个<code>Dockerfile</code>只能指定一个<code>CMD</code>指令，若是有多个<code>CMD</code>指令，只有最后一个是生效的。<code>CMD</code>指令的目的是为了给“执行容器”一个默认的执行程序。</p>
@@ -1864,10 +1861,10 @@
 <h6 id="entrypoint">ENTRYPOINT<a class="headerlink" href="#entrypoint" title="Permanent link">#</a></h6>
 <p>ENTRYPOINT有两种形式：</p>
 <p>优先选用EXEC形式：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;executable&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param2&quot;</span><span class="p">]</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;executable&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param2&quot;</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>shell形式：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="nb">command</span><span class="w"> </span>param1<span class="w"> </span>param2
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="nb">command</span><span class="w"> </span>param1<span class="w"> </span>param2
 </code></pre></div></td></tr></table></div>
 <p><code>ENTRYPOINT</code>允许你将容器配置成是“可执行”的。</p>
 <p><code>docker run &lt;image&gt;</code>的命令行参数将会附加到exec形式的<code>ENTRYPOINT</code>后面，同时也会覆盖所有<code>CMD</code>指令参数。例如，<code>docker run &lt;image&gt; -d</code>中的<code>-d</code>参数将会附加到entry point 后面。使用<code>docker run --entrypoint</code>标志可以覆盖<code>ENTRYPOINT</code>指令。</p>
@@ -1875,19 +1872,19 @@
 <p>若有多个<code>ENTRYPOINT</code>指令，只有最后一个是有效的。</p>
 <p><strong>Exec形式的ENTRYPOINT示例</strong></p>
 <p>使用exec形式的<code>ENTRYPOINT</code>设置固定的参数，使用<code>CMD</code>指令设置可更改的参数的默认值。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-b&quot;</span><span class="p">]</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-c&quot;</span><span class="p">]</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Docker</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-b&quot;</span><span class="p">]</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-c&quot;</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>默认执行<code>docker run &lt;image&gt;</code>执行的是<code>top -b -c</code>，而<code>docker run &lt;image&gt; -H</code>执行的是<code>top -b -H</code>.（<code>CMD</code>指令指定的参数被覆盖了）</p>
 <p><strong>Shell形式的ENTRYPOINT示例</strong></p>
 <p>shell形式的<code>ENTRYPOINT</code>指令将会在<code>/bin/sh -c</code>中执行。这种形式运行的程序将会忽略<code>CMD</code>和<code>docker run</code>指定的所有参数。</p>
 <p>为了保证收到<code>docker stop</code>的信号，命令可以以exec开头：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>FROM ubuntu
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>ENTRYPOINT exec top -b
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>FROM ubuntu
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>ENTRYPOINT exec top -b
 </code></pre></div></td></tr></table></div>
 <p>以exec开头的shell形式的<code>ENTRYPOINT</code>指令，PID仍然是1.</p>
 <p><strong>CMD和ENTRYPOINT交互</strong></p>
@@ -2050,6 +2047,17 @@
     
     <a href="https://rss.anxiu.cloud" target="_blank" rel="noopener" title="rss.anxiu.cloud" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64zm0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0zm32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.researchgate.net/profile/Yuchen-Fang-13" target="_blank" rel="noopener" title="www.researchgate.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg>
     </a>
   
     
