@@ -3,7 +3,7 @@ site_url: https://anxiu0101.github.io
 site_author: Anxiu
 site_description: 安修(Anxiu)的笔记站
 repo_name: Anxiu0101/note
-repo_url: https://github.com/Anxiu0101/note
+repo_url: https://github.com/Anxiu0101/Anxiu0101.github.io
 edit_uri: tree/master/docs
 copyright: Copyright &copy; 2023 <a href="https://github.com/Anxiu0101" target="_blank" rel="noopener">Anxiu</a>
 
@@ -116,12 +116,12 @@ plugins:
   # - rss
   - glightbox:
       width: 80%
-  # - statistics
+#  - statistics
   - search:
       lang:
         - en
       separator: '[\s\u200b\-]'
-  - social
+  # - social
   - offline
   - tags
 #  - info

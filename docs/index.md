@@ -1,14 +1,28 @@
 ---
-title: Hello,<br/>I'm Anxiu.
+title: Anxiu's Note
 # template: home.html
-# hide:
-# - navigation
+hide:
+- navigation
 # - toc
 ---
+
+![cover](.\assets\images\cover.png)
 
 Gopher, also interesting in **ML/IOT/Security** Tech.<br/>
 Currently studying at MIEC, **FZU**.<br/>
 That's creating some interesting projects!
+
+<style>
+    .md-typeset h1,
+    .md-content__inner.h1 {
+    	display: none;
+    }
+    .md-ellipsis {
+        font-weight: bold;
+    }
+</style>
+
+
 
 # Projects
 
@@ -108,8 +122,8 @@ That's creating some interesting projects!
 
 本站共有 {{ pages }} 个页面，{{ words }} 个字，{{ codes }} 行代码。
 
-[:octicons-info-16: 关于我](about/) /
-[:material-clock-time-two-outline: 最近更新](changelog/) /
+[:octicons-info-16: 关于我](about/index.md) /
+[:material-clock-time-two-outline: 最近更新](changelog/index.md) /
 [:material-chart-line: 站点统计](javascript:toggle_statistics();)
 
 
@@ -144,7 +158,7 @@ That's creating some interesting projects!
     }
 
     updateTime();
-
+    
     function toggle_statistics() {
         var statistics = document.getElementById("statistics");
         if (statistics.style.opacity == 0) {
