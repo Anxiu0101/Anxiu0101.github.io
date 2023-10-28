@@ -128,9 +128,8 @@ plugins:
 # - git-revision-date-localized
 
 nav:
-- Home:
-  - index.md
-- Computer-Sci:
+- index.md
+- Comp-Sci:
   - cs/index.md
 # — 编程语言 —————————————————————————————————————————————————————
   - Program Lang:
@@ -141,21 +140,21 @@ nav:
 # — 算法原理 —————————————————————————————————————————————————————
   - Algorithm:
       - Raft Algorithm: cs/algorithm/raft.md
-- Web-Development:
+- Web-Dev:
     - web/index.md
 # — 部署记录与一些开发工具的使用 —————————————————————————————————————
     - Deploy & Tools:
         - Config MySQL in Ubuntu: web/deploy/mysql-in-ubuntu.md
         - Nginx Introduction: web/deploy/nginx-intro.md
-        - 在 Docker 中配置 PostgreSQL: web/deploy/postgre-in-docker.md
+        - Config PostgreSQL in Docker: web/deploy/postgre-in-docker.md
         - Docker Introduction: web/deploy/docker-intro.md
         - Dockerfile Introduction: web/deploy/dockerfile-intro.md
-        - espanso simple use: web/deploy/espanso-intro.md
+        - Espanso simple use: web/deploy/espanso-intro.md
         - Systemctl Introduction: web/deploy/systemctl-intro.md
         - Config ssh in Win: web/deploy/win-ssh-config.md
 # — 开发记录 ——————————————————————————————————————————————————————
     - Development:
-        - Golang Optional Pattern: web/dev/Golang-optional-pattern.md
+        - Golang Optional Pattern: web/dev/golang-optional-pattern.md
         - Compiler a Go Project: web/dev/go-project-compiler.md
         - Use tencent SMS in Go: web/dev/golang-tencent-SMS.md
         - Gorm struct label Guide: web/dev/gorm-struct-label.md
@@ -167,8 +166,8 @@ nav:
     - rsc/sec/index.md
 - Others:
   - oth/index.md
-#  - Resume:
-#      - cv.pdf
+  # - Resume:
+  #   - cv.pdf
 # — 建站记录 ——————————————————————————————————————————————————————
   - Blog Build:
     - Markdown 语法测试: oth/blog/Markdown-Grammar.md
