@@ -46,6 +46,12 @@
     
     
       
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+Fira+Code:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, Fira Code";--md-code-font:"Fira Code"}</style>
+      
     
     
       <link rel="stylesheet" href="../../stylesheets/tasklist.css">
@@ -54,9 +60,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../stylesheets/flink.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/changelog_extra.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1659,7 +1665,7 @@
 <p>函数选项器模式是 Go 开发中经常使用的一种方式，可以更加便捷地整合配置信息，适用于可选项配置中。</p>
 <!--more-->
 
-<h5 id="_1">初遇函数式选项模式<a class="headerlink" href="#_1" title="Permanent link">#</a></h5>
+<h2 id="_1">初遇函数式选项模式<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>第一次在应用中接触到 go 的选项模式是在 gRPC 入门学习时，开启 gRPC 服务端和客户端时使用的 <code>grpc.ServerOption</code> 以及 <code>grpc.DialOption</code> 这两个选项。</p>
 <blockquote>
 <p>The Go (Golang) Functiona Options Pattern is a way, a pattern of structuring your structs in Go by designing a very expressive and flexible set of APIs that will help with the configuration and initialisation of your struct.
@@ -1727,7 +1733,7 @@ Go 函数式选项模式 是一种在 Go 中构建结构的模式，它通过设
 </code></pre></div></td></tr></table></div>
 <p>可以看到我新建了一个服务器选项切片 <mark>ServerOption Slice</mark>，在每次调取函数设置选项后将选项插入到选项切片中，并在最后创建 gRPC 服务时传入该选项切片。</p>
 <p>这样使得代码结构可读性更高。</p>
-<h5 id="_2">选项模式结构<a class="headerlink" href="#_2" title="Permanent link">#</a></h5>
+<h2 id="_2">选项模式结构<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>看以下来自 <a href="https://golang.cafe/blog/golang-functional-options-pattern.html">Golang Functional Options Pattern | Golang Cafe</a> 中的代码，</p>
 <p>我们首先为 Server 创建一个构造函数，函数参数为不定参数类型的 Server 方法函数，返回一个 Server 类型的指针。然后为 Server 的字段建立名为 <code>Withxxx</code> 的函数</p>
 <blockquote>
@@ -1984,14 +1990,14 @@ Go 函数式选项模式 是一种在 Go 中构建结构的模式，它通过设
 <p>同时，我们还定义了一个 <code>ServerOption</code> 接口和一个实现该接口的 <code>FuncServerOption</code> 结构。它们的作用是允许我们通过 <code>apply</code> 方法为 <code>ServerOptions</code> 结构单独配置一个参数。</p>
 <p>我们可以为每个默认参数定义一个 <code>WithXXX</code> 函数来配置参数，比如这里定义的 <code>WithHost</code> 和 <code>WithPort</code>，这样用户就可以通过调用 <code>WithXXX</code> 函数来自定义需要覆盖的默认参数。</p>
 <p>这时候在构造函数 <code>NewServer</code> 中定义了默认参数。构造函数接收一个变长参数，类型为 <code>ServerOption</code>。在构造函数内部，通过for循环调用每个传入的 <code>ServerOption</code> 对象的apply方法，将用户配置的参数依次赋值给构造函数内部的默认参数对象 options，替换默认参数。执行完 for 循环后，得到的 options 对象就是最终的配置。依次将其属性分配给 Server 以生成新对象。</p>
-<h5 id="attachment">Attachment<a class="headerlink" href="#attachment" title="Permanent link">#</a></h5>
+<h2 id="attachment">Attachment<a class="headerlink" href="#attachment" title="Permanent link">#</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>├─server
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>│<span class="w">  </span>└─server.go
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>└─main.go
 </code></pre></div></td></tr></table></div>
-<h6 id="servergo">server.go<a class="headerlink" href="#servergo" title="Permanent link">#</a></h6>
+<h3 id="servergo">server.go<a class="headerlink" href="#servergo" title="Permanent link">#</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -2182,7 +2188,7 @@ Go 函数式选项模式 是一种在 Go 中构建结构的模式，它通过设
 <a id="__codelineno-4-94" name="__codelineno-4-94"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;Error&quot;</span><span class="p">)</span>
 <a id="__codelineno-4-95" name="__codelineno-4-95"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h6 id="maingo">main.go<a class="headerlink" href="#maingo" title="Permanent link">#</a></h6>
+<h3 id="maingo">main.go<a class="headerlink" href="#maingo" title="Permanent link">#</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -2221,6 +2227,17 @@ Go 函数式选项模式 是一种在 Go 中构建结构的模式，它通过设
 <a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">   </span><span class="p">}</span><span class="w">  </span>
 <a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 31, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 

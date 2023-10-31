@@ -46,6 +46,12 @@
     
     
       
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+Fira+Code:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, Fira Code";--md-code-font:"Fira Code"}</style>
+      
     
     
       <link rel="stylesheet" href="../../../stylesheets/tasklist.css">
@@ -54,9 +60,9 @@
     
       <link rel="stylesheet" href="../../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/flink.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/changelog_extra.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1622,14 +1628,14 @@
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Python virtual environments allow you to install Python packages in an isolated location from the rest of your system instead of installing them system-wide. Let’s look at how to use the Python venv, short for Python virtual environment, also abbreviated as _virtualenv_.
 </code></pre></div></td></tr></table></div>
 <p>个人理解上，它的作用类似于前端项目中的 <code>node_module</code>，将依赖包安装到项目依赖路径下而不是系统依赖中。</p>
-<h5 id="install">Install<a class="headerlink" href="#install" title="Permanent link">#</a></h5>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">#</a></h2>
 <p>执行以下指令安装 python virtual environment，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
 </code></pre></div></td></tr></table></div>
 <p>也可以通过阿里云的镜像进行安装，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span> <span class="o">-</span><span class="n">i</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span> <span class="o">--</span><span class="n">trusted</span><span class="o">-</span><span class="n">host</span> <span class="n">mirrors</span><span class="o">.</span><span class="n">aliyun</span><span class="o">.</span><span class="n">com</span>
 </code></pre></div></td></tr></table></div>
-<h5 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">#</a></h5>
+<h2 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">#</a></h2>
 <p>以下是虚拟环境的简单使用，笔者使用的是 <code>win</code>，路径自己改改分隔符。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
@@ -1638,8 +1644,8 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1"># ./venv 为依赖创建的路径。</span>
 </code></pre></div></td></tr></table></div>
 <p>创建完成后，终端进入虚拟环境，使用 <code>.\venv\Scripts</code> 下的 <code>python.exe</code> 作为解释器。终端将会出现类似于 <code>(venv)</code> 的字样，显示已经进入虚拟环境中。</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071038311.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071038311.png" /></a></p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071039196.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071039196.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071038311.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image.png" loading="lazy" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071038311.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071039196.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image.png" loading="lazy" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071039196.png" /></a></p>
 <p>如果终端没有成功进入虚拟环境，可以使用 <code>venv</code> 生成的脚本进行启动，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
@@ -1736,7 +1742,7 @@
 <span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># 退出虚拟环境</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">deactivate</span>
 </code></pre></div></td></tr></table></div>
-<h5 id="migration-of-venv">Migration of venv<a class="headerlink" href="#migration-of-venv" title="Permanent link">#</a></h5>
+<h2 id="migration-of-venv">Migration of venv<a class="headerlink" href="#migration-of-venv" title="Permanent link">#</a></h2>
 <!--update--time: 2023-10-05---->
 
 <p>python 的虚拟环境中，启动脚本例如 <code>Activate.ps1</code> 以及 <code>Activate</code> 配置文件中均将虚拟环境的绝对路径写入启动脚本中，导致如果文件名进行了变更，将难以正常使用。例如，
@@ -1754,6 +1760,17 @@
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a>- [为python项目配置专属虚拟环境 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/463314523)
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>- https://blog.csdn.net/daxia5398/article/details/123330477
 </code></pre></div></td></tr></table></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 31, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 

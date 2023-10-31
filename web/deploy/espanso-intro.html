@@ -46,6 +46,12 @@
     
     
       
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+Fira+Code:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, Fira Code";--md-code-font:"Fira Code"}</style>
+      
     
     
       <link rel="stylesheet" href="../../stylesheets/tasklist.css">
@@ -54,9 +60,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../stylesheets/flink.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/changelog_extra.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1602,7 +1608,7 @@
 <p>Espanso 是一个好用的文本替换工具，你可以指定一些指令，在输入这些指令时，espanso 将会帮助你将这些指令替换成你指定的文本。</p>
 <!--more-->
 
-<h5 id="_1">开始使用<a class="headerlink" href="#_1" title="Permanent link">#</a></h5>
+<h2 id="_1">开始使用<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>Espanso 直接通过<a href="https://espanso.org/">官网</a>安装即可，提供了 win，macOS，Linux 系统的版本。</p>
 <p>鉴于 Espanso 的数字签名仍然相对较新，您可能会收到来自 Windows SmartScreen的警告。在这种情况下，只需单击 更多信息 <u>More info</u>，然后单击 无论如何运行 <u>Run anyway</u> 即可。</p>
 <p>安装完成后，在终端输入指令</p>
@@ -1636,7 +1642,7 @@
 <p>Anxiu</p>
 <p>例如你有很多邮箱，每次发给别人其中一个指定的邮箱地址都要打一长串，你就可以使用 trigger 去 match 一个，例如 <code>:gmail</code> -&gt; <code>exmaple@gmail.com</code>。</p>
 <p>现在你已经掌握了 espanso 的简单使用，当然它还有很多其他功能，但是这个最基础的 match 已经可以为我们提供很多帮助了。</p>
-<h5 id="package">Package 拓展<a class="headerlink" href="#package" title="Permanent link">#</a></h5>
+<h2 id="package">Package 拓展<a class="headerlink" href="#package" title="Permanent link">#</a></h2>
 <p>如果你认为一个一个指定 trigger 过于麻烦了，想要直接使用别人写好的 trigger。这当然是支持的！</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
@@ -1658,7 +1664,7 @@
 <p>你可以直接在 espanso hub 上搜索到它，复制指令并执行。你就可以通过简短的指令输出表情啦！</p>
 <p>😂</p>
 <p>安装包后，espanso 会自动更新配置，但是如果没有更新，请使用指令 <code>espanso restart</code> 进行指令的更新。</p>
-<h5 id="-">动态匹配-时间戳例子<a class="headerlink" href="#-" title="Permanent link">#</a></h5>
+<h2 id="-">动态匹配-时间戳例子<a class="headerlink" href="#-" title="Permanent link">#</a></h2>
 <p>你需要为每个要替换的问题指定一个指令，在 espanso 中称其为 trigger，也就是触发器。</p>
 <p>接下来我们来看看一个关于时间生成的触发器示例，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1695,6 +1701,17 @@
 <p>05/08/2023 14:16</p>
 <p>在输入 <code>:date</code> <code>:now</code> 指令时，espanso 将指令替换成 <code>{{date_now}}</code> 和 <code>{{time_now}}</code> 中的内容。这两个在 espanso 中被称作 <strong>variable</strong>，即<strong>变量</strong>。然后我们在下面指定拓展内容 <strong>extension</strong>，即 <code>var</code> 层级下的内容。包括变量名 <code>name</code>，变量类型 <code>type</code>，变量参数 <code>params</code>。这里是时间，使用内置的宏？进行时间格式的输出。</p>
 <p>更多内容请参考官方文档 <a href="https://espanso.org/docs/migration/overview/">Overview | Espanso</a>。</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 

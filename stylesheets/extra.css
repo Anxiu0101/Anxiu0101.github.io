@@ -1,0 +1,8 @@
+body {
+    font-family: "LXGW WenKai Screen", "Fira Code", sans-serif;
+}
+
+:root {
+    --md-text-font: "LXGW WenKai Screen";
+    --md-code-font: "Fira Code", "LXGW WenKai Screen";
+}

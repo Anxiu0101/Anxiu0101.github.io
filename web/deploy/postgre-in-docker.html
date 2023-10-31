@@ -46,6 +46,12 @@
     
     
       
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+Fira+Code:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, Fira Code";--md-code-font:"Fira Code"}</style>
+      
     
     
       <link rel="stylesheet" href="../../stylesheets/tasklist.css">
@@ -54,9 +60,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../stylesheets/flink.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/changelog_extra.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1697,19 +1703,19 @@
 <p>使用 Docker 安装 Postgre 并通过 psql-client 进行使用</p>
 <!--more-->
 
-<h5 id="_1">环境<a class="headerlink" href="#_1" title="Permanent link">#</a></h5>
+<h2 id="_1">环境<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
 <li>Ubuntu 20.04.4 LTS</li>
 <li>psql (12.9 (Ubuntu 12.9-0ubuntu0.20.04.1)</li>
 <li>server 14.2 (Debian 14.2-1.pgdg110+1))</li>
 <li>Docker </li>
 </ul>
-<h5 id="_2">安装<a class="headerlink" href="#_2" title="Permanent link">#</a></h5>
+<h2 id="_2">安装<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <blockquote>
 <p>参考网址
 <a href="https://techexpert.tips/zh-hans/%E6%B3%A2%E6%96%AF%E7%89%B9%E6%A0%BC%E9%9B%B7%E6%96%AF/postgresql-docker-%E5%AE%89%E8%A3%85/">教程 PostgreSQL - Docker 安装</a></p>
 </blockquote>
-<h6 id="dockerfile-postgresql">通过 Dockerfile 安装 PostgreSQL<a class="headerlink" href="#dockerfile-postgresql" title="Permanent link">#</a></h6>
+<h3 id="dockerfile-postgresql">通过 Dockerfile 安装 PostgreSQL<a class="headerlink" href="#dockerfile-postgresql" title="Permanent link">#</a></h3>
 <p>通过编写 Dockerfile 拉取官方的 postgres 的最新版本镜像，然后设置环境变量和暴露的端口即可。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1732,10 +1738,10 @@
 <p>需要注意的是，这里的三个环境变量只有 <code>ENV POSTGRES_PASSWORD</code> 是必备的，剩下两个都是可选的环境变量配置。</p>
 <p>编写完 Dockerfile 就可以创建镜像了，你可以选择命令行创建，这种方式便于大规模的集群部署。如果，是在本地使用 Goland 编辑的话可以使用 GUI 来创建，</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202210102224196.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20221010222400721" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202210102224196.png" /></a></p>
-<h5 id="docker">Docker 环境<a class="headerlink" href="#docker" title="Permanent link">#</a></h5>
+<h2 id="docker">Docker 环境<a class="headerlink" href="#docker" title="Permanent link">#</a></h2>
 <p>Docker 环境里三个组成部分，Image, Container, Volume。你可以把你的配置保存为自己的镜像，例如我这里设置了这个镜像为 <code>postgre-camp:1.0</code>。容器是你的机器里具体在运行的虚拟化应用，你可以在同一个机器中创建多个容器。Volume 是数据卷，用于保存持久化数据，postgres 默认保存路径为, <code>/var/lib/postgresql/data</code>。</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202210102227949.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20221010222726919" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202210102227949.png" /></a></p>
-<h5 id="pgsql">使用 pgsql 服务<a class="headerlink" href="#pgsql" title="Permanent link">#</a></h5>
+<h2 id="pgsql">使用 pgsql 服务<a class="headerlink" href="#pgsql" title="Permanent link">#</a></h2>
 <p>你可以使用 <code>docker</code> 指令去访问容器内部的 <code>pgsql</code> 服务，如下</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>docker exec -it &lt;Container ID&gt; /bin/bash
 </code></pre></div></td></tr></table></div>
@@ -1750,7 +1756,7 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># -h IP 地址</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1"># -d 数据库库名(可选)</span>
 </code></pre></div></td></tr></table></div>
-<h6 id="pgsql_1"><code>pgsql</code> 快捷指令<a class="headerlink" href="#pgsql_1" title="Permanent link">#</a></h6>
+<h3 id="pgsql_1"><code>pgsql</code> 快捷指令<a class="headerlink" href="#pgsql_1" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p><code>\l</code> 查看系统中现存的数据库</p>
@@ -1771,6 +1777,17 @@
 <p><code>\di</code> 查看索引</p>
 </li>
 </ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 

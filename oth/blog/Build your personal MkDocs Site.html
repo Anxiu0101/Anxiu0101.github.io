@@ -44,6 +44,12 @@
     
     
       
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+Fira+Code:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, Fira Code";--md-code-font:"Fira Code"}</style>
+      
     
     
       <link rel="stylesheet" href="../../stylesheets/tasklist.css">
@@ -52,9 +58,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../stylesheets/flink.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/changelog_extra.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1748,7 +1754,7 @@
 <p>Mkdocs 是一个使用 python 编写的静态博客生成软件，相比于 <code>hugo</code>，<code>hexo</code>等，更加满足我的需求。相对来说，<code>Mkdocs</code>会比前面二者更加简洁，上手难度应该也会更低一点。</p>
 <!--more-->
 
-<h5 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h5>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
 <p>因为这是一个 python 应用，实际上可以直接通过 <code>pip</code> 工具就可以进行安装。</p>
 <p>安装 <code>Mkdocs</code>，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">PowerShell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">mkdocs</span>
@@ -1776,7 +1782,7 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">Requires</span><span class="p">:</span> <span class="n">click</span><span class="p">,</span> <span class="n">colorama</span><span class="p">,</span> <span class="n">ghp-import</span><span class="p">,</span> <span class="n">jinja2</span><span class="p">,</span> <span class="n">markdown</span><span class="p">,</span> <span class="n">markupsafe</span><span class="p">,</span> <span class="n">mergedeep</span><span class="p">,</span> <span class="n">packaging</span><span class="p">,</span> <span class="n">pathspec</span><span class="p">,</span> <span class="n">platformdirs</span><span class="p">,</span> <span class="n">pyyaml</span><span class="p">,</span> <span class="n">pyyaml-env-tag</span><span class="p">,</span> <span class="n">watchdog</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">Required-by</span><span class="p">:</span>
 </code></pre></div></td></tr></table></div>
-<h6 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h6>
+<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h3>
 <p>使用 <code>mkdocs -h</code> 查看帮助信息后，可以看到 <code>mkdocs</code> 提供的命令行指令。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">PowerShell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1839,7 +1845,7 @@
 <p><code>mkdocs gh-deploy</code> - Deploy your documentation to GitHub Pages. 部署你的文档到 GitHub Pages 中。此处 <code>gh-deploy</code> 指令的作用是执行编译，并将编译后的结果 commit 到仓库的 <code>gh-deploy</code> 分支中。这也是主分支并不需要向远程仓库提交 <code>site/</code> folder 的原因。</p>
 </li>
 </ul>
-<h5 id="get-start">Get Start<a class="headerlink" href="#get-start" title="Permanent link">#</a></h5>
+<h2 id="get-start">Get Start<a class="headerlink" href="#get-start" title="Permanent link">#</a></h2>
 <p>使用 <code>mkdocs new</code> 指令创建项目并进入项目地址，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">PowerShell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
@@ -1922,7 +1928,7 @@
 <p>该指令编译文件为静态页面网站到 <code>gh-deploy</code> 分支并推送到远程仓库。现在就只需要开启远程仓库的 GitHub Page 功能并指定分支即可，具体操作如下，</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202309240644989.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20230924064437878" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202309240644989.png" /></a></p>
 <p>稍等片刻，刷新页面后点击 Visit site 按钮即可查看页面。</p>
-<h5 id="theme-configurations">Theme &amp; Configurations<a class="headerlink" href="#theme-configurations" title="Permanent link">#</a></h5>
+<h2 id="theme-configurations">Theme &amp; Configurations<a class="headerlink" href="#theme-configurations" title="Permanent link">#</a></h2>
 <p>推荐 <code>material</code> 主题，虽然官网有些功能要求赞助后才能使用，但是社区版提供的功能已经足够了。</p>
 <blockquote>
 <p>TODO fill with this part of content. mainly related to the <code>mkdocs.yml</code> file and material t</p>
@@ -1937,7 +1943,7 @@
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-statistics-plugin
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-git-revision-date-localized-plugin
 </code></pre></div></td></tr></table></div>
-<h6 id="material-social-plugin">material 中 social plugin 的使用异常问题<a class="headerlink" href="#material-social-plugin" title="Permanent link">#</a></h6>
+<h3 id="material-social-plugin">material 中 social plugin 的使用异常问题<a class="headerlink" href="#material-social-plugin" title="Permanent link">#</a></h3>
 <p>如果你开启了 material 中的一个名为 social 的内置插件，作用是为每个页面生成一张卡片，达成通过分享卡片的方式在社交媒体中宣传。可能遇到报错，报错部分信息如下，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Markdown</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>Required dependencies of &quot;social&quot; plugin not found. Install with: pip install pillow cairosvg
 </code></pre></div></td></tr></table></div>
@@ -1945,14 +1951,14 @@
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;mkdocs-material[imaging]&quot;</span>
 </code></pre></div></td></tr></table></div>
 当然你也可以根据报错信息分别安装对应包，两个方式没有区别。</p>
-<h6 id="i18n">i18n<a class="headerlink" href="#i18n" title="Permanent link">#</a></h6>
+<h3 id="i18n">i18n<a class="headerlink" href="#i18n" title="Permanent link">#</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="o">[</span>i18n<span class="o">]</span>
 </code></pre></div></td></tr></table></div>
-<h5 id="writing-tips">Writing Tips<a class="headerlink" href="#writing-tips" title="Permanent link">#</a></h5>
+<h2 id="writing-tips">Writing Tips<a class="headerlink" href="#writing-tips" title="Permanent link">#</a></h2>
 <p>遇到了一个很愚蠢的问题，下文中<code>mkdocs</code> 的文档内容描述了 <code>mkdocs</code> 设定文章标题的顺序，</p>
 <blockquote>
-<h6 id="meta-data">Meta-Data<a class="headerlink" href="#meta-data" title="Permanent link">#</a></h6>
-<h6 id="_1">元数据<a class="headerlink" href="#_1" title="Permanent link">#</a></h6>
+<h3 id="meta-data">Meta-Data<a class="headerlink" href="#meta-data" title="Permanent link">#</a></h3>
+<h3 id="_1">元数据<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
 <p>MkDocs包括支持YAML和MultiMarkdown两种样式的元数据（通常称为前端内容）。元数据由Markdown文档开头定义的一系列关键字和值组成，这些关键字和值在Python-Markdown处理之前从文档中删除。键/值对由MkDocs传递给页面模板。 因此，如果主题支持，则任何键的值都可以显示在页面上或用于控制页面呈现。有关可能支持哪些关键字的详细信息，请参阅相应的主题支持文档（如果有）。</p>
 <p>除了在模板中显示信息之外，MkDocs还支持一些预定义的元数据键，这些键可以改变该特定页面的MkDoc的行为。支持以下键：</p>
 <ul>
@@ -1981,7 +1987,7 @@
 <li><a href="https://stackoverflow.com/questions/60215601/mkdocs-nav-title-different-from-page-title">markdown - mkdocs nav title different from page title - Stack Overflow</a></li>
 </ul>
 </blockquote>
-<h5 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h5>
+<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">#</a></h2>
 <p><a href="https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/index.html">mkdocs-git-revision-date-localized-plugin (timvink.github.io)</a></p>
 <p><a href="https://guts.github.io/mkdocs-rss-plugin/">MkDocs RSS Plugin (guts.github.io)</a></p>
 <p><a href="https://wohugb.github.io/pymdown-extensions/">https://wohugb.github.io/pymdown-extensions/</a></p>
@@ -1996,11 +2002,22 @@
 <p><a href="https://github.com/TonyCrane/mkdocs-toolchain">TonyCrane/mkdocs-toolchain: My personal mkdocs toolchain (github.com)</a></p>
 <p><a href="https://github.com/TonyCrane/note">TonyCrane/note: TonyCrane's Public Notebook (github.com)</a></p>
 <p><a href="https://www.cnblogs.com/yang877/p/5860798.html">https://www.cnblogs.com/yang877/p/5860798.html</a></p>
-<h5 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h5>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://hellowac.github.io/mkdocs-docs-zh/">MkDocs中文文档 (hellowac.github.io)</a></li>
 <li><a href="https://wdk-docs.github.io/mkdocs-docs/">MkDocs 文档 (wdk-docs.github.io)</a></li>
 </ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 

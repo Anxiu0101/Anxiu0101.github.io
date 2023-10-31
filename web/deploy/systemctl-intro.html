@@ -46,6 +46,12 @@
     
     
       
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+Fira+Code:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, Fira Code";--md-code-font:"Fira Code"}</style>
+      
     
     
       <link rel="stylesheet" href="../../stylesheets/tasklist.css">
@@ -54,9 +60,9 @@
     
       <link rel="stylesheet" href="../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../stylesheets/flink.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/changelog_extra.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1616,14 +1622,25 @@
 
   <h1>Systemctl Introduction</h1>
 
-<h5 id="systemd">Systemd 介绍<a class="headerlink" href="#systemd" title="Permanent link">#</a></h5>
+<h2 id="systemd">Systemd 介绍<a class="headerlink" href="#systemd" title="Permanent link">#</a></h2>
 <p><a href="https://blog.csdn.net/shliang310/article/details/122576783">https://blog.csdn.net/shliang310/article/details/122576783</a></p>
-<h5 id="systemctl-in-ubuntu">Systemctl in Ubuntu<a class="headerlink" href="#systemctl-in-ubuntu" title="Permanent link">#</a></h5>
+<h2 id="systemctl-in-ubuntu">Systemctl in Ubuntu<a class="headerlink" href="#systemctl-in-ubuntu" title="Permanent link">#</a></h2>
 <p>Ubuntu 中 <code>.service</code> 文件路径: <code>/etc/systemd/system</code>，但实际部分是从 <code>/lib/systemd/system</code> 中软连接的。</p>
 <p><a href="https://blog.csdn.net/qq_44947550/article/details/119052871">https://blog.csdn.net/qq_44947550/article/details/119052871</a></p>
-<h5 id="service"><code>.service</code> 文件配置<a class="headerlink" href="#service" title="Permanent link">#</a></h5>
+<h2 id="service"><code>.service</code> 文件配置<a class="headerlink" href="#service" title="Permanent link">#</a></h2>
 <p><a href="https://blog.csdn.net/qq_41035283/article/details/122793745">https://blog.csdn.net/qq_41035283/article/details/122793745</a></p>
 <p>更改完 <code>/service</code> 文件后使用 <code>systemctl daemon-reload</code> 刷新 Systemctl 服务配置。</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 

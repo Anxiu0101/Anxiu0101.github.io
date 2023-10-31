@@ -42,6 +42,12 @@
     
     
       
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto,+Fira+Code:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto, Fira Code";--md-code-font:"Fira Code"}</style>
+      
     
     
       <link rel="stylesheet" href="../stylesheets/tasklist.css">
@@ -50,9 +56,9 @@
     
       <link rel="stylesheet" href="../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../stylesheets/flink.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../stylesheets/changelog_extra.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1484,6 +1490,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1492,14 +1500,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lecture-10-graphs-i" class="md-nav__link">
-    Lecture-10 Graphs I
-  </a>
-  
-    <nav class="md-nav" aria-label="Lecture-10 Graphs I">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#graph" class="md-nav__link">
     Graph
   </a>
@@ -1518,11 +1518,6 @@
   <a href="#terminology" class="md-nav__link">
     Terminology
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1560,12 +1555,10 @@
   
 
 
-  <h1>Anxiu's Note</h1>
-
 <p>CS211-Note 算法与数据结构</p>
 <!--more-->
 
-<h4 id="lecture-10-graphs-i">Lecture-10 Graphs I<a class="headerlink" href="#lecture-10-graphs-i" title="Permanent link">#</a></h4>
+<h1 id="lecture-10-graphs-i">Lecture-10 Graphs I<a class="headerlink" href="#lecture-10-graphs-i" title="Permanent link">#</a></h1>
 <hr />
 <ul>
 <li>Learn different types of graphs and their properties 学习不同类型的图表及其属性</li>
@@ -1575,14 +1568,14 @@
 <li>Build adjacency matrix 建立邻接矩阵</li>
 </ul>
 <hr />
-<h5 id="graph">Graph<a class="headerlink" href="#graph" title="Permanent link">#</a></h5>
+<h2 id="graph">Graph<a class="headerlink" href="#graph" title="Permanent link">#</a></h2>
 <p>Graphs are one of the most versatile structures used in computer programming and are used to solve the more interesting problems.</p>
 <p>have two type: </p>
 <ul>
 <li>Unweighted graphs where the links between nodes are equal.</li>
 <li>Weighted graphs where the links are each associated with an individual weight.</li>
 </ul>
-<h6 id="graph-structure">Graph Structure<a class="headerlink" href="#graph-structure" title="Permanent link">#</a></h6>
+<h3 id="graph-structure">Graph Structure<a class="headerlink" href="#graph-structure" title="Permanent link">#</a></h3>
 <ul>
 <li>Nodes are called <mark>vertices</mark>.</li>
 <li><mark>Edges</mark> link vertices.</li>
@@ -1597,7 +1590,7 @@
 <li>Vertices and edges are positions and store elements.</li>
 </ul>
 <p>Graph 在实际生活中的应用有：Electronic circuits、Transportation networks、Computer networks、Databases</p>
-<h6 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">#</a></h6>
+<h3 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">#</a></h3>
 <ul>
 <li>End vertices (or endpoints) of an edge: U and V are the endpoints of a</li>
 <li>Edges incident on a vertex: a, d, and b are incident on V</li>
@@ -1641,6 +1634,17 @@
 </li>
 </ul>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207042208152.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20220704220855120" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202207042208152.png" /></a></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
