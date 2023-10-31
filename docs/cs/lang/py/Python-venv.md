@@ -39,9 +39,9 @@ python -m venv .\venv
 
 创建完成后，终端进入虚拟环境，使用 `.\venv\Scripts` 下的 `python.exe` 作为解释器。终端将会出现类似于 `(venv)` 的字样，显示已经进入虚拟环境中。
 
-![image.png](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071038311.png)
+![image.png](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071038311.png){ loading=lazy }
 
-![image.png](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071039196.png)
+![image.png](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202308071039196.png){ loading=lazy }
 
 如果终端没有成功进入虚拟环境，可以使用 `venv` 生成的脚本进行启动，
 

@@ -20,11 +20,14 @@ That's creating some interesting projects!
     .md-ellipsis {
         font-weight: bold;
     }
+    .md-source-file {
+        display: none;
+    }
 </style>
 
 
 
-# Projects
+## Projects
 
 <div class="row">
     <div class="column">
@@ -68,7 +71,7 @@ That's creating some interesting projects!
     </div>
 </div>
 
-# Publication
+## Publication
 
 <div class="row">
     <div class="column">
@@ -106,15 +109,14 @@ That's creating some interesting projects!
     </div>
 </div>
 
-# Contact Me
+## Contact Me
 
 <div class="row">
     <div class="fullcolumn">
         <div class="card">
             <p>If you have any questions that interest me or would like to collaborate with me, please do let me know. I
                 look forward to hearing from you!</p>
-            <div align="center"><a class="md-button contact-button" href="mailto:anxiu.fyc@foxmail.com"><strong>Contact
-                with Me for Any question!</strong></a></div>
+            <div align="center"><a class="md-button contact-button" href="mailto:anxiu.fyc@foxmail.com"><strong>Contact with Me for Any question!</strong></a></div>
         </div>
     </div>
 </div>

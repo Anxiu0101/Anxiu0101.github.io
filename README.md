@@ -20,14 +20,14 @@
 - [ ] git talk
 - [x] GitHub page 配置
 - [ ] RSS 插件 warming log 消除
-- [ ] 主页配置
+- [x] 主页配置
   - [x] 基础文字补充
-  - [ ] 卡片化
+  - [x] 卡片化
   - [x] Navigation 关闭
 - [ ] 通讯卡片配置
 - [ ] 编辑跳转
 - [ ] gitbook 样式
 - [ ] mint 样式
-- [ ] 代码块字体设置 `Fira Code`. 
+- [x] 代码块字体设置 `Fira Code`. 
 - [x] 解决 meta 标题以及首行标题的问题
 - [ ] 修复字数统计插件错误
