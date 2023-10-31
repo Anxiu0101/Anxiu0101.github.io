@@ -3,6 +3,7 @@ title: 'Python Virtual Environment Introduction'
 date: 2023-09-02 15:52:18
 tags: [Code,Python]
 published: true
+comments: true
 ---
 
 `venv`  是 python 中搭建虚拟环境的一个工具，是 python virtual environments 特性中的一部分，有时也会被缩写成 `virtualenv` 
