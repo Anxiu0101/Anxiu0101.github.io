@@ -19,6 +19,7 @@ neoteroi-mkdocs = "^1.0.4"
 mkdocs-jupyter = "^0.24.5"
 mkdocs-statistics-plugin = "^0.1.2"
 python-markdown-math = "^0.8"
+mkdocs-with-pdf = "^0.9.3"
 
 
 [build-system]
