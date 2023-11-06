@@ -121,6 +121,7 @@ That's creating some interesting projects!
     </div>
 </div>
 
+[Send Documents to ME!](localhost:8000/writing-online){ .md-button }
 
 本站共有 {{ pages }} 个页面，{{ words }} 个字，{{ codes }} 行代码。
 

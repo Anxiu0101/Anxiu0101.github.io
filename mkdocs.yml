@@ -125,9 +125,6 @@ extra:
   link:
     - icon: fontawesome/solid/home
       link: https://anxiu0101.github.io/note
-#  analytics:
-#    provider: custom
-#    property: G-DYETCPM289
 
 extra_css:
   - stylesheets/tasklist.css
@@ -178,6 +175,7 @@ plugins:
 
 nav:
 - index.md
+#- writing-online.md
 - Comp-Sci:
   - cs/index.md
 # — 编程语言 —————————————————————————————————————————————————————
