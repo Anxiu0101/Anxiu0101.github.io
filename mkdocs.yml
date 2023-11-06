@@ -4,7 +4,7 @@ site_author: Anxiu
 site_description: 安修(Anxiu)的笔记站
 repo_name: Anxiu0101/note
 repo_url: https://github.com/Anxiu0101/Anxiu0101.github.io
-edit_uri: tree/master/docs
+edit_uri: edit/master/docs/
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://anxiu.cloud/">Anxiu's Note</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Anxiu0101">Anxiu</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
 
 theme:
@@ -12,8 +12,12 @@ theme:
   language: 'zh'
   icon:
     logo: material/notebook-outline
+    edit: material/pencil
+    view: material/eye
   custom_dir: overrides
   features:
+  - content.action.edit     # page source code edit in Github.
+  - content.action.view     # page source code view.
   - content.code.annotate
   - content.code.copy
   - navigation.tracking
@@ -25,9 +29,10 @@ theme:
   - search.share
   - search.suggest
   - toc.follow
-  font:
-    text: Roboto, Fira Code
-    code: Fira Code
+  # have set in css file.
+  #  font:
+  #    text: Roboto, Fira Code
+  #    code: Fira Code
   palette:
     - scheme: default # 日间模式
       primary: deep
@@ -86,10 +91,28 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.saneheaders # 严格标题格式
 
 extra:
   annotation:
     json: [.s2]
+  analytics:
+    provider: google
+    property: G-0MED3RPS23
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Anxiu0101
@@ -110,9 +133,10 @@ extra_css:
   - stylesheets/tasklist.css
   - stylesheets/custom.css
   - stylesheets/card.css
-  - stylesheets/extra.css
+  - stylesheets/font.css
 
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css # font style
+  - https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css # simplemde -> online markdown editor style.
 #  - stylesheets/flink.css
 #  - stylesheets/changelog_extra.css
 
@@ -120,7 +144,9 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
   - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js # mermaid support
+  - https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js
   - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js # simplemde -> online markdown editor support.
 
 plugins:
   # - rss
@@ -131,14 +157,24 @@ plugins:
       lang:
         - en
       separator: '[\s\u200b\-]'
-#  - social
   - offline
-  # - with-pdf: 
-  #     author: 
-  #       Anxiu
   - tags
-#  - info
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      custom_format: "%d. %B %Y"
+      timezone: Asia/Hong_Kong
+      locale: en
+      fallback_to_build_date: false
+      enable_creation_date: true
+      exclude:
+        - index.md
+      enabled: true
+      strict: false # control log level; when false, on info.
+  - git-committers:
+      repository: Anxiu0101/Anxiu0101.github.io
+      branch: master
+      token: !!python/object/apply:os.getenv [ "MKDOCS_GIT_COMMITTERS_APIKEY" ]
+  - changelog:
+      file: changelog.yml
 
 nav:
 - index.md
@@ -185,3 +221,6 @@ nav:
   - Blog Build:
     - Markdown 语法测试: oth/blog/Markdown-Grammar.md
     - Mkdocs 建站指南: oth/blog/Build your personal MkDocs Site.md
+    - Changelog: changelog/index.md
+
+not_in_nav: writing-online.md

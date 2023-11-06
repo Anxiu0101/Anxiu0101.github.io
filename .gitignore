@@ -17,5 +17,4 @@
 # cache
 /.cache
 
-# change log
-/docs/changelog
+/config

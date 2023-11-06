@@ -1,0 +1,58 @@
+- "2023":
+    - "2023-10-26":
+        - function: 各分区首页 UI 大更新！
+    - "2023-09-28":
+        - newpage:
+            text: CS > 理论计算机相关 > 计算理论课程笔记
+            href: /cs/tcs/toc/
+    - "2023-09-27":
+        - function: 中文和公式混排的空格也可以处理了！
+    - "2023-09-19":
+        - newpage:
+            text: CS > 编程语言 & ISA > 编程语言原理课程笔记
+            href: /cs/pl/ppl/
+        - newpage:
+            text: SECCON 2023 Quals Writeup
+            href: /writeups/seccon2023/
+- "2022":
+    - "2022-12-15":
+        - refactor: 更新了一些 index，新增了 Security、Web 两个分区
+        - function: 引入了心心念念的 heti，实现了四分宽混排空格以及标点挤压
+    - "2022-12-06 ~ 2022-12-10":
+        - newpage:
+            text: 更新了系列系统 Ⅱ 笔记
+            href: /cs/system/cs2/
+    - "2022-12-03":
+        - newpage:
+            text: CTF > Blockchain > Ethereum > Solidity 语言
+            href: /ctf/blockchain/eth/solidity/
+    - "2022-12-02":
+        - pageupdate:
+            text: CTF > Blockchain > Ethereum > ERC 标准
+            href: /ctf/blockchain/eth/erc/
+        - newpage:
+            text: CTF > Blockchain > Ethereum > Yul 语言
+            href: /ctf/blockchain/eth/yul/
+    - "2022-12-01":
+        - function: 主页增加站点统计信息
+        - newpage:
+            text: CTF > Blockchain > Ethereum > 常见合约漏洞攻击手段
+            href: /ctf/blockchain/eth/vuln/
+        - newpage:
+            text: CTF > Blockchain > Ethereum > 其余重要 EIPs
+            href: /ctf/blockchain/eth/eip/
+        - pageupdate:
+            text: CTF > Blockchain > Ethereum > ERC 标准
+            href: /ctf/blockchain/eth/erc/
+    - "2022-11-30":
+        - function: 添加最近更新部分
+    - "2022-11-28":
+        - newpage:
+            text: CS > ISA > RISC-V ISA > 特权级 ISA
+            href: /cs/pl/riscv/privileged/
+        - pageupdate:
+            text: CS > ISA > RISC-V ISA > 非特权级 ISA
+            href: /cs/pl/riscv/unprivileged/
+        - newpage:
+            text: CTF > Blockchain > Ethereum > 以太坊基础
+            href: /ctf/blockchain/eth/basic/

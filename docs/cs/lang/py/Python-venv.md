@@ -128,3 +128,7 @@ title: 参考资料
 - [为python项目配置专属虚拟环境 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/463314523)
 - https://blog.csdn.net/daxia5398/article/details/123330477
 ```
+
+
+
+poetry init  # 初始化项目  poetry shell  # 激活虚拟环境  poetry install  # 安装pyproject.toml里或poetry.lock里列出来的包  poetry install --no-dev  # 只安装生产用依赖  poetry add httpx  # 安装一个新的包  poetry update httpx  ipython  # 升级已安装的一个或多个包  poetry show --tree  # 展示已安装的包  poetry remove gunicorn  # 卸载已安装的包  poetry run python manage.py runserver   # 在不激活虚拟环境时执行命令
