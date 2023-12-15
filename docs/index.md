@@ -116,12 +116,17 @@ That's creating some interesting projects!
         <div class="card">
             <p>If you have any questions that interest me or would like to collaborate with me, please do let me know. I
                 look forward to hearing from you!</p>
-            <div align="center"><a class="md-button contact-button" href="mailto:anxiu.fyc@foxmail.com"><strong>Contact with Me for Any question!</strong></a></div>
+            <div align="center">
+                <a  class="md-button contact-button" 
+                    href="mailto:anxiu.fyc@foxmail.com">
+                    <strong>Contact with Me for Any question!</strong>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
-[Send Documents to ME!](localhost:8000/writing-online){ .md-button }
+[Send Documents to ME! (Not work Actually, XD)](localhost:8000/writing-online){ .md-button .contact-button }
 
 本站共有 {{ pages }} 个页面，{{ words }} 个字，{{ codes }} 行代码。
 

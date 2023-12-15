@@ -175,7 +175,7 @@ plugins:
 
 nav:
 - index.md
-#- writing-online.md
+- writing-online.md
 - Comp-Sci:
   - cs/index.md
 # — 编程语言 —————————————————————————————————————————————————————
@@ -221,4 +221,4 @@ nav:
     - Mkdocs 建站指南: oth/blog/Build your personal MkDocs Site.md
     - Changelog: changelog/index.md
 
-not_in_nav: writing-online.md
+#not_in_nav: writing-online.md
