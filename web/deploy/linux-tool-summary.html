@@ -1,0 +1,2445 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="安修(Anxiu)的笔记站">
+      
+      
+        <meta name="author" content="Anxiu">
+      
+      
+        <link rel="canonical" href="https://anxiu0101.github.io/web/deploy/linux-tool-summary.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+    
+    
+      
+        <title>Linux Development Tools - Anxiu's Note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeline.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/tasklist.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/card.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/font.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-0MED3RPS23"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-0MED3RPS23",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-0MED3RPS23",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-development-tools" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anxiu's Note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux Development Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep" data-md-color-accent="blue"  aria-label="Dark"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Light"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Anxiu0101/Anxiu0101.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Anxiu0101/note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Anxiu's Note
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../writing-online.html" class="md-tabs__link">
+        
+  
+    
+  
+  Online Writing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cs/index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Comp-Sci
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Web-Dev
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../rsc/index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Research
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../oth/index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Others
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+
+    </a>
+    Anxiu's Note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Anxiu0101/Anxiu0101.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Anxiu0101/note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anxiu's Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing-online.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Online Writing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cs/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Comp-Sci
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Comp-Sci
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Program Lang
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Program Lang
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/lang/py/Python-venv.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Virtual Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Golang
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Golang
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/lang/go/interface-in-go.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface in Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algorithm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/algorithm/raft.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raft Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Web-Dev
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Web-Dev
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Deploy & Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy & Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mysql-in-ubuntu.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config MySQL in Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nginx-intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nginx Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="postgre-in-docker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config PostgreSQL in Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker-intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dockerfile-intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dockerfile Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="espanso-intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Espanso simple use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="systemctl-intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systemctl Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="win-ssh-config.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config ssh in Win
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/golang-optional-pattern.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Golang Optional Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/go-project-compiler.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compiler a Go Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/golang-tencent-SMS.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use tencent SMS in Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev/gorm-struct-label.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gorm struct label Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../rsc/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Research
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Research
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../rsc/ml/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../rsc/sec/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../oth/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../changelog/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog Build
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog Build
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oth/blog/Markdown-Grammar.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown 语法测试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oth/blog/Build%20your%20personal%20MkDocs%20Site.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs 建站指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-tools" class="md-nav__link">
+    File Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="File Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    Tar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/web/deploy/linux-tool-summary.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/web/deploy/linux-tool-summary.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+    </a>
+  
+
+
+<h1 id="linux-development-tools">Linux Development Tools<a class="headerlink" href="#linux-development-tools" title="Permanent link">#</a></h1>
+<h2 id="file-tools">File Tools<a class="headerlink" href="#file-tools" title="Permanent link">#</a></h2>
+<h3 id="tar">Tar<a class="headerlink" href="#tar" title="Permanent link">#</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-0-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-0-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-0-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-0-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-0-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-0-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-0-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-0-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-0-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-0-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-0-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-0-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-0-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-0-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-0-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-0-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-0-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-0-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-0-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-0-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-0-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-0-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-0-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-0-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-0-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-0-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-0-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-0-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-0-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-0-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-0-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-0-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-0-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-0-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-0-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-0-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-0-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-0-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-0-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-0-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-0-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-0-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-0-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-0-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-0-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-0-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-0-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-0-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-0-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-0-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-0-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-0-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-0-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-0-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-0-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-0-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-0-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-0-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-0-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-0-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-0-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-0-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-0-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-0-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-0-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-0-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-0-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-0-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-0-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-0-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-0-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-0-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-0-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-0-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-0-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-0-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-0-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-0-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-0-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-0-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-0-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-0-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-0-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-0-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-0-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-0-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-0-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-0-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-0-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-0-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-0-100">100</a></span>
+<span class="normal"><a href="#__codelineno-0-101">101</a></span>
+<span class="normal"><a href="#__codelineno-0-102">102</a></span>
+<span class="normal"><a href="#__codelineno-0-103">103</a></span>
+<span class="normal"><a href="#__codelineno-0-104">104</a></span>
+<span class="normal"><a href="#__codelineno-0-105">105</a></span>
+<span class="normal"><a href="#__codelineno-0-106">106</a></span>
+<span class="normal"><a href="#__codelineno-0-107">107</a></span>
+<span class="normal"><a href="#__codelineno-0-108">108</a></span>
+<span class="normal"><a href="#__codelineno-0-109">109</a></span>
+<span class="normal"><a href="#__codelineno-0-110">110</a></span>
+<span class="normal"><a href="#__codelineno-0-111">111</a></span>
+<span class="normal"><a href="#__codelineno-0-112">112</a></span>
+<span class="normal"><a href="#__codelineno-0-113">113</a></span>
+<span class="normal"><a href="#__codelineno-0-114">114</a></span>
+<span class="normal"><a href="#__codelineno-0-115">115</a></span>
+<span class="normal"><a href="#__codelineno-0-116">116</a></span>
+<span class="normal"><a href="#__codelineno-0-117">117</a></span>
+<span class="normal"><a href="#__codelineno-0-118">118</a></span>
+<span class="normal"><a href="#__codelineno-0-119">119</a></span>
+<span class="normal"><a href="#__codelineno-0-120">120</a></span>
+<span class="normal"><a href="#__codelineno-0-121">121</a></span>
+<span class="normal"><a href="#__codelineno-0-122">122</a></span>
+<span class="normal"><a href="#__codelineno-0-123">123</a></span>
+<span class="normal"><a href="#__codelineno-0-124">124</a></span>
+<span class="normal"><a href="#__codelineno-0-125">125</a></span>
+<span class="normal"><a href="#__codelineno-0-126">126</a></span>
+<span class="normal"><a href="#__codelineno-0-127">127</a></span>
+<span class="normal"><a href="#__codelineno-0-128">128</a></span>
+<span class="normal"><a href="#__codelineno-0-129">129</a></span>
+<span class="normal"><a href="#__codelineno-0-130">130</a></span>
+<span class="normal"><a href="#__codelineno-0-131">131</a></span>
+<span class="normal"><a href="#__codelineno-0-132">132</a></span>
+<span class="normal"><a href="#__codelineno-0-133">133</a></span>
+<span class="normal"><a href="#__codelineno-0-134">134</a></span>
+<span class="normal"><a href="#__codelineno-0-135">135</a></span>
+<span class="normal"><a href="#__codelineno-0-136">136</a></span>
+<span class="normal"><a href="#__codelineno-0-137">137</a></span>
+<span class="normal"><a href="#__codelineno-0-138">138</a></span>
+<span class="normal"><a href="#__codelineno-0-139">139</a></span>
+<span class="normal"><a href="#__codelineno-0-140">140</a></span>
+<span class="normal"><a href="#__codelineno-0-141">141</a></span>
+<span class="normal"><a href="#__codelineno-0-142">142</a></span>
+<span class="normal"><a href="#__codelineno-0-143">143</a></span>
+<span class="normal"><a href="#__codelineno-0-144">144</a></span>
+<span class="normal"><a href="#__codelineno-0-145">145</a></span>
+<span class="normal"><a href="#__codelineno-0-146">146</a></span>
+<span class="normal"><a href="#__codelineno-0-147">147</a></span>
+<span class="normal"><a href="#__codelineno-0-148">148</a></span>
+<span class="normal"><a href="#__codelineno-0-149">149</a></span>
+<span class="normal"><a href="#__codelineno-0-150">150</a></span>
+<span class="normal"><a href="#__codelineno-0-151">151</a></span>
+<span class="normal"><a href="#__codelineno-0-152">152</a></span>
+<span class="normal"><a href="#__codelineno-0-153">153</a></span>
+<span class="normal"><a href="#__codelineno-0-154">154</a></span>
+<span class="normal"><a href="#__codelineno-0-155">155</a></span>
+<span class="normal"><a href="#__codelineno-0-156">156</a></span>
+<span class="normal"><a href="#__codelineno-0-157">157</a></span>
+<span class="normal"><a href="#__codelineno-0-158">158</a></span>
+<span class="normal"><a href="#__codelineno-0-159">159</a></span>
+<span class="normal"><a href="#__codelineno-0-160">160</a></span>
+<span class="normal"><a href="#__codelineno-0-161">161</a></span>
+<span class="normal"><a href="#__codelineno-0-162">162</a></span>
+<span class="normal"><a href="#__codelineno-0-163">163</a></span>
+<span class="normal"><a href="#__codelineno-0-164">164</a></span>
+<span class="normal"><a href="#__codelineno-0-165">165</a></span>
+<span class="normal"><a href="#__codelineno-0-166">166</a></span>
+<span class="normal"><a href="#__codelineno-0-167">167</a></span>
+<span class="normal"><a href="#__codelineno-0-168">168</a></span>
+<span class="normal"><a href="#__codelineno-0-169">169</a></span>
+<span class="normal"><a href="#__codelineno-0-170">170</a></span>
+<span class="normal"><a href="#__codelineno-0-171">171</a></span>
+<span class="normal"><a href="#__codelineno-0-172">172</a></span>
+<span class="normal"><a href="#__codelineno-0-173">173</a></span>
+<span class="normal"><a href="#__codelineno-0-174">174</a></span>
+<span class="normal"><a href="#__codelineno-0-175">175</a></span>
+<span class="normal"><a href="#__codelineno-0-176">176</a></span>
+<span class="normal"><a href="#__codelineno-0-177">177</a></span>
+<span class="normal"><a href="#__codelineno-0-178">178</a></span>
+<span class="normal"><a href="#__codelineno-0-179">179</a></span>
+<span class="normal"><a href="#__codelineno-0-180">180</a></span>
+<span class="normal"><a href="#__codelineno-0-181">181</a></span>
+<span class="normal"><a href="#__codelineno-0-182">182</a></span>
+<span class="normal"><a href="#__codelineno-0-183">183</a></span>
+<span class="normal"><a href="#__codelineno-0-184">184</a></span>
+<span class="normal"><a href="#__codelineno-0-185">185</a></span>
+<span class="normal"><a href="#__codelineno-0-186">186</a></span>
+<span class="normal"><a href="#__codelineno-0-187">187</a></span>
+<span class="normal"><a href="#__codelineno-0-188">188</a></span>
+<span class="normal"><a href="#__codelineno-0-189">189</a></span>
+<span class="normal"><a href="#__codelineno-0-190">190</a></span>
+<span class="normal"><a href="#__codelineno-0-191">191</a></span>
+<span class="normal"><a href="#__codelineno-0-192">192</a></span>
+<span class="normal"><a href="#__codelineno-0-193">193</a></span>
+<span class="normal"><a href="#__codelineno-0-194">194</a></span>
+<span class="normal"><a href="#__codelineno-0-195">195</a></span>
+<span class="normal"><a href="#__codelineno-0-196">196</a></span>
+<span class="normal"><a href="#__codelineno-0-197">197</a></span>
+<span class="normal"><a href="#__codelineno-0-198">198</a></span>
+<span class="normal"><a href="#__codelineno-0-199">199</a></span>
+<span class="normal"><a href="#__codelineno-0-200">200</a></span>
+<span class="normal"><a href="#__codelineno-0-201">201</a></span>
+<span class="normal"><a href="#__codelineno-0-202">202</a></span>
+<span class="normal"><a href="#__codelineno-0-203">203</a></span>
+<span class="normal"><a href="#__codelineno-0-204">204</a></span>
+<span class="normal"><a href="#__codelineno-0-205">205</a></span>
+<span class="normal"><a href="#__codelineno-0-206">206</a></span>
+<span class="normal"><a href="#__codelineno-0-207">207</a></span>
+<span class="normal"><a href="#__codelineno-0-208">208</a></span>
+<span class="normal"><a href="#__codelineno-0-209">209</a></span>
+<span class="normal"><a href="#__codelineno-0-210">210</a></span>
+<span class="normal"><a href="#__codelineno-0-211">211</a></span>
+<span class="normal"><a href="#__codelineno-0-212">212</a></span>
+<span class="normal"><a href="#__codelineno-0-213">213</a></span>
+<span class="normal"><a href="#__codelineno-0-214">214</a></span>
+<span class="normal"><a href="#__codelineno-0-215">215</a></span>
+<span class="normal"><a href="#__codelineno-0-216">216</a></span>
+<span class="normal"><a href="#__codelineno-0-217">217</a></span>
+<span class="normal"><a href="#__codelineno-0-218">218</a></span>
+<span class="normal"><a href="#__codelineno-0-219">219</a></span>
+<span class="normal"><a href="#__codelineno-0-220">220</a></span>
+<span class="normal"><a href="#__codelineno-0-221">221</a></span>
+<span class="normal"><a href="#__codelineno-0-222">222</a></span>
+<span class="normal"><a href="#__codelineno-0-223">223</a></span>
+<span class="normal"><a href="#__codelineno-0-224">224</a></span>
+<span class="normal"><a href="#__codelineno-0-225">225</a></span>
+<span class="normal"><a href="#__codelineno-0-226">226</a></span>
+<span class="normal"><a href="#__codelineno-0-227">227</a></span>
+<span class="normal"><a href="#__codelineno-0-228">228</a></span>
+<span class="normal"><a href="#__codelineno-0-229">229</a></span>
+<span class="normal"><a href="#__codelineno-0-230">230</a></span>
+<span class="normal"><a href="#__codelineno-0-231">231</a></span>
+<span class="normal"><a href="#__codelineno-0-232">232</a></span>
+<span class="normal"><a href="#__codelineno-0-233">233</a></span>
+<span class="normal"><a href="#__codelineno-0-234">234</a></span>
+<span class="normal"><a href="#__codelineno-0-235">235</a></span>
+<span class="normal"><a href="#__codelineno-0-236">236</a></span>
+<span class="normal"><a href="#__codelineno-0-237">237</a></span>
+<span class="normal"><a href="#__codelineno-0-238">238</a></span>
+<span class="normal"><a href="#__codelineno-0-239">239</a></span>
+<span class="normal"><a href="#__codelineno-0-240">240</a></span>
+<span class="normal"><a href="#__codelineno-0-241">241</a></span>
+<span class="normal"><a href="#__codelineno-0-242">242</a></span>
+<span class="normal"><a href="#__codelineno-0-243">243</a></span>
+<span class="normal"><a href="#__codelineno-0-244">244</a></span>
+<span class="normal"><a href="#__codelineno-0-245">245</a></span>
+<span class="normal"><a href="#__codelineno-0-246">246</a></span>
+<span class="normal"><a href="#__codelineno-0-247">247</a></span>
+<span class="normal"><a href="#__codelineno-0-248">248</a></span>
+<span class="normal"><a href="#__codelineno-0-249">249</a></span>
+<span class="normal"><a href="#__codelineno-0-250">250</a></span>
+<span class="normal"><a href="#__codelineno-0-251">251</a></span>
+<span class="normal"><a href="#__codelineno-0-252">252</a></span>
+<span class="normal"><a href="#__codelineno-0-253">253</a></span>
+<span class="normal"><a href="#__codelineno-0-254">254</a></span>
+<span class="normal"><a href="#__codelineno-0-255">255</a></span>
+<span class="normal"><a href="#__codelineno-0-256">256</a></span>
+<span class="normal"><a href="#__codelineno-0-257">257</a></span>
+<span class="normal"><a href="#__codelineno-0-258">258</a></span>
+<span class="normal"><a href="#__codelineno-0-259">259</a></span>
+<span class="normal"><a href="#__codelineno-0-260">260</a></span>
+<span class="normal"><a href="#__codelineno-0-261">261</a></span>
+<span class="normal"><a href="#__codelineno-0-262">262</a></span>
+<span class="normal"><a href="#__codelineno-0-263">263</a></span>
+<span class="normal"><a href="#__codelineno-0-264">264</a></span>
+<span class="normal"><a href="#__codelineno-0-265">265</a></span>
+<span class="normal"><a href="#__codelineno-0-266">266</a></span>
+<span class="normal"><a href="#__codelineno-0-267">267</a></span>
+<span class="normal"><a href="#__codelineno-0-268">268</a></span>
+<span class="normal"><a href="#__codelineno-0-269">269</a></span>
+<span class="normal"><a href="#__codelineno-0-270">270</a></span>
+<span class="normal"><a href="#__codelineno-0-271">271</a></span>
+<span class="normal"><a href="#__codelineno-0-272">272</a></span>
+<span class="normal"><a href="#__codelineno-0-273">273</a></span>
+<span class="normal"><a href="#__codelineno-0-274">274</a></span>
+<span class="normal"><a href="#__codelineno-0-275">275</a></span>
+<span class="normal"><a href="#__codelineno-0-276">276</a></span>
+<span class="normal"><a href="#__codelineno-0-277">277</a></span>
+<span class="normal"><a href="#__codelineno-0-278">278</a></span>
+<span class="normal"><a href="#__codelineno-0-279">279</a></span>
+<span class="normal"><a href="#__codelineno-0-280">280</a></span>
+<span class="normal"><a href="#__codelineno-0-281">281</a></span>
+<span class="normal"><a href="#__codelineno-0-282">282</a></span>
+<span class="normal"><a href="#__codelineno-0-283">283</a></span>
+<span class="normal"><a href="#__codelineno-0-284">284</a></span>
+<span class="normal"><a href="#__codelineno-0-285">285</a></span>
+<span class="normal"><a href="#__codelineno-0-286">286</a></span>
+<span class="normal"><a href="#__codelineno-0-287">287</a></span>
+<span class="normal"><a href="#__codelineno-0-288">288</a></span>
+<span class="normal"><a href="#__codelineno-0-289">289</a></span>
+<span class="normal"><a href="#__codelineno-0-290">290</a></span>
+<span class="normal"><a href="#__codelineno-0-291">291</a></span>
+<span class="normal"><a href="#__codelineno-0-292">292</a></span>
+<span class="normal"><a href="#__codelineno-0-293">293</a></span>
+<span class="normal"><a href="#__codelineno-0-294">294</a></span>
+<span class="normal"><a href="#__codelineno-0-295">295</a></span>
+<span class="normal"><a href="#__codelineno-0-296">296</a></span>
+<span class="normal"><a href="#__codelineno-0-297">297</a></span>
+<span class="normal"><a href="#__codelineno-0-298">298</a></span>
+<span class="normal"><a href="#__codelineno-0-299">299</a></span>
+<span class="normal"><a href="#__codelineno-0-300">300</a></span>
+<span class="normal"><a href="#__codelineno-0-301">301</a></span>
+<span class="normal"><a href="#__codelineno-0-302">302</a></span>
+<span class="normal"><a href="#__codelineno-0-303">303</a></span>
+<span class="normal"><a href="#__codelineno-0-304">304</a></span>
+<span class="normal"><a href="#__codelineno-0-305">305</a></span>
+<span class="normal"><a href="#__codelineno-0-306">306</a></span>
+<span class="normal"><a href="#__codelineno-0-307">307</a></span>
+<span class="normal"><a href="#__codelineno-0-308">308</a></span>
+<span class="normal"><a href="#__codelineno-0-309">309</a></span>
+<span class="normal"><a href="#__codelineno-0-310">310</a></span>
+<span class="normal"><a href="#__codelineno-0-311">311</a></span>
+<span class="normal"><a href="#__codelineno-0-312">312</a></span>
+<span class="normal"><a href="#__codelineno-0-313">313</a></span>
+<span class="normal"><a href="#__codelineno-0-314">314</a></span>
+<span class="normal"><a href="#__codelineno-0-315">315</a></span>
+<span class="normal"><a href="#__codelineno-0-316">316</a></span>
+<span class="normal"><a href="#__codelineno-0-317">317</a></span>
+<span class="normal"><a href="#__codelineno-0-318">318</a></span>
+<span class="normal"><a href="#__codelineno-0-319">319</a></span>
+<span class="normal"><a href="#__codelineno-0-320">320</a></span>
+<span class="normal"><a href="#__codelineno-0-321">321</a></span>
+<span class="normal"><a href="#__codelineno-0-322">322</a></span>
+<span class="normal"><a href="#__codelineno-0-323">323</a></span>
+<span class="normal"><a href="#__codelineno-0-324">324</a></span>
+<span class="normal"><a href="#__codelineno-0-325">325</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Usage:<span class="w"> </span>tar<span class="w"> </span><span class="o">[</span>OPTION...<span class="o">]</span><span class="w"> </span><span class="o">[</span>FILE<span class="o">]</span>...
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>GNU<span class="w"> </span><span class="s1">&#39;tar&#39;</span><span class="w"> </span>saves<span class="w"> </span>many<span class="w"> </span>files<span class="w"> </span>together<span class="w"> </span>into<span class="w"> </span>a<span class="w"> </span>single<span class="w"> </span>tape<span class="w"> </span>or<span class="w"> </span>disk<span class="w"> </span>archive,<span class="w"> </span>and<span class="w"> </span>can
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>restore<span class="w"> </span>individual<span class="w"> </span>files<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>archive.
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>Examples:
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span>tar<span class="w"> </span>-cf<span class="w"> </span>archive.tar<span class="w"> </span>foo<span class="w"> </span>bar<span class="w">  </span><span class="c1"># Create archive.tar from files foo and bar.</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span>tar<span class="w"> </span>-tvf<span class="w"> </span>archive.tar<span class="w">         </span><span class="c1"># List all files in archive.tar verbosely.</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span>tar<span class="w"> </span>-xf<span class="w"> </span>archive.tar<span class="w">          </span><span class="c1"># Extract all files from archive.tar.</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w"> </span>Main<span class="w"> </span>operation<span class="w"> </span>mode:
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span>-A,<span class="w"> </span>--catenate,<span class="w"> </span>--concatenate<span class="w">   </span>append<span class="w"> </span>tar<span class="w"> </span>files<span class="w"> </span>to<span class="w"> </span>an<span class="w"> </span>archive
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span>-c,<span class="w"> </span>--create<span class="w">               </span>create<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>archive
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">      </span>--delete<span class="w">               </span>delete<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>archive<span class="w"> </span><span class="o">(</span>not<span class="w"> </span>on<span class="w"> </span>mag<span class="w"> </span>tapes!<span class="o">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span>-d,<span class="w"> </span>--diff,<span class="w"> </span>--compare<span class="w">      </span>find<span class="w"> </span>differences<span class="w"> </span>between<span class="w"> </span>archive<span class="w"> </span>and<span class="w"> </span>file<span class="w"> </span>system
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span>-r,<span class="w"> </span>--append<span class="w">               </span>append<span class="w"> </span>files<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>end<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>archive
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">      </span>--test-label<span class="w">           </span><span class="nb">test</span><span class="w"> </span>the<span class="w"> </span>archive<span class="w"> </span>volume<span class="w"> </span>label<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span>-t,<span class="w"> </span>--list<span class="w">                 </span>list<span class="w"> </span>the<span class="w"> </span>contents<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>archive
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span>-u,<span class="w"> </span>--update<span class="w">               </span>only<span class="w"> </span>append<span class="w"> </span>files<span class="w"> </span>newer<span class="w"> </span>than<span class="w"> </span>copy<span class="w"> </span><span class="k">in</span><span class="w"> </span>archive
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span>-x,<span class="w"> </span>--extract,<span class="w"> </span>--get<span class="w">       </span>extract<span class="w"> </span>files<span class="w"> </span>from<span class="w"> </span>an<span class="w"> </span>archive
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w"> </span>Operation<span class="w"> </span>modifiers:
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">      </span>--check-device<span class="w">         </span>check<span class="w"> </span>device<span class="w"> </span>numbers<span class="w"> </span>when<span class="w"> </span>creating<span class="w"> </span>incremental
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">                             </span>archives<span class="w"> </span><span class="o">(</span>default<span class="o">)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span>-g,<span class="w"> </span>--listed-incremental<span class="o">=</span>FILE<span class="w">   </span>handle<span class="w"> </span>new<span class="w"> </span>GNU-format<span class="w"> </span>incremental<span class="w"> </span>backup
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">  </span>-G,<span class="w"> </span>--incremental<span class="w">          </span>handle<span class="w"> </span>old<span class="w"> </span>GNU-format<span class="w"> </span>incremental<span class="w"> </span>backup
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">      </span>--hole-detection<span class="o">=</span>TYPE<span class="w">  </span>technique<span class="w"> </span>to<span class="w"> </span>detect<span class="w"> </span>holes
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">      </span>--ignore-failed-read<span class="w">   </span><span class="k">do</span><span class="w"> </span>not<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>with<span class="w"> </span>nonzero<span class="w"> </span>on<span class="w"> </span>unreadable<span class="w"> </span>files
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">      </span>--level<span class="o">=</span>NUMBER<span class="w">         </span>dump<span class="w"> </span>level<span class="w"> </span><span class="k">for</span><span class="w"> </span>created<span class="w"> </span>listed-incremental<span class="w"> </span>archive
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">      </span>--no-check-device<span class="w">      </span><span class="k">do</span><span class="w"> </span>not<span class="w"> </span>check<span class="w"> </span>device<span class="w"> </span>numbers<span class="w"> </span>when<span class="w"> </span>creating
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">                             </span>incremental<span class="w"> </span>archives
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">      </span>--no-seek<span class="w">              </span>archive<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>seekable
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">  </span>-n,<span class="w"> </span>--seek<span class="w">                 </span>archive<span class="w"> </span>is<span class="w"> </span>seekable
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">      </span>--occurrence<span class="o">[=</span>NUMBER<span class="o">]</span><span class="w">  </span>process<span class="w"> </span>only<span class="w"> </span>the<span class="w"> </span>NUMBERth<span class="w"> </span>occurrence<span class="w"> </span>of<span class="w"> </span>each<span class="w"> </span>file
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">                             </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>archive<span class="p">;</span><span class="w"> </span>this<span class="w"> </span>option<span class="w"> </span>is<span class="w"> </span>valid<span class="w"> </span>only<span class="w"> </span><span class="k">in</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">                             </span>conjunction<span class="w"> </span>with<span class="w"> </span>one<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>subcommands<span class="w"> </span>--delete,
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">                             </span>--diff,<span class="w"> </span>--extract<span class="w"> </span>or<span class="w"> </span>--list<span class="w"> </span>and<span class="w"> </span>when<span class="w"> </span>a<span class="w"> </span>list<span class="w"> </span>of
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">                             </span>files<span class="w"> </span>is<span class="w"> </span>given<span class="w"> </span>either<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span><span class="nb">command</span><span class="w"> </span>line<span class="w"> </span>or<span class="w"> </span>via
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">                             </span>the<span class="w"> </span>-T<span class="w"> </span>option<span class="p">;</span><span class="w"> </span>NUMBER<span class="w"> </span>defaults<span class="w"> </span>to<span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">      </span>--sparse-version<span class="o">=</span>MAJOR<span class="o">[</span>.MINOR<span class="o">]</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">                             </span><span class="nb">set</span><span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>sparse<span class="w"> </span>format<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span><span class="o">(</span>implies
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">                             </span>--sparse<span class="o">)</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">  </span>-S,<span class="w"> </span>--sparse<span class="w">               </span>handle<span class="w"> </span>sparse<span class="w"> </span>files<span class="w"> </span>efficiently
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w"> </span>Local<span class="w"> </span>file<span class="w"> </span>name<span class="w"> </span>selection:
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">      </span>--add-file<span class="o">=</span>FILE<span class="w">        </span>add<span class="w"> </span>given<span class="w"> </span>FILE<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>archive<span class="w"> </span><span class="o">(</span>useful<span class="w"> </span><span class="k">if</span><span class="w"> </span>its<span class="w"> </span>name
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">                             </span>starts<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>dash<span class="o">)</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">  </span>-C,<span class="w"> </span>--directory<span class="o">=</span>DIR<span class="w">        </span>change<span class="w"> </span>to<span class="w"> </span>directory<span class="w"> </span>DIR
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">      </span>--exclude<span class="o">=</span>PATTERN<span class="w">      </span>exclude<span class="w"> </span>files,<span class="w"> </span>given<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>PATTERN
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">      </span>--exclude-backups<span class="w">      </span>exclude<span class="w"> </span>backup<span class="w"> </span>and<span class="w"> </span>lock<span class="w"> </span>files
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">      </span>--exclude-caches<span class="w">       </span>exclude<span class="w"> </span>contents<span class="w"> </span>of<span class="w"> </span>directories<span class="w"> </span>containing
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">                             </span>CACHEDIR.TAG,<span class="w"> </span>except<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>tag<span class="w"> </span>file<span class="w"> </span>itself
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">      </span>--exclude-caches-all<span class="w">   </span>exclude<span class="w"> </span>directories<span class="w"> </span>containing<span class="w"> </span>CACHEDIR.TAG
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">      </span>--exclude-caches-under<span class="w"> </span>exclude<span class="w"> </span>everything<span class="w"> </span>under<span class="w"> </span>directories<span class="w"> </span>containing
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">                             </span>CACHEDIR.TAG
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">      </span>--exclude-ignore<span class="o">=</span>FILE<span class="w">  </span><span class="nb">read</span><span class="w"> </span>exclude<span class="w"> </span>patterns<span class="w"> </span><span class="k">for</span><span class="w"> </span>each<span class="w"> </span>directory<span class="w"> </span>from
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">                             </span>FILE,<span class="w"> </span><span class="k">if</span><span class="w"> </span>it<span class="w"> </span>exists
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">      </span>--exclude-ignore-recursive<span class="o">=</span>FILE
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">                             </span><span class="nb">read</span><span class="w"> </span>exclude<span class="w"> </span>patterns<span class="w"> </span><span class="k">for</span><span class="w"> </span>each<span class="w"> </span>directory<span class="w"> </span>and<span class="w"> </span>its
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">                             </span>subdirectories<span class="w"> </span>from<span class="w"> </span>FILE,<span class="w"> </span><span class="k">if</span><span class="w"> </span>it<span class="w"> </span>exists
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">      </span>--exclude-tag<span class="o">=</span>FILE<span class="w">     </span>exclude<span class="w"> </span>contents<span class="w"> </span>of<span class="w"> </span>directories<span class="w"> </span>containing<span class="w"> </span>FILE,
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">                             </span>except<span class="w"> </span><span class="k">for</span><span class="w"> </span>FILE<span class="w"> </span>itself
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">      </span>--exclude-tag-all<span class="o">=</span>FILE<span class="w"> </span>exclude<span class="w"> </span>directories<span class="w"> </span>containing<span class="w"> </span>FILE
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">      </span>--exclude-tag-under<span class="o">=</span>FILE<span class="w">   </span>exclude<span class="w"> </span>everything<span class="w"> </span>under<span class="w"> </span>directories
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">                             </span>containing<span class="w"> </span>FILE
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">      </span>--exclude-vcs<span class="w">          </span>exclude<span class="w"> </span>version<span class="w"> </span>control<span class="w"> </span>system<span class="w"> </span>directories
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">      </span>--exclude-vcs-ignores<span class="w">  </span><span class="nb">read</span><span class="w"> </span>exclude<span class="w"> </span>patterns<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>VCS<span class="w"> </span>ignore<span class="w"> </span>files
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="w">      </span>--no-null<span class="w">              </span>disable<span class="w"> </span>the<span class="w"> </span>effect<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>previous<span class="w"> </span>--null<span class="w"> </span>option
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="w">      </span>--no-recursion<span class="w">         </span>avoid<span class="w"> </span>descending<span class="w"> </span>automatically<span class="w"> </span><span class="k">in</span><span class="w"> </span>directories
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="w">      </span>--no-unquote<span class="w">           </span><span class="k">do</span><span class="w"> </span>not<span class="w"> </span>unquote<span class="w"> </span>input<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>member<span class="w"> </span>names
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="w">      </span>--no-verbatim-files-from<span class="w">   </span>-T<span class="w"> </span>treats<span class="w"> </span>file<span class="w"> </span>names<span class="w"> </span>starting<span class="w"> </span>with<span class="w"> </span>dash<span class="w"> </span>as
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="w">                             </span>options<span class="w"> </span><span class="o">(</span>default<span class="o">)</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a><span class="w">      </span>--null<span class="w">                 </span>-T<span class="w"> </span>reads<span class="w"> </span>null-terminated<span class="w"> </span>names<span class="p">;</span><span class="w"> </span>implies
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="w">                             </span>--verbatim-files-from
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="w">      </span>--recursion<span class="w">            </span>recurse<span class="w"> </span>into<span class="w"> </span>directories<span class="w"> </span><span class="o">(</span>default<span class="o">)</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">  </span>-T,<span class="w"> </span>--files-from<span class="o">=</span>FILE<span class="w">      </span>get<span class="w"> </span>names<span class="w"> </span>to<span class="w"> </span>extract<span class="w"> </span>or<span class="w"> </span>create<span class="w"> </span>from<span class="w"> </span>FILE
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="w">      </span>--unquote<span class="w">              </span>unquote<span class="w"> </span>input<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>member<span class="w"> </span>names<span class="w"> </span><span class="o">(</span>default<span class="o">)</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="w">      </span>--verbatim-files-from<span class="w">  </span>-T<span class="w"> </span>reads<span class="w"> </span>file<span class="w"> </span>names<span class="w"> </span>verbatim<span class="w"> </span><span class="o">(</span>no<span class="w"> </span>escape<span class="w"> </span>or<span class="w"> </span>option
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="w">                             </span>handling<span class="o">)</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">  </span>-X,<span class="w"> </span>--exclude-from<span class="o">=</span>FILE<span class="w">    </span>exclude<span class="w"> </span>patterns<span class="w"> </span>listed<span class="w"> </span><span class="k">in</span><span class="w"> </span>FILE
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="w"> </span>File<span class="w"> </span>name<span class="w"> </span>matching<span class="w"> </span>options<span class="w"> </span><span class="o">(</span>affect<span class="w"> </span>both<span class="w"> </span>exclude<span class="w"> </span>and<span class="w"> </span>include<span class="w"> </span>patterns<span class="o">)</span>:
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a>
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a><span class="w">      </span>--anchored<span class="w">             </span>patterns<span class="w"> </span>match<span class="w"> </span>file<span class="w"> </span>name<span class="w"> </span>start
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="w">      </span>--ignore-case<span class="w">          </span>ignore<span class="w"> </span><span class="k">case</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="w">      </span>--no-anchored<span class="w">          </span>patterns<span class="w"> </span>match<span class="w"> </span>after<span class="w"> </span>any<span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="w"> </span><span class="o">(</span>default<span class="w"> </span><span class="k">for</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="w">                             </span>exclusion<span class="o">)</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="w">      </span>--no-ignore-case<span class="w">       </span><span class="k">case</span><span class="w"> </span>sensitive<span class="w"> </span>matching<span class="w"> </span><span class="o">(</span>default<span class="o">)</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="w">      </span>--no-wildcards<span class="w">         </span>verbatim<span class="w"> </span>string<span class="w"> </span>matching
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="w">      </span>--no-wildcards-match-slash<span class="w">   </span>wildcards<span class="w"> </span><span class="k">do</span><span class="w"> </span>not<span class="w"> </span>match<span class="w"> </span><span class="s1">&#39;/&#39;</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a><span class="w">      </span>--wildcards<span class="w">            </span>use<span class="w"> </span>wildcards<span class="w"> </span><span class="o">(</span>default<span class="w"> </span><span class="k">for</span><span class="w"> </span>exclusion<span class="o">)</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="w">      </span>--wildcards-match-slash<span class="w">   </span>wildcards<span class="w"> </span>match<span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="w"> </span><span class="o">(</span>default<span class="w"> </span><span class="k">for</span><span class="w"> </span>exclusion<span class="o">)</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a>
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a><span class="w"> </span>Overwrite<span class="w"> </span>control:
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a>
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a><span class="w">      </span>--keep-directory-symlink<span class="w">   </span>preserve<span class="w"> </span>existing<span class="w"> </span>symlinks<span class="w"> </span>to<span class="w"> </span>directories<span class="w"> </span>when
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a><span class="w">                             </span>extracting
+<a id="__codelineno-0-98" name="__codelineno-0-98"></a><span class="w">      </span>--keep-newer-files<span class="w">     </span>don<span class="s1">&#39;t replace existing files that are newer than</span>
+<a id="__codelineno-0-99" name="__codelineno-0-99"></a><span class="s1">                             their archive copies</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="s1">  -k, --keep-old-files       don&#39;</span>t<span class="w"> </span>replace<span class="w"> </span>existing<span class="w"> </span>files<span class="w"> </span>when<span class="w"> </span>extracting,
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a><span class="w">                             </span>treat<span class="w"> </span>them<span class="w"> </span>as<span class="w"> </span>errors
+<a id="__codelineno-0-102" name="__codelineno-0-102"></a><span class="w">      </span>--no-overwrite-dir<span class="w">     </span>preserve<span class="w"> </span>metadata<span class="w"> </span>of<span class="w"> </span>existing<span class="w"> </span>directories
+<a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="w">      </span>--one-top-level<span class="o">[=</span>DIR<span class="o">]</span><span class="w">  </span>create<span class="w"> </span>a<span class="w"> </span>subdirectory<span class="w"> </span>to<span class="w"> </span>avoid<span class="w"> </span>having<span class="w"> </span>loose<span class="w"> </span>files
+<a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="w">                             </span>extracted
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a><span class="w">      </span>--overwrite<span class="w">            </span>overwrite<span class="w"> </span>existing<span class="w"> </span>files<span class="w"> </span>when<span class="w"> </span>extracting
+<a id="__codelineno-0-106" name="__codelineno-0-106"></a><span class="w">      </span>--overwrite-dir<span class="w">        </span>overwrite<span class="w"> </span>metadata<span class="w"> </span>of<span class="w"> </span>existing<span class="w"> </span>directories<span class="w"> </span>when
+<a id="__codelineno-0-107" name="__codelineno-0-107"></a><span class="w">                             </span>extracting<span class="w"> </span><span class="o">(</span>default<span class="o">)</span>
+<a id="__codelineno-0-108" name="__codelineno-0-108"></a><span class="w">      </span>--recursive-unlink<span class="w">     </span>empty<span class="w"> </span>hierarchies<span class="w"> </span>prior<span class="w"> </span>to<span class="w"> </span>extracting<span class="w"> </span>directory
+<a id="__codelineno-0-109" name="__codelineno-0-109"></a><span class="w">      </span>--remove-files<span class="w">         </span>remove<span class="w"> </span>files<span class="w"> </span>after<span class="w"> </span>adding<span class="w"> </span>them<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>archive
+<a id="__codelineno-0-110" name="__codelineno-0-110"></a><span class="w">      </span>--skip-old-files<span class="w">       </span>don<span class="s1">&#39;t replace existing files when extracting,</span>
+<a id="__codelineno-0-111" name="__codelineno-0-111"></a><span class="s1">                             silently skip over them</span>
+<a id="__codelineno-0-112" name="__codelineno-0-112"></a><span class="s1">  -U, --unlink-first         remove each file prior to extracting over it</span>
+<a id="__codelineno-0-113" name="__codelineno-0-113"></a><span class="s1">  -W, --verify               attempt to verify the archive after writing it</span>
+<a id="__codelineno-0-114" name="__codelineno-0-114"></a>
+<a id="__codelineno-0-115" name="__codelineno-0-115"></a><span class="s1"> Select output stream:</span>
+<a id="__codelineno-0-116" name="__codelineno-0-116"></a>
+<a id="__codelineno-0-117" name="__codelineno-0-117"></a><span class="s1">      --ignore-command-error ignore exit codes of children</span>
+<a id="__codelineno-0-118" name="__codelineno-0-118"></a><span class="s1">      --no-ignore-command-error   treat non-zero exit codes of children as</span>
+<a id="__codelineno-0-119" name="__codelineno-0-119"></a><span class="s1">                             error</span>
+<a id="__codelineno-0-120" name="__codelineno-0-120"></a><span class="s1">  -O, --to-stdout            extract files to standard output</span>
+<a id="__codelineno-0-121" name="__codelineno-0-121"></a><span class="s1">      --to-command=COMMAND   pipe extracted files to another program</span>
+<a id="__codelineno-0-122" name="__codelineno-0-122"></a>
+<a id="__codelineno-0-123" name="__codelineno-0-123"></a><span class="s1"> Handling of file attributes:</span>
+<a id="__codelineno-0-124" name="__codelineno-0-124"></a>
+<a id="__codelineno-0-125" name="__codelineno-0-125"></a><span class="s1">      --atime-preserve[=METHOD]   preserve access times on dumped files, either</span>
+<a id="__codelineno-0-126" name="__codelineno-0-126"></a><span class="s1">                             by restoring the times after reading</span>
+<a id="__codelineno-0-127" name="__codelineno-0-127"></a><span class="s1">                             (METHOD=&#39;</span>replace<span class="s1">&#39;; default) or by not setting the</span>
+<a id="__codelineno-0-128" name="__codelineno-0-128"></a><span class="s1">                             times in the first place (METHOD=&#39;</span>system<span class="s1">&#39;)</span>
+<a id="__codelineno-0-129" name="__codelineno-0-129"></a><span class="s1">      --clamp-mtime          only set time when the file is more recent than</span>
+<a id="__codelineno-0-130" name="__codelineno-0-130"></a><span class="s1">                             what was given with --mtime</span>
+<a id="__codelineno-0-131" name="__codelineno-0-131"></a><span class="s1">      --delay-directory-restore   delay setting modification times and</span>
+<a id="__codelineno-0-132" name="__codelineno-0-132"></a><span class="s1">                             permissions of extracted directories until the end</span>
+<a id="__codelineno-0-133" name="__codelineno-0-133"></a><span class="s1">                             of extraction</span>
+<a id="__codelineno-0-134" name="__codelineno-0-134"></a><span class="s1">      --group=NAME           force NAME as group for added files</span>
+<a id="__codelineno-0-135" name="__codelineno-0-135"></a><span class="s1">      --group-map=FILE       use FILE to map file owner GIDs and names</span>
+<a id="__codelineno-0-136" name="__codelineno-0-136"></a><span class="s1">      --mode=CHANGES         force (symbolic) mode CHANGES for added files</span>
+<a id="__codelineno-0-137" name="__codelineno-0-137"></a><span class="s1">      --mtime=DATE-OR-FILE   set mtime for added files from DATE-OR-FILE</span>
+<a id="__codelineno-0-138" name="__codelineno-0-138"></a><span class="s1">  -m, --touch                don&#39;</span>t<span class="w"> </span>extract<span class="w"> </span>file<span class="w"> </span>modified<span class="w"> </span><span class="nb">time</span>
+<a id="__codelineno-0-139" name="__codelineno-0-139"></a><span class="w">      </span>--no-delay-directory-restore
+<a id="__codelineno-0-140" name="__codelineno-0-140"></a><span class="w">                             </span>cancel<span class="w"> </span>the<span class="w"> </span>effect<span class="w"> </span>of<span class="w"> </span>--delay-directory-restore
+<a id="__codelineno-0-141" name="__codelineno-0-141"></a><span class="w">                             </span>option
+<a id="__codelineno-0-142" name="__codelineno-0-142"></a><span class="w">      </span>--no-same-owner<span class="w">        </span>extract<span class="w"> </span>files<span class="w"> </span>as<span class="w"> </span>yourself<span class="w"> </span><span class="o">(</span>default<span class="w"> </span><span class="k">for</span><span class="w"> </span>ordinary
+<a id="__codelineno-0-143" name="__codelineno-0-143"></a><span class="w">                             </span>users<span class="o">)</span>
+<a id="__codelineno-0-144" name="__codelineno-0-144"></a><span class="w">      </span>--no-same-permissions<span class="w">  </span>apply<span class="w"> </span>the<span class="w"> </span>user<span class="s1">&#39;s umask when extracting permissions</span>
+<a id="__codelineno-0-145" name="__codelineno-0-145"></a><span class="s1">                             from the archive (default for ordinary users)</span>
+<a id="__codelineno-0-146" name="__codelineno-0-146"></a><span class="s1">      --numeric-owner        always use numbers for user/group names</span>
+<a id="__codelineno-0-147" name="__codelineno-0-147"></a><span class="s1">      --owner=NAME           force NAME as owner for added files</span>
+<a id="__codelineno-0-148" name="__codelineno-0-148"></a><span class="s1">      --owner-map=FILE       use FILE to map file owner UIDs and names</span>
+<a id="__codelineno-0-149" name="__codelineno-0-149"></a><span class="s1">  -p, --preserve-permissions, --same-permissions</span>
+<a id="__codelineno-0-150" name="__codelineno-0-150"></a><span class="s1">                             extract information about file permissions</span>
+<a id="__codelineno-0-151" name="__codelineno-0-151"></a><span class="s1">                             (default for superuser)</span>
+<a id="__codelineno-0-152" name="__codelineno-0-152"></a><span class="s1">      --same-owner           try extracting files with the same ownership as</span>
+<a id="__codelineno-0-153" name="__codelineno-0-153"></a><span class="s1">                             exists in the archive (default for superuser)</span>
+<a id="__codelineno-0-154" name="__codelineno-0-154"></a><span class="s1">      --sort=ORDER           directory sorting order: none (default), name or</span>
+<a id="__codelineno-0-155" name="__codelineno-0-155"></a><span class="s1">                             inode</span>
+<a id="__codelineno-0-156" name="__codelineno-0-156"></a><span class="s1">  -s, --preserve-order, --same-order</span>
+<a id="__codelineno-0-157" name="__codelineno-0-157"></a><span class="s1">                             member arguments are listed in the same order as</span>
+<a id="__codelineno-0-158" name="__codelineno-0-158"></a><span class="s1">                             the files in the archive</span>
+<a id="__codelineno-0-159" name="__codelineno-0-159"></a>
+<a id="__codelineno-0-160" name="__codelineno-0-160"></a><span class="s1"> Handling of extended file attributes:</span>
+<a id="__codelineno-0-161" name="__codelineno-0-161"></a>
+<a id="__codelineno-0-162" name="__codelineno-0-162"></a><span class="s1">      --acls                 Enable the POSIX ACLs support</span>
+<a id="__codelineno-0-163" name="__codelineno-0-163"></a><span class="s1">      --no-acls              Disable the POSIX ACLs support</span>
+<a id="__codelineno-0-164" name="__codelineno-0-164"></a><span class="s1">      --no-selinux           Disable the SELinux context support</span>
+<a id="__codelineno-0-165" name="__codelineno-0-165"></a><span class="s1">      --no-xattrs            Disable extended attributes support</span>
+<a id="__codelineno-0-166" name="__codelineno-0-166"></a><span class="s1">      --selinux              Enable the SELinux context support</span>
+<a id="__codelineno-0-167" name="__codelineno-0-167"></a><span class="s1">      --xattrs               Enable extended attributes support</span>
+<a id="__codelineno-0-168" name="__codelineno-0-168"></a><span class="s1">      --xattrs-exclude=MASK  specify the exclude pattern for xattr keys</span>
+<a id="__codelineno-0-169" name="__codelineno-0-169"></a><span class="s1">      --xattrs-include=MASK  specify the include pattern for xattr keys</span>
+<a id="__codelineno-0-170" name="__codelineno-0-170"></a>
+<a id="__codelineno-0-171" name="__codelineno-0-171"></a><span class="s1"> Device selection and switching:</span>
+<a id="__codelineno-0-172" name="__codelineno-0-172"></a>
+<a id="__codelineno-0-173" name="__codelineno-0-173"></a><span class="s1">      --force-local          archive file is local even if it has a colon</span>
+<a id="__codelineno-0-174" name="__codelineno-0-174"></a><span class="s1">  -f, --file=ARCHIVE         use archive file or device ARCHIVE</span>
+<a id="__codelineno-0-175" name="__codelineno-0-175"></a><span class="s1">  -F, --info-script=NAME, --new-volume-script=NAME</span>
+<a id="__codelineno-0-176" name="__codelineno-0-176"></a><span class="s1">                             run script at end of each tape (implies -M)</span>
+<a id="__codelineno-0-177" name="__codelineno-0-177"></a><span class="s1">  -L, --tape-length=NUMBER   change tape after writing NUMBER x 1024 bytes</span>
+<a id="__codelineno-0-178" name="__codelineno-0-178"></a><span class="s1">  -M, --multi-volume         create/list/extract multi-volume archive</span>
+<a id="__codelineno-0-179" name="__codelineno-0-179"></a><span class="s1">      --rmt-command=COMMAND  use given rmt COMMAND instead of rmt</span>
+<a id="__codelineno-0-180" name="__codelineno-0-180"></a><span class="s1">      --rsh-command=COMMAND  use remote COMMAND instead of rsh</span>
+<a id="__codelineno-0-181" name="__codelineno-0-181"></a><span class="s1">      --volno-file=FILE      use/update the volume number in FILE</span>
+<a id="__codelineno-0-182" name="__codelineno-0-182"></a>
+<a id="__codelineno-0-183" name="__codelineno-0-183"></a><span class="s1"> Device blocking:</span>
+<a id="__codelineno-0-184" name="__codelineno-0-184"></a>
+<a id="__codelineno-0-185" name="__codelineno-0-185"></a><span class="s1">  -b, --blocking-factor=BLOCKS   BLOCKS x 512 bytes per record</span>
+<a id="__codelineno-0-186" name="__codelineno-0-186"></a><span class="s1">  -B, --read-full-records    reblock as we read (for 4.2BSD pipes)</span>
+<a id="__codelineno-0-187" name="__codelineno-0-187"></a><span class="s1">  -i, --ignore-zeros         ignore zeroed blocks in archive (means EOF)</span>
+<a id="__codelineno-0-188" name="__codelineno-0-188"></a><span class="s1">      --record-size=NUMBER   NUMBER of bytes per record, multiple of 512</span>
+<a id="__codelineno-0-189" name="__codelineno-0-189"></a>
+<a id="__codelineno-0-190" name="__codelineno-0-190"></a><span class="s1"> Archive format selection:</span>
+<a id="__codelineno-0-191" name="__codelineno-0-191"></a>
+<a id="__codelineno-0-192" name="__codelineno-0-192"></a><span class="s1">  -H, --format=FORMAT        create archive of the given format</span>
+<a id="__codelineno-0-193" name="__codelineno-0-193"></a>
+<a id="__codelineno-0-194" name="__codelineno-0-194"></a><span class="s1"> FORMAT is one of the following:</span>
+<a id="__codelineno-0-195" name="__codelineno-0-195"></a><span class="s1">    gnu                      GNU tar 1.13.x format</span>
+<a id="__codelineno-0-196" name="__codelineno-0-196"></a><span class="s1">    oldgnu                   GNU format as per tar &lt;= 1.12</span>
+<a id="__codelineno-0-197" name="__codelineno-0-197"></a><span class="s1">    pax                      POSIX 1003.1-2001 (pax) format</span>
+<a id="__codelineno-0-198" name="__codelineno-0-198"></a><span class="s1">    posix                    same as pax</span>
+<a id="__codelineno-0-199" name="__codelineno-0-199"></a><span class="s1">    ustar                    POSIX 1003.1-1988 (ustar) format</span>
+<a id="__codelineno-0-200" name="__codelineno-0-200"></a><span class="s1">    v7                       old V7 tar format</span>
+<a id="__codelineno-0-201" name="__codelineno-0-201"></a>
+<a id="__codelineno-0-202" name="__codelineno-0-202"></a><span class="s1">      --old-archive, --portability</span>
+<a id="__codelineno-0-203" name="__codelineno-0-203"></a><span class="s1">                             same as --format=v7</span>
+<a id="__codelineno-0-204" name="__codelineno-0-204"></a><span class="s1">      --pax-option=keyword[[:]=value][,keyword[[:]=value]]...</span>
+<a id="__codelineno-0-205" name="__codelineno-0-205"></a><span class="s1">                             control pax keywords</span>
+<a id="__codelineno-0-206" name="__codelineno-0-206"></a><span class="s1">      --posix                same as --format=posix</span>
+<a id="__codelineno-0-207" name="__codelineno-0-207"></a><span class="s1">  -V, --label=TEXT           create archive with volume name TEXT; at</span>
+<a id="__codelineno-0-208" name="__codelineno-0-208"></a><span class="s1">                             list/extract time, use TEXT as a globbing pattern</span>
+<a id="__codelineno-0-209" name="__codelineno-0-209"></a><span class="s1">                             for volume name</span>
+<a id="__codelineno-0-210" name="__codelineno-0-210"></a>
+<a id="__codelineno-0-211" name="__codelineno-0-211"></a><span class="s1"> Compression options:</span>
+<a id="__codelineno-0-212" name="__codelineno-0-212"></a>
+<a id="__codelineno-0-213" name="__codelineno-0-213"></a><span class="s1">  -a, --auto-compress        use archive suffix to determine the compression</span>
+<a id="__codelineno-0-214" name="__codelineno-0-214"></a><span class="s1">                             program</span>
+<a id="__codelineno-0-215" name="__codelineno-0-215"></a><span class="s1">  -I, --use-compress-program=PROG</span>
+<a id="__codelineno-0-216" name="__codelineno-0-216"></a><span class="s1">                             filter through PROG (must accept -d)</span>
+<a id="__codelineno-0-217" name="__codelineno-0-217"></a><span class="s1">  -j, --bzip2                filter the archive through bzip2</span>
+<a id="__codelineno-0-218" name="__codelineno-0-218"></a><span class="s1">  -J, --xz                   filter the archive through xz</span>
+<a id="__codelineno-0-219" name="__codelineno-0-219"></a><span class="s1">      --lzip                 filter the archive through lzip</span>
+<a id="__codelineno-0-220" name="__codelineno-0-220"></a><span class="s1">      --lzma                 filter the archive through xz</span>
+<a id="__codelineno-0-221" name="__codelineno-0-221"></a><span class="s1">      --lzop                 filter the archive through lzop</span>
+<a id="__codelineno-0-222" name="__codelineno-0-222"></a><span class="s1">      --no-auto-compress     do not use archive suffix to determine the</span>
+<a id="__codelineno-0-223" name="__codelineno-0-223"></a><span class="s1">                             compression program</span>
+<a id="__codelineno-0-224" name="__codelineno-0-224"></a><span class="s1">      --zstd                 filter the archive through zstd</span>
+<a id="__codelineno-0-225" name="__codelineno-0-225"></a><span class="s1">  -z, --gzip, --gunzip, --ungzip   filter the archive through gzip</span>
+<a id="__codelineno-0-226" name="__codelineno-0-226"></a><span class="s1">  -Z, --compress, --uncompress   filter the archive through compress</span>
+<a id="__codelineno-0-227" name="__codelineno-0-227"></a>
+<a id="__codelineno-0-228" name="__codelineno-0-228"></a><span class="s1"> Local file selection:</span>
+<a id="__codelineno-0-229" name="__codelineno-0-229"></a>
+<a id="__codelineno-0-230" name="__codelineno-0-230"></a><span class="s1">      --backup[=CONTROL]     backup before removal, choose version CONTROL</span>
+<a id="__codelineno-0-231" name="__codelineno-0-231"></a><span class="s1">      --hard-dereference     follow hard links; archive and dump the files they</span>
+<a id="__codelineno-0-232" name="__codelineno-0-232"></a><span class="s1">                             refer to</span>
+<a id="__codelineno-0-233" name="__codelineno-0-233"></a><span class="s1">  -h, --dereference          follow symlinks; archive and dump the files they</span>
+<a id="__codelineno-0-234" name="__codelineno-0-234"></a><span class="s1">                             point to</span>
+<a id="__codelineno-0-235" name="__codelineno-0-235"></a><span class="s1">  -K, --starting-file=MEMBER-NAME</span>
+<a id="__codelineno-0-236" name="__codelineno-0-236"></a><span class="s1">                             begin at member MEMBER-NAME when reading the</span>
+<a id="__codelineno-0-237" name="__codelineno-0-237"></a><span class="s1">                             archive</span>
+<a id="__codelineno-0-238" name="__codelineno-0-238"></a><span class="s1">      --newer-mtime=DATE     compare date and time when data changed only</span>
+<a id="__codelineno-0-239" name="__codelineno-0-239"></a><span class="s1">  -N, --newer=DATE-OR-FILE, --after-date=DATE-OR-FILE</span>
+<a id="__codelineno-0-240" name="__codelineno-0-240"></a><span class="s1">                             only store files newer than DATE-OR-FILE</span>
+<a id="__codelineno-0-241" name="__codelineno-0-241"></a><span class="s1">      --one-file-system      stay in local file system when creating archive</span>
+<a id="__codelineno-0-242" name="__codelineno-0-242"></a><span class="s1">  -P, --absolute-names       don&#39;</span>t<span class="w"> </span>strip<span class="w"> </span>leading<span class="w"> </span><span class="s1">&#39;/&#39;</span>s<span class="w"> </span>from<span class="w"> </span>file<span class="w"> </span>names
+<a id="__codelineno-0-243" name="__codelineno-0-243"></a><span class="w">      </span>--suffix<span class="o">=</span>STRING<span class="w">        </span>backup<span class="w"> </span>before<span class="w"> </span>removal,<span class="w"> </span>override<span class="w"> </span>usual<span class="w"> </span>suffix<span class="w"> </span><span class="o">(</span><span class="s1">&#39;~&#39;</span>
+<a id="__codelineno-0-244" name="__codelineno-0-244"></a><span class="w">                             </span>unless<span class="w"> </span>overridden<span class="w"> </span>by<span class="w"> </span>environment<span class="w"> </span>variable
+<a id="__codelineno-0-245" name="__codelineno-0-245"></a><span class="w">                             </span>SIMPLE_BACKUP_SUFFIX<span class="o">)</span>
+<a id="__codelineno-0-246" name="__codelineno-0-246"></a>
+<a id="__codelineno-0-247" name="__codelineno-0-247"></a><span class="w"> </span>File<span class="w"> </span>name<span class="w"> </span>transformations:
+<a id="__codelineno-0-248" name="__codelineno-0-248"></a>
+<a id="__codelineno-0-249" name="__codelineno-0-249"></a><span class="w">      </span>--strip-components<span class="o">=</span>NUMBER<span class="w">   </span>strip<span class="w"> </span>NUMBER<span class="w"> </span>leading<span class="w"> </span>components<span class="w"> </span>from<span class="w"> </span>file
+<a id="__codelineno-0-250" name="__codelineno-0-250"></a><span class="w">                             </span>names<span class="w"> </span>on<span class="w"> </span>extraction
+<a id="__codelineno-0-251" name="__codelineno-0-251"></a><span class="w">      </span>--transform<span class="o">=</span>EXPRESSION,<span class="w"> </span>--xform<span class="o">=</span>EXPRESSION
+<a id="__codelineno-0-252" name="__codelineno-0-252"></a><span class="w">                             </span>use<span class="w"> </span>sed<span class="w"> </span>replace<span class="w"> </span>EXPRESSION<span class="w"> </span>to<span class="w"> </span>transform<span class="w"> </span>file
+<a id="__codelineno-0-253" name="__codelineno-0-253"></a><span class="w">                             </span>names
+<a id="__codelineno-0-254" name="__codelineno-0-254"></a>
+<a id="__codelineno-0-255" name="__codelineno-0-255"></a><span class="w"> </span>Informative<span class="w"> </span>output:
+<a id="__codelineno-0-256" name="__codelineno-0-256"></a>
+<a id="__codelineno-0-257" name="__codelineno-0-257"></a><span class="w">      </span>--checkpoint<span class="o">[=</span>NUMBER<span class="o">]</span><span class="w">  </span>display<span class="w"> </span>progress<span class="w"> </span>messages<span class="w"> </span>every<span class="w"> </span>NUMBERth<span class="w"> </span>record
+<a id="__codelineno-0-258" name="__codelineno-0-258"></a><span class="w">                             </span><span class="o">(</span>default<span class="w"> </span><span class="m">10</span><span class="o">)</span>
+<a id="__codelineno-0-259" name="__codelineno-0-259"></a><span class="w">      </span>--checkpoint-action<span class="o">=</span>ACTION<span class="w">   </span>execute<span class="w"> </span>ACTION<span class="w"> </span>on<span class="w"> </span>each<span class="w"> </span>checkpoint
+<a id="__codelineno-0-260" name="__codelineno-0-260"></a><span class="w">      </span>--full-time<span class="w">            </span>print<span class="w"> </span>file<span class="w"> </span><span class="nb">time</span><span class="w"> </span>to<span class="w"> </span>its<span class="w"> </span>full<span class="w"> </span>resolution
+<a id="__codelineno-0-261" name="__codelineno-0-261"></a><span class="w">      </span>--index-file<span class="o">=</span>FILE<span class="w">      </span>send<span class="w"> </span>verbose<span class="w"> </span>output<span class="w"> </span>to<span class="w"> </span>FILE
+<a id="__codelineno-0-262" name="__codelineno-0-262"></a><span class="w">  </span>-l,<span class="w"> </span>--check-links<span class="w">          </span>print<span class="w"> </span>a<span class="w"> </span>message<span class="w"> </span><span class="k">if</span><span class="w"> </span>not<span class="w"> </span>all<span class="w"> </span>links<span class="w"> </span>are<span class="w"> </span>dumped
+<a id="__codelineno-0-263" name="__codelineno-0-263"></a><span class="w">      </span>--no-quote-chars<span class="o">=</span>STRING<span class="w">   </span>disable<span class="w"> </span>quoting<span class="w"> </span><span class="k">for</span><span class="w"> </span>characters<span class="w"> </span>from<span class="w"> </span>STRING
+<a id="__codelineno-0-264" name="__codelineno-0-264"></a><span class="w">      </span>--quote-chars<span class="o">=</span>STRING<span class="w">   </span>additionally<span class="w"> </span>quote<span class="w"> </span>characters<span class="w"> </span>from<span class="w"> </span>STRING
+<a id="__codelineno-0-265" name="__codelineno-0-265"></a><span class="w">      </span>--quoting-style<span class="o">=</span>STYLE<span class="w">  </span><span class="nb">set</span><span class="w"> </span>name<span class="w"> </span>quoting<span class="w"> </span>style<span class="p">;</span><span class="w"> </span>see<span class="w"> </span>below<span class="w"> </span><span class="k">for</span><span class="w"> </span>valid<span class="w"> </span>STYLE
+<a id="__codelineno-0-266" name="__codelineno-0-266"></a><span class="w">                             </span>values
+<a id="__codelineno-0-267" name="__codelineno-0-267"></a><span class="w">  </span>-R,<span class="w"> </span>--block-number<span class="w">         </span>show<span class="w"> </span>block<span class="w"> </span>number<span class="w"> </span>within<span class="w"> </span>archive<span class="w"> </span>with<span class="w"> </span>each<span class="w"> </span>message
+<a id="__codelineno-0-268" name="__codelineno-0-268"></a>
+<a id="__codelineno-0-269" name="__codelineno-0-269"></a><span class="w">      </span>--show-defaults<span class="w">        </span>show<span class="w"> </span>tar<span class="w"> </span>defaults
+<a id="__codelineno-0-270" name="__codelineno-0-270"></a><span class="w">      </span>--show-omitted-dirs<span class="w">    </span>when<span class="w"> </span>listing<span class="w"> </span>or<span class="w"> </span>extracting,<span class="w"> </span>list<span class="w"> </span>each<span class="w"> </span>directory
+<a id="__codelineno-0-271" name="__codelineno-0-271"></a><span class="w">                             </span>that<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>match<span class="w"> </span>search<span class="w"> </span>criteria
+<a id="__codelineno-0-272" name="__codelineno-0-272"></a><span class="w">      </span>--show-snapshot-field-ranges
+<a id="__codelineno-0-273" name="__codelineno-0-273"></a><span class="w">                             </span>show<span class="w"> </span>valid<span class="w"> </span>ranges<span class="w"> </span><span class="k">for</span><span class="w"> </span>snapshot-file<span class="w"> </span>fields
+<a id="__codelineno-0-274" name="__codelineno-0-274"></a><span class="w">      </span>--show-transformed-names,<span class="w"> </span>--show-stored-names
+<a id="__codelineno-0-275" name="__codelineno-0-275"></a><span class="w">                             </span>show<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>archive<span class="w"> </span>names<span class="w"> </span>after<span class="w"> </span>transformation
+<a id="__codelineno-0-276" name="__codelineno-0-276"></a><span class="w">      </span>--totals<span class="o">[=</span>SIGNAL<span class="o">]</span><span class="w">      </span>print<span class="w"> </span>total<span class="w"> </span>bytes<span class="w"> </span>after<span class="w"> </span>processing<span class="w"> </span>the<span class="w"> </span>archive<span class="p">;</span>
+<a id="__codelineno-0-277" name="__codelineno-0-277"></a><span class="w">                             </span>with<span class="w"> </span>an<span class="w"> </span>argument<span class="w"> </span>-<span class="w"> </span>print<span class="w"> </span>total<span class="w"> </span>bytes<span class="w"> </span>when<span class="w"> </span>this
+<a id="__codelineno-0-278" name="__codelineno-0-278"></a><span class="w">                             </span>SIGNAL<span class="w"> </span>is<span class="w"> </span>delivered<span class="p">;</span><span class="w"> </span>Allowed<span class="w"> </span>signals<span class="w"> </span>are:<span class="w"> </span>SIGHUP,
+<a id="__codelineno-0-279" name="__codelineno-0-279"></a><span class="w">                             </span>SIGQUIT,<span class="w"> </span>SIGINT,<span class="w"> </span>SIGUSR1<span class="w"> </span>and<span class="w"> </span>SIGUSR2<span class="p">;</span><span class="w"> </span>the<span class="w"> </span>names
+<a id="__codelineno-0-280" name="__codelineno-0-280"></a><span class="w">                             </span>without<span class="w"> </span>SIG<span class="w"> </span>prefix<span class="w"> </span>are<span class="w"> </span>also<span class="w"> </span>accepted
+<a id="__codelineno-0-281" name="__codelineno-0-281"></a><span class="w">      </span>--utc<span class="w">                  </span>print<span class="w"> </span>file<span class="w"> </span>modification<span class="w"> </span><span class="nb">times</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>UTC
+<a id="__codelineno-0-282" name="__codelineno-0-282"></a><span class="w">  </span>-v,<span class="w"> </span>--verbose<span class="w">              </span>verbosely<span class="w"> </span>list<span class="w"> </span>files<span class="w"> </span>processed
+<a id="__codelineno-0-283" name="__codelineno-0-283"></a><span class="w">      </span>--warning<span class="o">=</span>KEYWORD<span class="w">      </span>warning<span class="w"> </span>control
+<a id="__codelineno-0-284" name="__codelineno-0-284"></a><span class="w">  </span>-w,<span class="w"> </span>--interactive,<span class="w"> </span>--confirmation
+<a id="__codelineno-0-285" name="__codelineno-0-285"></a><span class="w">                             </span>ask<span class="w"> </span><span class="k">for</span><span class="w"> </span>confirmation<span class="w"> </span><span class="k">for</span><span class="w"> </span>every<span class="w"> </span>action
+<a id="__codelineno-0-286" name="__codelineno-0-286"></a>
+<a id="__codelineno-0-287" name="__codelineno-0-287"></a><span class="w"> </span>Compatibility<span class="w"> </span>options:
+<a id="__codelineno-0-288" name="__codelineno-0-288"></a>
+<a id="__codelineno-0-289" name="__codelineno-0-289"></a><span class="w">  </span>-o<span class="w">                         </span>when<span class="w"> </span>creating,<span class="w"> </span>same<span class="w"> </span>as<span class="w"> </span>--old-archive<span class="p">;</span><span class="w"> </span>when
+<a id="__codelineno-0-290" name="__codelineno-0-290"></a><span class="w">                             </span>extracting,<span class="w"> </span>same<span class="w"> </span>as<span class="w"> </span>--no-same-owner
+<a id="__codelineno-0-291" name="__codelineno-0-291"></a>
+<a id="__codelineno-0-292" name="__codelineno-0-292"></a><span class="w"> </span>Other<span class="w"> </span>options:
+<a id="__codelineno-0-293" name="__codelineno-0-293"></a>
+<a id="__codelineno-0-294" name="__codelineno-0-294"></a><span class="w">  </span>-?,<span class="w"> </span>--help<span class="w">                 </span>give<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>list
+<a id="__codelineno-0-295" name="__codelineno-0-295"></a><span class="w">      </span>--restrict<span class="w">             </span>disable<span class="w"> </span>use<span class="w"> </span>of<span class="w"> </span>some<span class="w"> </span>potentially<span class="w"> </span>harmful<span class="w"> </span>options
+<a id="__codelineno-0-296" name="__codelineno-0-296"></a><span class="w">      </span>--usage<span class="w">                </span>give<span class="w"> </span>a<span class="w"> </span>short<span class="w"> </span>usage<span class="w"> </span>message
+<a id="__codelineno-0-297" name="__codelineno-0-297"></a><span class="w">      </span>--version<span class="w">              </span>print<span class="w"> </span>program<span class="w"> </span>version
+<a id="__codelineno-0-298" name="__codelineno-0-298"></a>
+<a id="__codelineno-0-299" name="__codelineno-0-299"></a>Mandatory<span class="w"> </span>or<span class="w"> </span>optional<span class="w"> </span>arguments<span class="w"> </span>to<span class="w"> </span>long<span class="w"> </span>options<span class="w"> </span>are<span class="w"> </span>also<span class="w"> </span>mandatory<span class="w"> </span>or<span class="w"> </span>optional
+<a id="__codelineno-0-300" name="__codelineno-0-300"></a><span class="k">for</span><span class="w"> </span>any<span class="w"> </span>corresponding<span class="w"> </span>short<span class="w"> </span>options.
+<a id="__codelineno-0-301" name="__codelineno-0-301"></a>
+<a id="__codelineno-0-302" name="__codelineno-0-302"></a>The<span class="w"> </span>backup<span class="w"> </span>suffix<span class="w"> </span>is<span class="w"> </span><span class="s1">&#39;~&#39;</span>,<span class="w"> </span>unless<span class="w"> </span><span class="nb">set</span><span class="w"> </span>with<span class="w"> </span>--suffix<span class="w"> </span>or<span class="w"> </span>SIMPLE_BACKUP_SUFFIX.
+<a id="__codelineno-0-303" name="__codelineno-0-303"></a>The<span class="w"> </span>version<span class="w"> </span>control<span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span><span class="nb">set</span><span class="w"> </span>with<span class="w"> </span>--backup<span class="w"> </span>or<span class="w"> </span>VERSION_CONTROL,<span class="w"> </span>values<span class="w"> </span>are:
+<a id="__codelineno-0-304" name="__codelineno-0-304"></a>
+<a id="__codelineno-0-305" name="__codelineno-0-305"></a><span class="w">  </span>none,<span class="w"> </span>off<span class="w">       </span>never<span class="w"> </span>make<span class="w"> </span>backups
+<a id="__codelineno-0-306" name="__codelineno-0-306"></a><span class="w">  </span>t,<span class="w"> </span>numbered<span class="w">     </span>make<span class="w"> </span>numbered<span class="w"> </span>backups
+<a id="__codelineno-0-307" name="__codelineno-0-307"></a><span class="w">  </span>nil,<span class="w"> </span>existing<span class="w">   </span>numbered<span class="w"> </span><span class="k">if</span><span class="w"> </span>numbered<span class="w"> </span>backups<span class="w"> </span>exist,<span class="w"> </span>simple<span class="w"> </span>otherwise
+<a id="__codelineno-0-308" name="__codelineno-0-308"></a><span class="w">  </span>never,<span class="w"> </span>simple<span class="w">   </span>always<span class="w"> </span>make<span class="w"> </span>simple<span class="w"> </span>backups
+<a id="__codelineno-0-309" name="__codelineno-0-309"></a>
+<a id="__codelineno-0-310" name="__codelineno-0-310"></a>Valid<span class="w"> </span>arguments<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>--quoting-style<span class="w"> </span>option<span class="w"> </span>are:
+<a id="__codelineno-0-311" name="__codelineno-0-311"></a>
+<a id="__codelineno-0-312" name="__codelineno-0-312"></a><span class="w">  </span>literal
+<a id="__codelineno-0-313" name="__codelineno-0-313"></a><span class="w">  </span>shell
+<a id="__codelineno-0-314" name="__codelineno-0-314"></a><span class="w">  </span>shell-always
+<a id="__codelineno-0-315" name="__codelineno-0-315"></a><span class="w">  </span>shell-escape
+<a id="__codelineno-0-316" name="__codelineno-0-316"></a><span class="w">  </span>shell-escape-always
+<a id="__codelineno-0-317" name="__codelineno-0-317"></a><span class="w">  </span>c
+<a id="__codelineno-0-318" name="__codelineno-0-318"></a><span class="w">  </span>c-maybe
+<a id="__codelineno-0-319" name="__codelineno-0-319"></a><span class="w">  </span>escape
+<a id="__codelineno-0-320" name="__codelineno-0-320"></a><span class="w">  </span>locale
+<a id="__codelineno-0-321" name="__codelineno-0-321"></a><span class="w">  </span>clocale
+<a id="__codelineno-0-322" name="__codelineno-0-322"></a>
+<a id="__codelineno-0-323" name="__codelineno-0-323"></a>*This*<span class="w"> </span>tar<span class="w"> </span>defaults<span class="w"> </span>to:
+<a id="__codelineno-0-324" name="__codelineno-0-324"></a>--format<span class="o">=</span>gnu<span class="w"> </span>-f-<span class="w"> </span>-b20<span class="w"> </span>--quoting-style<span class="o">=</span>escape<span class="w"> </span>--rmt-command<span class="o">=</span>/usr/sbin/rmt
+<a id="__codelineno-0-325" name="__codelineno-0-325"></a>--rsh-command<span class="o">=</span>/usr/bin/rsh
+</code></pre></div></td></tr></table></div>
+<p><a href="https://www.runoob.com/linux/linux-system-contents.html">Linux 系统目录结构 | 菜鸟教程 (runoob.com)</a></p>
+<p><a href="https://www.runoob.com/linux/linux-file-content-manage.html">Linux 文件与目录管理 | 菜鸟教程 (runoob.com)</a></p>
+<p><a href="https://www.runoob.com/linux/linux-comm-tar.html">Linux tar 命令 | 菜鸟教程 (runoob.com)</a></p>
+<p>lsb_release -a</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2023</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://anxiu.cloud/">Anxiu's Note</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Anxiu0101">Anxiu</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Anxiu0101" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://rss.anxiu.cloud" target="_blank" rel="noopener" title="rss.anxiu.cloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64zm0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0zm32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.researchgate.net/profile/Yuchen-Fang-13" target="_blank" rel="noopener" title="www.researchgate.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:anxiu.fyc@foxmail.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M121 32c-29.4 0-55 20-62.1 48.5l-57 227.9C.6 313.5 0 318.7 0 323.9V416c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-92.1c0-5.2-.6-10.4-1.9-15.5l-57-227.9C446 52 420.4 32 391 32H121zm0 64h270l48 192h-51.2c-12.1 0-23.2 6.8-28.6 17.7l-14.3 28.6c-5.4 10.8-16.5 17.7-28.6 17.7H195.8c-12.1 0-23.2-6.8-28.6-17.7l-14.3-28.6c-5.4-10.8-16.5-17.7-28.6-17.7H73l48-192z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
