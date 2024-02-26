@@ -32,6 +32,21 @@
 - [x] 解决 meta 标题以及首行标题的问题
 - [ ] 修复字数统计插件错误
 
+Got it! Here's the updated version using a more narrative approach:
+
+## Quick Start
+
+Make sure you have [poetry](https://python-poetry.org/docs/) installed, which is a handy Python package manager tool.
+
+```shell
+poetry install              # Install Dependencies
+poetry run mkdocs serve     # Run the Development Server
+poetry run mkdocs build     # Build Your Site, generate site/ dir.
+poetry run mkdocs gh-deploy # Push to remote Repos.
+```
+
+Alternatively, you can utilize the Makefile provided with the `install`, `run`, `build`, `update` commands.
+
 ## License
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]

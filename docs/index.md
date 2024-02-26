@@ -17,6 +17,10 @@ That's creating some interesting projects!
     .md-content__inner.h1 {
     	display: none;
     }
+    /* 指定 feedback block not display */
+    form[name="feedback"] {
+        display: none;
+    }
     .md-ellipsis {
         font-weight: bold;
     }

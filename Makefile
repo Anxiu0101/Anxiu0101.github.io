@@ -1,3 +1,7 @@
+.PHONY: install
+run_client:
+	poetry install
+
 .PHONY: run
 run:
 	poetry run mkdocs serve
