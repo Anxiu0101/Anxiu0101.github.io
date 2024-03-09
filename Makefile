@@ -1,5 +1,5 @@
 .PHONY: install
-run_client:
+install:
 	poetry install
 
 .PHONY: run
@@ -7,7 +7,7 @@ run:
 	poetry run mkdocs serve
 
 .PHONY: build
-run_client:
+build:
 	poetry run mkdocs build
 
 .PHONY: update

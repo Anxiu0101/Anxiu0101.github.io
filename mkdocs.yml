@@ -211,8 +211,11 @@ nav:
     - rsc/ml/index.md
   - Security:
     - rsc/sec/index.md
+  - Experience:
+    - rsc/exp/use-zotero-in-your-research.md
 - Others:
   - oth/index.md
+  - FYP Simple Note: oth/miec-fyp-guideline.md
   # - Resume:
   #   - cv.pdf
 # — 建站记录 ——————————————————————————————————————————————————————
