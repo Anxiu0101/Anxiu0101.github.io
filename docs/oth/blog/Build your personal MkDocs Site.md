@@ -151,7 +151,9 @@ mkdocs gh-deploy
 
 稍等片刻，刷新页面后点击 Visit site 按钮即可查看页面。
 
-
+> [!tip]
+>
+> 如果在这一步配置 GitHub Page 时使用了自己的域名，则应该在 `/docs` 目录之下放一个 `CNAME` 文件，文件内容为你的域名即可，否则 `site/` 或者说编译后的结果分支 `gh-pages` 再次上传会将域名设置覆盖。
 
 
 

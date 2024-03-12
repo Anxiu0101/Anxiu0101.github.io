@@ -23,7 +23,11 @@ Your report, including the title page, should not exceed 20 pages (excluding ref
 
 ### Word
 
+可以看看 [Using Zotero in your Project - Anxiu's Note](https://anxiu.cloud/rsc/exp/use-zotero-in-your-research.html) 关于使用 Word 和 Zotero 联动完成引用的工作。
+
 ### Latex
+
+学校没模板 .....，以后有遇到这种情境一定会来补这篇的！（大概
 
 ## Paper Content
 

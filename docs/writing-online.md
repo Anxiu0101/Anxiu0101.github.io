@@ -7,7 +7,7 @@
         var simplemde = new SimpleMDE({ element: document.getElementById("OnlineEditor") });
 
 
-        
+
         document.getElementById("saveButton").addEventListener("click", function() {
             // 获取 SimpleMDE 编辑器中的内容
             var markdownContent = simplemde.value();

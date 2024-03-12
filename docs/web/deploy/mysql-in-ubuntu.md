@@ -73,7 +73,13 @@ mysql>FLUSH PRIVILEGES;
 vim /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
-修改 `bind-address = 127.0.0.1` 为 `bind-address = 0.0.0.0`
+修改 `bind-address = 127.0.0.1` 为 `bind-address = 0.0.0.0`，或者直接将该字段注释掉。
+
+> [!note]
+>
+> 该字段在文件中有注释内容，By dafualt we only accept connections from localhost。即默认只允许本地访问。你也可以通过配置该字段设置限定访问的服务器 IP。
+
+同时在本文件中也可以通过修改 `[mysqld]` 的 字段 `port` 来指定你设置的 MySQL 服务访问端口。
 
 ## 关于容器
 
@@ -106,7 +112,13 @@ COMMAND    PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 mysqld  227885 mysql   24u  IPv4 917710      0t0  TCP localhost:mysql (LISTEN)
 ```
 
-当然，你也可以使用 `netstat -a` 将所有使用中的端口信息打印出来，然后检查 MySQL 使用了那个端口。如果 MySQL 服务没有启用，也可以 `netstat -ap` 打印所有端口占用信息。
+当然，你也可以使用 `netstat -a` 将所有使用中的端口信息打印出来，然后检查 MySQL 使用了那个端口。如果 MySQL 服务没有启用，也可以 `netstat -ap` 打印所有端口占用信息。例如，
+
+```shell
+netstat -an|grep 3306
+```
+
+
 
 
 ### 使用 SystemCTL 管理 MySQL 服务
@@ -119,3 +131,49 @@ systemctl status mysql.service # 查看当前服务状态
 systemctl enable mysql.service # 设置 MySQL 服务开机自启
 systemctl disable mysql.service # 关闭 MySQL 服务开机自启
 ```
+
+## MySQL 基础操作
+
+登录数据库
+
+```sql
+mysql -u user_name -p
+Enter password:******
+```
+
+数据库相关操作
+
+```sql
+# 展示 MySQL 内已有的数据库。
+mysql > show databases;
+# 创建一个名为 database_name 的数据库，在创建前检查 MySQL 中是否已经存在这个数据库
+# 指定数据库的字符集为 utf8mb4，数据库的排序规则为 utf8mb4_general_ci
+mysql > CREATE DATABASE IF NOT EXISTS database_name
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_general_ci;
+# 进入指定的数据库，在进入数据库之后才可以对数据表进行访问。
+mysql > use database_name;
+# 展示数据库中的所有数据表
+mysql > show tables;
+```
+
+数据表相关操作
+
+```sql
+# 列出名为 table_name 的数据表的字段信息
+mysql > desc table_name;
+# 查询名为 table_name 的数据表的数据条数
+mysql > select count(*) from table_name;
+# 更新名为 table_name 的数据表中 user 字段为 root 的条目的 host 为 %
+mysql > update table_name set host='%' where user = 'root';
+```
+
+特殊操作
+
+```sql
+# 在修改了 MySQL 数据库下的表内容时，进行权限刷新
+mysql > flush privileges;
+```
+
+
+
