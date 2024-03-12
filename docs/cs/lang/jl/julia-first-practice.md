@@ -42,7 +42,7 @@ PS C:\Users\Anxiu> winget install julia -s msstore
 
 当你有使用 Windows Terminal 软件时，`juliaup` 安装会自动将 Julia 添加到你的 Terminal 中，
 
-![image-20240311152051952](C:\Users\Anxiu\AppData\Roaming\Typora\typora-user-images\image-20240311152051952.png)
+![](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/20240312195441.png)
 
 现在就可以直接通过 `julia` 指令来启动 Julia 了，退出方式为快捷键 `Ctrl + D` 或者输入 `exit()` 皆可。
 
