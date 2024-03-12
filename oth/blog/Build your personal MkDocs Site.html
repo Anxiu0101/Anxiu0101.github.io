@@ -2099,6 +2099,10 @@
 <p>该指令编译文件为静态页面网站到 <code>gh-deploy</code> 分支并推送到远程仓库。现在就只需要开启远程仓库的 GitHub Page 功能并指定分支即可，具体操作如下，</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202309240644989.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20230924064437878" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202309240644989.png" /></a></p>
 <p>稍等片刻，刷新页面后点击 Visit site 按钮即可查看页面。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>如果在这一步配置 GitHub Page 时使用了自己的域名，则应该在 <code>/docs</code> 目录之下放一个 <code>CNAME</code> 文件，文件内容为你的域名即可，否则 <code>site/</code> 或者说编译后的结果分支 <code>gh-pages</code> 再次上传会将域名设置覆盖。</p>
+</blockquote>
 <h2 id="theme-configurations">Theme &amp; Configurations<a class="headerlink" href="#theme-configurations" title="Permanent link">#</a></h2>
 <p>推荐 <code>material</code> 主题，虽然官网有些功能要求赞助后才能使用，但是社区版提供的功能已经足够了。</p>
 <blockquote>
@@ -2184,7 +2188,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 25, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2024</span>
       
         <br>
         创建日期:

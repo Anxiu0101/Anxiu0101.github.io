@@ -12,24 +12,24 @@
         <meta name="author" content="Anxiu">
       
       
-        <link rel="canonical" href="https://anxiu0101.github.io/web/deploy/git.html">
+        <link rel="canonical" href="https://anxiu0101.github.io/cs/lang/jl/julia-first-practice.html">
       
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
     
     
       
-        <title>Git - Anxiu's Note</title>
+        <title>Julia 初尝试 - Anxiu's Note</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6a10b989.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -50,21 +50,21 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="../../stylesheets/tasklist.css">
+      <link rel="stylesheet" href="../../../stylesheets/tasklist.css">
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="../../stylesheets/card.css">
+      <link rel="stylesheet" href="../../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../stylesheets/font.css">
+      <link rel="stylesheet" href="../../../stylesheets/font.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -81,7 +81,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -92,7 +92,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -113,6 +113,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#julia" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -123,7 +128,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+    <a href="../../../index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -143,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Git
+              Julia 初尝试
             
           </span>
         </div>
@@ -254,7 +259,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../../../index.html" class="md-tabs__link">
         
   
     
@@ -271,7 +276,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../writing-online.html" class="md-tabs__link">
+      <a href="../../../writing-online.html" class="md-tabs__link">
         
   
     
@@ -290,7 +295,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cs/index.html" class="md-tabs__link">
+        <a href="../../index.html" class="md-tabs__link">
           
   
     
@@ -310,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../index.html" class="md-tabs__link">
+        <a href="../../../web/index.html" class="md-tabs__link">
           
   
     
@@ -330,7 +335,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../rsc/index.html" class="md-tabs__link">
+        <a href="../../../rsc/index.html" class="md-tabs__link">
           
   
     
@@ -350,7 +355,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../oth/index.html" class="md-tabs__link">
+        <a href="../../../oth/index.html" class="md-tabs__link">
           
   
     
@@ -385,7 +390,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+    <a href="../../../index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -414,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -433,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../writing-online.html" class="md-nav__link">
+      <a href="../../../writing-online.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +484,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/index.html" class="md-nav__link ">
+            <a href="../../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -593,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/py/Python-venv.html" class="md-nav__link">
+      <a href="../py/Python-venv.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -661,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/go/interface-in-go.html" class="md-nav__link">
+      <a href="../go/interface-in-go.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithm/raft.html" class="md-nav__link">
+      <a href="../../algorithm/raft.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +804,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../../../web/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -885,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mysql-in-ubuntu.html" class="md-nav__link">
+      <a href="../../../web/deploy/mysql-in-ubuntu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -905,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nginx-intro.html" class="md-nav__link">
+      <a href="../../../web/deploy/nginx-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="postgre-in-docker.html" class="md-nav__link">
+      <a href="../../../web/deploy/postgre-in-docker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -945,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker-intro.html" class="md-nav__link">
+      <a href="../../../web/deploy/docker-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -965,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dockerfile-intro.html" class="md-nav__link">
+      <a href="../../../web/deploy/dockerfile-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -985,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="espanso-intro.html" class="md-nav__link">
+      <a href="../../../web/deploy/espanso-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1005,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="systemctl-intro.html" class="md-nav__link">
+      <a href="../../../web/deploy/systemctl-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="win-ssh-config.html" class="md-nav__link">
+      <a href="../../../web/deploy/win-ssh-config.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/golang-optional-pattern.html" class="md-nav__link">
+      <a href="../../../web/dev/golang-optional-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/go-project-compiler.html" class="md-nav__link">
+      <a href="../../../web/dev/go-project-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1139,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/golang-tencent-SMS.html" class="md-nav__link">
+      <a href="../../../web/dev/golang-tencent-SMS.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1159,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/gorm-struct-label.html" class="md-nav__link">
+      <a href="../../../web/dev/gorm-struct-label.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1228,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/index.html" class="md-nav__link ">
+            <a href="../../../rsc/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1275,7 +1280,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/ml/index.html" class="md-nav__link ">
+            <a href="../../../rsc/ml/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1330,7 +1335,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/sec/index.html" class="md-nav__link ">
+            <a href="../../../rsc/sec/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1405,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
+      <a href="../../../rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1472,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../oth/index.html" class="md-nav__link ">
+            <a href="../../../oth/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1499,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/miec-fyp-guideline.html" class="md-nav__link">
+      <a href="../../../oth/miec-fyp-guideline.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1543,7 +1548,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../changelog/index.html" class="md-nav__link ">
+            <a href="../../../changelog/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1573,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Markdown-Grammar.html" class="md-nav__link">
+      <a href="../../../oth/blog/Markdown-Grammar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1593,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Build%20your%20personal%20MkDocs%20Site.html" class="md-nav__link">
+      <a href="../../../oth/blog/Build%20your%20personal%20MkDocs%20Site.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1641,6 +1646,76 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#plutojl" class="md-nav__link">
+    Pluto.jl
+  </a>
+  
+    <nav class="md-nav" aria-label="Pluto.jl">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pluto-installation" class="md-nav__link">
+    Pluto Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#julia-practice" class="md-nav__link">
+    Julia Practice
+  </a>
+  
+    <nav class="md-nav" aria-label="Julia Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grammer" class="md-nav__link">
+    Grammer
+  </a>
+  
+    <nav class="md-nav" aria-label="Grammer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function" class="md-nav__link">
+    function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-structure" class="md-nav__link">
+    Data Structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1655,7 +1730,7 @@
                   
 
   
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/web/deploy/git.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/cs/lang/jl/julia-first-practice.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -1664,38 +1739,176 @@
     
       
     
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/web/deploy/git.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/cs/lang/jl/julia-first-practice.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-  <h1>Git</h1>
-
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:Anxiu0101/Anxiu0101.github.io.git
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>//<span class="w"> </span>clone<span class="w"> </span>指定分支
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>gh-pages<span class="w"> </span>git@github.com:Anxiu0101/Anxiu0101.github.io.git
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>master<span class="w"> </span>--allow-unrelated-histories
+<h1 id="julia">Julia 初尝试<a class="headerlink" href="#julia" title="Permanent link">#</a></h1>
+<blockquote>
+<p>[!note]</p>
+<p><a href="https://julialang.org/">The Julia Programming Language (julialang.org)</a> | <a href="https://cn.julialang.org/">Julia 中文社区 (julialang.org)</a></p>
+<p>Scientific computing has traditionally required the highest performance, yet domain experts have largely moved to slower dynamic languages for daily work. We believe there are many good reasons to prefer dynamic languages for these applications, and we do not expect their use to diminish. Fortunately, modern language design and compiler techniques make it possible to mostly eliminate the performance trade-off and provide a single environment productive enough for prototyping and efficient enough for deploying performance-intensive applications. The Julia programming language fills this role: it is a flexible dynamic language, appropriate for scientific and numerical computing, with performance comparable to traditional statically-typed languages.</p>
+<p>Because Julia's compiler is different from the interpreters used for languages like Python or R, you may find that Julia's performance is unintuitive at first. If you find that something is slow, we highly recommend reading through the <a href="https://docs.julialang.org/en/v1/manual/performance-tips/#man-performance-tips">Performance Tips</a> section before trying anything else. Once you understand how Julia works, it is easy to write code that is nearly as fast as C.</p>
+</blockquote>
+<p>个人推荐直接通过 winget 下载，这种方式是通过安装 <code>juliaup</code> 管理工具来下载，指令如下</p>
+<blockquote>
+<p>[!tip]</p>
+<p>Windows 也可以通过官网的可执行文件进行下载，这里就不做介绍了，移步官网下载页面有更加详细的内容。Julia 中文社区中提供的下载方式并不全面，需要访问英文官网获取全部咨询。</p>
+</blockquote>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">PowerShell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">PS </span><span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="n">Anxiu</span><span class="p">&gt;</span> <span class="n">winget</span> <span class="n">install</span> <span class="n">julia</span> <span class="n">-s</span> <span class="n">msstore</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">已找到</span> <span class="n">Julia</span> <span class="p">[</span><span class="n">9NJNWW8PVKMN</span><span class="p">]</span> <span class="n">版本</span> <span class="n">Unknown</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">此程序包是通过</span> <span class="n">Microsoft</span> <span class="n">Store</span> <span class="n">提供的</span><span class="err">。</span><span class="n">winget</span> <span class="n">可能需要代表当前用户从</span> <span class="n">Microsoft</span> <span class="n">Store</span> <span class="n">获取该程序包</span><span class="err">。</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">的协议</span> <span class="n">Julia</span> <span class="p">[</span><span class="n">9NJNWW8PVKMN</span><span class="p">]</span> <span class="n">版本</span> <span class="n">Unknown</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">版本</span><span class="p">:</span> <span class="n">Unknown</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">发布者</span><span class="p">:</span> <span class="n">Julia</span> <span class="n">Computing</span><span class="p">,</span> <span class="n">Inc</span><span class="p">.</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">发布服务器</span> <span class="n">URL</span><span class="p">:</span> <span class="n">https</span><span class="p">://</span><span class="n">julialang</span><span class="p">.</span><span class="n">org</span><span class="p">/</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">许可证</span><span class="p">:</span> <span class="n">ms-windows-store</span><span class="p">://</span><span class="n">pdp</span><span class="p">/</span><span class="k">?</span><span class="n">ProductId</span><span class="p">=</span><span class="n">9NJNWW8PVKMN</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">隐私</span> <span class="n">URL</span><span class="p">:</span> <span class="n">https</span><span class="p">://</span><span class="n">juliacomputing</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">privacy</span><span class="p">/</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">协议</span><span class="err">：</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>  <span class="n">Category</span><span class="p">:</span> <span class="n">Developer</span> <span class="n">tools</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>  <span class="n">Pricing</span><span class="p">:</span> <span class="n">Free</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>  <span class="n">Free</span> <span class="n">Trial</span><span class="p">:</span> <span class="n">No</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>  <span class="n">Terms</span> <span class="n">of</span> <span class="n">Transaction</span><span class="p">:</span> <span class="n">https</span><span class="p">://</span><span class="n">aka</span><span class="p">.</span><span class="n">ms</span><span class="p">/</span><span class="n">microsoft-store-terms-of-transaction</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>  <span class="n">Seizure</span> <span class="n">Warning</span><span class="p">:</span> <span class="n">https</span><span class="p">://</span><span class="n">aka</span><span class="p">.</span><span class="n">ms</span><span class="p">/</span><span class="n">microsoft-store-seizure-warning</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>  <span class="n">Store</span> <span class="n">License</span> <span class="n">Terms</span><span class="p">:</span> <span class="n">https</span><span class="p">://</span><span class="n">aka</span><span class="p">.</span><span class="n">ms</span><span class="p">/</span><span class="n">microsoft-store-license</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">发行商要求你在安装前查看上述信息并接受协议</span><span class="err">。</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="n">是否同意上述条款</span><span class="p">?</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="no">[Y] 是  [N]</span> <span class="n">否</span><span class="p">:</span> <span class="n">Y</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="n">正在启动程序包安装</span><span class="p">...</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>  <span class="err">██████████████████████████████</span>  <span class="n">100</span><span class="p">%</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="n">已成功安装</span>
 </code></pre></div></td></tr></table></div>
+<p>当你有使用 Windows Terminal 软件时，<code>juliaup</code> 安装会自动将 Julia 添加到你的 Terminal 中，</p>
+<p><a class="glightbox" href="C:\Users\Anxiu\AppData\Roaming\Typora\typora-user-images\image-20240311152051952.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240311152051952" src="C:\Users\Anxiu\AppData\Roaming\Typora\typora-user-images\image-20240311152051952.png" /></a></p>
+<p>现在就可以直接通过 <code>julia</code> 指令来启动 Julia 了，退出方式为快捷键 <code>Ctrl + D</code> 或者输入 <code>exit()</code> 皆可。</p>
+<p>你还可以使用 <code>juliaup</code> 工具来检查本机 Julia 环境，</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">PowerShell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c"># 查看 julia 当前安装状态 </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">juliaup</span> <span class="n">status</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a> <span class="k">Default</span>  <span class="n">Channel</span>  <span class="n">Version</span>                   <span class="n">Update</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">----------------------------------------------------</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>       <span class="p">*</span>  <span class="n">release</span>  <span class="n">1</span><span class="p">.</span><span class="n">10</span><span class="p">.</span><span class="n">2</span><span class="p">+</span><span class="n">0</span><span class="p">.</span><span class="n">x64</span><span class="p">.</span><span class="n">w64</span><span class="p">.</span><span class="n">mingw32</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c"># 查看可以安装的版本</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">juliaup</span> <span class="n">list</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a> <span class="n">Channel</span>            <span class="n">Version</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">----------------------------------------------------</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a> <span class="n">0</span>                  <span class="n">0</span><span class="p">.</span><span class="n">7</span><span class="p">.</span><span class="n">0</span><span class="p">+</span><span class="n">0</span><span class="p">.</span><span class="n">x64</span><span class="p">.</span><span class="n">w64</span><span class="p">.</span><span class="n">mingw32</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a> <span class="n">0</span><span class="p">.</span><span class="n">7</span>                <span class="n">0</span><span class="p">.</span><span class="n">7</span><span class="p">.</span><span class="n">0</span><span class="p">+</span><span class="n">0</span><span class="p">.</span><span class="n">x64</span><span class="p">.</span><span class="n">w64</span><span class="p">.</span><span class="n">mingw32</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a> <span class="n">0</span><span class="p">.</span><span class="n">7</span><span class="p">.</span><span class="n">0</span>              <span class="n">0</span><span class="p">.</span><span class="n">7</span><span class="p">.</span><span class="n">0</span><span class="p">+</span><span class="n">0</span><span class="p">.</span><span class="n">x64</span><span class="p">.</span><span class="n">w64</span><span class="p">.</span><span class="n">mingw32</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c"># ...</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a> <span class="n">release</span>            <span class="n">1</span><span class="p">.</span><span class="n">10</span><span class="p">.</span><span class="n">2</span><span class="p">+</span><span class="n">0</span><span class="p">.</span><span class="n">x64</span><span class="p">.</span><span class="n">w64</span><span class="p">.</span><span class="n">mingw32</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a> <span class="n">release</span><span class="p">~</span><span class="n">x64</span>        <span class="n">1</span><span class="p">.</span><span class="n">10</span><span class="p">.</span><span class="n">2</span><span class="p">+</span><span class="n">0</span><span class="p">.</span><span class="n">x64</span><span class="p">.</span><span class="n">w64</span><span class="p">.</span><span class="n">mingw32</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a> <span class="n">release</span><span class="p">~</span><span class="n">x86</span>        <span class="n">1</span><span class="p">.</span><span class="n">10</span><span class="p">.</span><span class="n">2</span><span class="p">+</span><span class="n">0</span><span class="p">.</span><span class="n">x86</span><span class="p">.</span><span class="n">w64</span><span class="p">.</span><span class="n">mingw32</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a> <span class="n">nightly</span>            <span class="n">latest-win64</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a> <span class="n">nightly</span><span class="p">~</span><span class="n">x86</span>        <span class="n">latest-win32</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a> <span class="n">nightly</span><span class="p">~</span><span class="n">x64</span>        <span class="n">latest-win64</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="c"># 指定版本安装</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="n">julia</span> <span class="n">add</span> <span class="s1">&#39;1.10&#39;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="plutojl">Pluto.jl<a class="headerlink" href="#plutojl" title="Permanent link">#</a></h2>
+<p>笔者因为课程需求，使用了 Julia 中的一个名为 <a href="https://plutojl.org/">Pluto.jl</a> 的 Notebook，功能类似于 Python 的 Jupyter Notebook，Julia 还有一个同类产品的项目叫做 <a href="https://mybinder.org/">Binder</a>。</p>
+<h3 id="pluto-installation">Pluto Installation<a class="headerlink" href="#pluto-installation" title="Permanent link">#</a></h3>
+<p>直接参考官网 <a href="https://plutojl.org/#install">下载页面</a>，在安装并运行 Julia 后执行指令 <code>import Pkg; Pkg.add("Pluto")</code> 和  <code>import Pluto; Pluto.run()</code> 即可完成安装并启动 Pluto 的页面，默认页面在 <a href="http://localhost:1234/">http://localhost:1234/</a> 位置。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Julia</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="n">Pluto</span><span class="p">;</span><span class="w"> </span><span class="n">Pluto</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">┌</span><span class="w"> </span><span class="n">Info</span><span class="o">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">│</span><span class="w">   </span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Pluto</span><span class="w"> </span><span class="n">v0</span><span class="mf">.19.40</span><span class="w"> </span><span class="n">🎈</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">│</span><span class="w">   </span><span class="n">Start</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">notebook</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="k">using</span><span class="o">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">│</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">│</span><span class="w"> </span><span class="n">julia</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Pluto</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">│</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">│</span><span class="w">   </span><span class="n">Have</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">look</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">FAQ</span><span class="o">:</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">│</span><span class="w">   </span><span class="n">https</span><span class="o">://</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fonsp</span><span class="o">/</span><span class="n">Pluto</span><span class="o">.</span><span class="n">jl</span><span class="o">/</span><span class="n">wiki</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">└</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="p">[</span><span class="w"> </span><span class="n">Info</span><span class="o">:</span><span class="w"> </span><span class="n">Loading</span><span class="o">...</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="n">┌</span><span class="w"> </span><span class="n">Info</span><span class="o">:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">└</span><span class="w"> </span><span class="n">Opening</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">1234</span><span class="o">/?</span><span class="n">secret</span><span class="o">=</span><span class="n">wOrEm4HR</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">default</span><span class="w"> </span><span class="n">browser</span><span class="o">...</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">fun!</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">┌</span><span class="w"> </span><span class="n">Info</span><span class="o">:</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">│</span><span class="w"> </span><span class="n">Press</span><span class="w"> </span><span class="n">Ctrl</span><span class="o">+</span><span class="n">C</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">terminal</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="n">Pluto</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="n">└</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="julia-practice">Julia Practice<a class="headerlink" href="#julia-practice" title="Permanent link">#</a></h2>
+<blockquote>
+<p>[!note]</p>
+<p>TODO!</p>
+</blockquote>
+<h3 id="grammer">Grammer<a class="headerlink" href="#grammer" title="Permanent link">#</a></h3>
+<h4 id="function">function<a class="headerlink" href="#function" title="Permanent link">#</a></h4>
+<h3 id="data-structure">Data Structure<a class="headerlink" href="#data-structure" title="Permanent link">#</a></h3>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 11, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2024</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 11, 2024</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2024</span>
       
     
   </small>
@@ -1837,10 +2050,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -1850,7 +2063,7 @@
       
         <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
       

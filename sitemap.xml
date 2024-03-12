@@ -2,197 +2,207 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://anxiu0101.github.io/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/writing-online.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/about/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/changelog/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/cs/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/cs/algorithm/raft.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/cs/lang/go/interface-in-go.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://anxiu0101.github.io/cs/lang/jl/julia-first-practice.html</loc>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/cs/lang/py/Python-venv.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/note/CS211-Note.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/oth/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/oth/miec-fyp-guideline.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/oth/blog/Build%20your%20personal%20MkDocs%20Site.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/oth/blog/Markdown-Grammar.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/oth/blog/Mkdocs-work-with-supabase.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/rsc/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/rsc/exp/use-zotero-in-your-research.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/rsc/ml/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://anxiu0101.github.io/rsc/ml/ollama-first-try.html</loc>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/rsc/sec/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/index.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/docker-intro.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/dockerfile-intro.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/espanso-intro.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/git.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/init-dev-env.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/linux-tool-summary.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/mysql-in-ubuntu.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/nginx-intro.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/postgre-in-docker.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/systemctl-intro.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/deploy/win-ssh-config.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/add-color-to-your-terminal.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/before-learn-dev.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/first-react-project.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/go-project-compiler.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/goland-set-goimports.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/golang-log-lib-logrus.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/golang-optional-pattern.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/golang-tencent-SMS.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://anxiu0101.github.io/web/dev/gorm-struct-label.html</loc>
-         <lastmod>2024-03-09</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

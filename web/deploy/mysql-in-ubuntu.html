@@ -995,6 +995,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mysql_1" class="md-nav__link">
+    MySQL 基础操作
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1807,6 +1814,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mysql_1" class="md-nav__link">
+    MySQL 基础操作
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1944,7 +1958,12 @@
 <p>在配置文件中为 <code>localhost</code> 解除绑定</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>vim<span class="w"> </span>/etc/mysql/mysql.conf.d/mysqld.cnf
 </code></pre></div></td></tr></table></div>
-<p>修改 <code>bind-address = 127.0.0.1</code> 为 <code>bind-address = 0.0.0.0</code></p>
+<p>修改 <code>bind-address = 127.0.0.1</code> 为 <code>bind-address = 0.0.0.0</code>，或者直接将该字段注释掉。</p>
+<blockquote>
+<p>[!note]</p>
+<p>该字段在文件中有注释内容，By dafualt we only accept connections from localhost。即默认只允许本地访问。你也可以通过配置该字段设置限定访问的服务器 IP。</p>
+</blockquote>
+<p>同时在本文件中也可以通过修改 <code>[mysqld]</code> 的 字段 <code>port</code> 来指定你设置的 MySQL 服务访问端口。</p>
 <h2 id="_1">关于容器<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <blockquote>
 <p><a href="https://zhuanlan.zhihu.com/p/424233173">你在 Docker 中跑 MySQL？恭喜你，可以滚了！</a></p>
@@ -1969,19 +1988,68 @@
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>COMMAND<span class="w">    </span>PID<span class="w">  </span>USER<span class="w">   </span>FD<span class="w">   </span>TYPE<span class="w"> </span>DEVICE<span class="w"> </span>SIZE/OFF<span class="w"> </span>NODE<span class="w"> </span>NAME
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a>mysqld<span class="w">  </span><span class="m">227885</span><span class="w"> </span>mysql<span class="w">   </span>24u<span class="w">  </span>IPv4<span class="w"> </span><span class="m">917710</span><span class="w">      </span>0t0<span class="w">  </span>TCP<span class="w"> </span>localhost:mysql<span class="w"> </span><span class="o">(</span>LISTEN<span class="o">)</span>
 </code></pre></div></td></tr></table></div>
-<p>当然，你也可以使用 <code>netstat -a</code> 将所有使用中的端口信息打印出来，然后检查 MySQL 使用了那个端口。如果 MySQL 服务没有启用，也可以 <code>netstat -ap</code> 打印所有端口占用信息。</p>
+<p>当然，你也可以使用 <code>netstat -a</code> 将所有使用中的端口信息打印出来，然后检查 MySQL 使用了那个端口。如果 MySQL 服务没有启用，也可以 <code>netstat -ap</code> 打印所有端口占用信息。例如，</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>netstat<span class="w"> </span>-an<span class="p">|</span>grep<span class="w"> </span><span class="m">3306</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="systemctl-mysql">使用 SystemCTL 管理 MySQL 服务<a class="headerlink" href="#systemctl-mysql" title="Permanent link">#</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>systemctl<span class="w"> </span>start<span class="w"> </span>mysql.service
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>systemctl<span class="w"> </span>stop<span class="w"> </span>mysql.service
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>mysql.service
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>systemctl<span class="w"> </span>status<span class="w"> </span>mysql.service<span class="w"> </span><span class="c1"># 查看当前服务状态</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mysql.service<span class="w"> </span><span class="c1"># 设置 MySQL 服务开机自启</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>systemctl<span class="w"> </span>disable<span class="w"> </span>mysql.service<span class="w"> </span><span class="c1"># 关闭 MySQL 服务开机自启</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>systemctl<span class="w"> </span>start<span class="w"> </span>mysql.service
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>systemctl<span class="w"> </span>stop<span class="w"> </span>mysql.service
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>mysql.service
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>systemctl<span class="w"> </span>status<span class="w"> </span>mysql.service<span class="w"> </span><span class="c1"># 查看当前服务状态</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mysql.service<span class="w"> </span><span class="c1"># 设置 MySQL 服务开机自启</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>systemctl<span class="w"> </span>disable<span class="w"> </span>mysql.service<span class="w"> </span><span class="c1"># 关闭 MySQL 服务开机自启</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="mysql_1">MySQL 基础操作<a class="headerlink" href="#mysql_1" title="Permanent link">#</a></h2>
+<p>登录数据库</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">user_name</span><span class="w"> </span><span class="o">-</span><span class="n">p</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">Enter</span><span class="w"> </span><span class="n">password</span><span class="p">:</span><span class="o">******</span>
+</code></pre></div></td></tr></table></div>
+<p>数据库相关操作</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">#</span><span class="w"> </span><span class="err">展示</span><span class="w"> </span><span class="n">MySQL</span><span class="w"> </span><span class="err">内已有的数据库。</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">mysql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="n">databases</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="o">#</span><span class="w"> </span><span class="err">创建一个名为</span><span class="w"> </span><span class="n">database_name</span><span class="w"> </span><span class="err">的数据库，在创建前检查</span><span class="w"> </span><span class="n">MySQL</span><span class="w"> </span><span class="err">中是否已经存在这个数据库</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="o">#</span><span class="w"> </span><span class="err">指定数据库的字符集为</span><span class="w"> </span><span class="n">utf8mb4</span><span class="err">，数据库的排序规则为</span><span class="w"> </span><span class="n">utf8mb4_general_ci</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">mysql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">database_name</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">  </span><span class="nb">CHARACTER</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">utf8mb4</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">  </span><span class="k">COLLATE</span><span class="w"> </span><span class="n">utf8mb4_general_ci</span><span class="p">;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="o">#</span><span class="w"> </span><span class="err">进入指定的数据库，在进入数据库之后才可以对数据表进行访问。</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="n">mysql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">database_name</span><span class="p">;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="o">#</span><span class="w"> </span><span class="err">展示数据库中的所有数据表</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="n">mysql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">show</span><span class="w"> </span><span class="n">tables</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>数据表相关操作</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="o">#</span><span class="w"> </span><span class="err">列出名为</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="err">的数据表的字段信息</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">mysql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">desc</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="o">#</span><span class="w"> </span><span class="err">查询名为</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="err">的数据表的数据条数</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">mysql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="o">#</span><span class="w"> </span><span class="err">更新名为</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="err">的数据表中</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="err">字段为</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="err">的条目的</span><span class="w"> </span><span class="k">host</span><span class="w"> </span><span class="err">为</span><span class="w"> </span><span class="o">%</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="n">mysql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">update</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="k">host</span><span class="o">=</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>特殊操作</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="o">#</span><span class="w"> </span><span class="err">在修改了</span><span class="w"> </span><span class="n">MySQL</span><span class="w"> </span><span class="err">数据库下的表内容时，进行权限刷新</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">mysql</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 
   <hr>
@@ -1989,7 +2057,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2024</span>
       
         <br>
         创建日期:
