@@ -184,6 +184,8 @@ nav:
       - Python Virtual Environment: cs/lang/py/Python-venv.md
     - Golang:
       - Interface in Go: cs/lang/go/interface-in-go.md
+    - Julia:
+      - First try with Julia: cs/lang/jl/julia-first-practice.md
 # — 算法原理 —————————————————————————————————————————————————————
   - Algorithm:
       - Raft Algorithm: cs/algorithm/raft.md
