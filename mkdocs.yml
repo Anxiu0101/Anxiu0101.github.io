@@ -201,29 +201,38 @@ nav:
         - Espanso simple use: web/deploy/espanso-intro.md
         - Systemctl Introduction: web/deploy/systemctl-intro.md
         - Config ssh in Win: web/deploy/win-ssh-config.md
+        - Configuration Set of Dev Tools: web/deploy/init-dev-env.md
 # — 开发记录 ——————————————————————————————————————————————————————
     - Development:
         - Golang Optional Pattern: web/dev/golang-optional-pattern.md
         - Compiler a Go Project: web/dev/go-project-compiler.md
         - Use tencent SMS in Go: web/dev/golang-tencent-SMS.md
         - Gorm struct label Guide: web/dev/gorm-struct-label.md
+        - A regular Dev-Env in go programing: web/dev/goland-set-goimports.md
+        - Add Color to your Terminal: web/dev/add-color-to-your-terminal.md
 - Research:
   - rsc/index.md
   - Machine Learning:
     - rsc/ml/index.md
+    - rsc/ml/ollama-first-try.md
   - Security:
     - rsc/sec/index.md
   - Experience:
     - rsc/exp/use-zotero-in-your-research.md
+- Note: 
+  - Experience: 
+    - FYP Simple Note: note/exp/miec-fyp-guideline.md
+  - Lecture Note:
+    - CS211 Note: note/lec/CS211-Note.md
 - Others:
   - oth/index.md
-  - FYP Simple Note: oth/miec-fyp-guideline.md
   # - Resume:
   #   - cv.pdf
 # — 建站记录 ——————————————————————————————————————————————————————
   - Blog Build:
     - Markdown 语法测试: oth/blog/Markdown-Grammar.md
-    - Mkdocs 建站指南: oth/blog/Build your personal MkDocs Site.md
+    - Mkdocs 建站指南: oth/blog/Build-your-personal-MkDocs-Site.md
+    - Adcanced your MkDocs site: oth/blog/Mkdocs-work-with-supabase.md
     - Changelog: changelog/index.md
 
 #not_in_nav: writing-online.md

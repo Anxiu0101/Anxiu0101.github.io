@@ -63,6 +63,7 @@ Your report, including the title page, should not exceed 20 pages (excluding ref
 - 指标：描述您将如何评估您的工作。
 - 项目：列出并简要描述您在项目中取得的重大成就（典型项目中可能有 3-5 个）。 如果您对最先进的技术做出了任何贡献，请务必将其包含在此处。
 
+
 ### Technical background (all material to be cited correctly)
 
 > [!TIP]
@@ -191,3 +192,106 @@ How well does your solution solve the problem
 桑基图，箱线图
 
 TODO
+
+
+
+
+
+## Appendices
+
+> 88 【导师说这才是他想要的introduction！ - 从小镇到UCL | 小红书 - 你的生活指南】 😆 bJwa6cyIXiLnwP4 😆 http://xhslink.com/jDRSJD
+>
+> **总体介绍**
+>
+> - For decades, one of the most popular idea in researh is the idea that
+> - Recent theoretical developments have revealed that
+> - A common strategy used to study <u>sth.</u> is to 
+> - This reseach constitutes a relatively new area which has emerged from
+> - These approaches have been influential in the field bacause of
+> - In the past several decades, <u>sth.</u> have played an important role in 
+> - There are growing appeals for
+> - This is the field of study that deals with
+> - Most of the theories of <u>sth.</u> are however focused on explaining
+> - There are three major theoretical and conceptual frameworks for
+> - The field has gradually broadened as
+> - This field of study is sometimes referred as
+> - This has been widely adopted in the field of
+> - This thesis considers the field of <u>sth.</u> as the main subject of its study
+> - One of the major topics to be investigated in this field is
+> - The field closely follows the paradigm of
+> - The field has met with great success in many problems
+> - This is not particularly new and has been used for many years in the field of
+> - This field closely follows the paradigm of
+> - Widely considered to be a good way to
+> - This has been widely adopted in the field of
+>
+> **问题定义**
+>
+> - This seems to be a common problem in
+> - This leads to myriad problems in
+> - The main problem is that
+> - There is a further problem with
+> - One primary problem with <u>sth.</u> is that
+> - The methods are not without their problems as will be discussed in 
+> - The foremost problems are the facts that
+> - This makes ip for the problem of
+> - The field closely follows the paradigm of
+> - The field has met with great success in many problems
+> - This is not particularly new and has been used for many years in the field of
+> - This field closely follows the paradigm of
+> - Widely considered to be a good way to
+> - This has been widely adopted in the field of
+> - This seems to be a common problem in
+> - This leads to myriad problems in
+> - The main problem is that
+> - There is a further problem with
+> - One primary problem with <u>sth.</u> is that
+> - The methods are note without their problems as will be discussed in
+> - The foremost problems are the facts that
+> - This makes up for the problem of
+> - Most of the research in this field is aimed at solving this probelm
+> - This remains an open probelm in the area
+> - This problem has received substantial interest
+> - These examples highlight the problem that
+> - The main practical problem that confronts us is
+>
+> **研究现状**
+>
+> - There is no previous research using <u>sth.</u> approach
+> - There has been less previous evidence for
+> - Other studies have failed to
+> - To our knowledge, no study has yielded
+> - No study to date has examined
+> - Only a few studies have shown
+> - However, <u>sth.</u> has rarely been studied directly
+> - Moreover, few studies have focussed on
+> - In particular no study, to our knowledge, has considered
+> - A challenging problem which arises in this domain is
+> - These problems are difficult to handle
+> - A well-known problem with <u>sth.</u> is that it does not take into account the
+> - One of the problems is that it considers only the
+> - The key problem with this technique is
+> - It is usually an ill-posed problem in the case of
+> - This problem is well-posed and does not require to impose
+> - This appears as a more strainghtforward problem compared to the
+> - This turns out to be even more problematic because
+> - The problem with such an implementation is that
+> - This poses some problems when carrying out the
+> - This problem has attracted more attention in the field of
+> - This is a basic chicken-and-egg problem because 
+> - Unfortunately, this approach results in problems related to
+
+
+
+> 87 【导师：文献综述不是让你胡编乱写的🤬 - 慢慢咨询 | 小红书 - 你的生活指南】 😆 nWivItfNOSrXVox 😆 http://xhslink.com/swUSJD
+>
+> ![image-20240315024900768](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240315024900768.png)
+>
+> ![image-20240315024917806](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240315024917806.png)
+>
+> ![](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240315024917806.png)
+
+
+
+
+

@@ -12,9 +12,9 @@ isTop: false
 
 Goland >> Setting >> Tools >> File Watchers >> Add >> goimports
 
-![image-20231204083819575](.\assets\image-20231204083819575.png)
+![image-20231204083819575](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20231204083819575.png)
 
-![image-20231204083724267](.\assets\image-20231204083724267.png)
+![image-20231204083724267](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20231204083724267.png)
 
 
 
