@@ -176,6 +176,18 @@ How well does your solution solve the problem
 
 ## Recommend Tools
 
-- Zotero 知名文献阅读与整理工具。
-- MyBib 引用整合工具。
-- TypeDown Typora 的免费替代品，微软商店下载。
+- [Zotero](https://www.zotero.org/) 知名文献阅读与整理工具。
+- [MyBib](https://www.mybib.com/) 引用整合工具。
+- [TypeDown](https://github.com/wrimle/typedown) Typora 的免费替代品，从微软商店下载。（朋友评价为感觉像是在系统设置里写 Markdown XD。
+
+## Making Diagrams
+
+> [!tip]
+>
+> 作图在科研工作中扮演着至关重要的角色，它不仅是展示研究成果的主要手段，也是帮助研究者更好地理解和分析数据的重要工具。在毕业设计中，科研作图的质量直接关系到研究成果的清晰度和说服力。本节将介绍如何科学、有效地进行科研作图，并介绍一些推荐使用的工具，例如 Microsoft Excel、Python 的 Matplotlib 库、以及 R 语言中的 ggplot2。笔者亦会建议科研绘图中需要注意的一些关键要点，如配色选取等，以确保作图的质量和效果达到最佳状态。从选择合适的图表类型到图表设计和优化，来更好地完成毕业设计。
+
+常见的流程图、柱状图、饼图、折线图等索性就不再提了。
+
+桑基图，箱线图
+
+TODO
