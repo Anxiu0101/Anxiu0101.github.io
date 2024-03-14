@@ -234,5 +234,8 @@ nav:
     - Mkdocs 建站指南: oth/blog/Build-your-personal-MkDocs-Site.md
     - Adcanced your MkDocs site: oth/blog/Mkdocs-work-with-supabase.md
     - Changelog: changelog/index.md
+  - Templates of PaperWork: 
+    - Issue Submission in Github: oth\template\IssueSubmission.md
+    - Meeting Minutes or Records: oth\template\MeetingMinutes.md
 
 #not_in_nav: writing-online.md
