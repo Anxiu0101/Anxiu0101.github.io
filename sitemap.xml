@@ -81,6 +81,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://anxiu0101.github.io/oth/template/IssueSubmission.html</loc>
+         <lastmod>2024-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://anxiu0101.github.io/oth/template/MeetingMinutes.html</loc>
+         <lastmod>2024-03-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://anxiu0101.github.io/rsc/index.html</loc>
          <lastmod>2024-03-14</lastmod>
          <changefreq>daily</changefreq>
