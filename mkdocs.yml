@@ -224,6 +224,17 @@ nav:
     - FYP Simple Note: note/exp/miec-fyp-guideline.md
   - Lecture Note:
     - CS211 Note: note/lec/CS211-Note.md
+    - CS240 Note: note/lec/CS240-Note.md
+    - CS253 Note: note/lec/CS253-Note.md
+    - CS253 Note: note/lec/CS253-Note.md
+    - CS253FZ 2021 Exam Sample: note/lec/CS253FZ-2021-Exam.md
+    - CS253FZ 2022 Exam Sample: note/lec/CS253FZ-2022-Exam.md
+    - CS264 SoftwareDesign: note/lec/CS264-SoftwareDesign.md
+    - CS310 Exam Sample: note/lec/CS310-Exam.md
+    - CS310 ProgrammeLanguagesAndCompilers: note/lec/CS310-ProgrammeLanguagesAndCompilers.md
+    - CS320 ComputerNetwork: note/lec/CS320-ComputerNetwork.md
+    - CS357 SoftwareVerification: note/lec/CS357-SoftwareVerification.md
+    - CS370 ComputationAndComplexity: note/lec/CS370-ComputationAndComplexity.md
 - Others:
   - oth/index.md
   # - Resume:
@@ -235,7 +246,7 @@ nav:
     - Adcanced your MkDocs site: oth/blog/Mkdocs-work-with-supabase.md
     - Changelog: changelog/index.md
   - Templates of PaperWork: 
-    - Issue Submission in Github: oth\template\IssueSubmission.md
-    - Meeting Minutes or Records: oth\template\MeetingMinutes.md
+    - Issue Submission in Github: oth/template/IssueSubmission.md
+    - Meeting Minutes or Records: oth/template/MeetingMinutes.md
 
 #not_in_nav: writing-online.md
