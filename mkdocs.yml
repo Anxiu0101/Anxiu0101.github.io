@@ -154,6 +154,7 @@ plugins:
       lang:
         - en
       separator: '[\s\u200b\-]'
+  - minify
   - offline
   - tags
   - git-revision-date-localized:
@@ -172,6 +173,10 @@ plugins:
       token: !!python/object/apply:os.getenv [ "MKDOCS_GIT_COMMITTERS_APIKEY" ]
   - changelog:
       file: changelog.yml
+
+extra:
+  head:
+    - <script defer src="https://analysis.anxiu.cloud/script.js" data-website-id="190c3086-6d0e-40ec-bcc7-be1f64a8e907"></script>
 
 nav:
 - index.md
