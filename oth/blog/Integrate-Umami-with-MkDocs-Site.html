@@ -12,22 +12,28 @@
         <meta name="author" content="Anxiu">
       
       
+        <link rel="canonical" href="https://anxiu0101.github.io/oth/blog/Integrate-Umami-with-MkDocs-Site.html">
       
       
+        <link rel="prev" href="Mkdocs-work-with-supabase.html">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="../../changelog/index.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
     
     
       
-        <title>Anxiu's Note</title>
+        <title>Integrate Umami with your MkDocs Site - Anxiu's Note</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -48,21 +54,21 @@
       
     
     
-      <link rel="stylesheet" href="/css/timeline.css">
+      <link rel="stylesheet" href="../../css/timeline.css">
     
-      <link rel="stylesheet" href="/stylesheets/tasklist.css">
+      <link rel="stylesheet" href="../../stylesheets/tasklist.css">
     
-      <link rel="stylesheet" href="/stylesheets/custom.css">
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="/stylesheets/card.css">
+      <link rel="stylesheet" href="../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="/stylesheets/font.css">
+      <link rel="stylesheet" href="../../stylesheets/font.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +76,18 @@
     
     
     <script defer src="https://analysis.anxiu.cloud/script.js" data-website-id="190c3086-6d0e-40ec-bcc7-be1f64a8e907"></script>
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -91,6 +108,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#basic-introduction" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +123,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -121,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Integrate Umami with your MkDocs Site
             
           </span>
         </div>
@@ -232,7 +254,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
     
@@ -249,7 +271,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/writing-online.html" class="md-tabs__link">
+      <a href="../../writing-online.html" class="md-tabs__link">
         
   
     
@@ -268,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/cs/index.html" class="md-tabs__link">
+        <a href="../../cs/index.html" class="md-tabs__link">
           
   
     
@@ -288,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/web/index.html" class="md-tabs__link">
+        <a href="../../web/index.html" class="md-tabs__link">
           
   
     
@@ -308,7 +330,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/rsc/index.html" class="md-tabs__link">
+        <a href="../../rsc/index.html" class="md-tabs__link">
           
   
     
@@ -334,7 +356,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/note/exp/miec-fyp-guideline.html" class="md-tabs__link">
+        <a href="../../note/exp/miec-fyp-guideline.html" class="md-tabs__link">
           
   
     
@@ -353,11 +375,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/oth/index.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../index.html" class="md-tabs__link">
           
   
     
@@ -392,7 +416,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -421,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/writing-online.html" class="md-nav__link">
+      <a href="../../writing-online.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -486,7 +510,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/cs/index.html" class="md-nav__link ">
+            <a href="../../cs/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -602,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cs/lang/py/Python-venv.html" class="md-nav__link">
+      <a href="../../cs/lang/py/Python-venv.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cs/lang/go/interface-in-go.html" class="md-nav__link">
+      <a href="../../cs/lang/go/interface-in-go.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -738,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cs/lang/jl/julia-first-practice.html" class="md-nav__link">
+      <a href="../../cs/lang/jl/julia-first-practice.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cs/algorithm/raft.html" class="md-nav__link">
+      <a href="../../cs/algorithm/raft.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -876,7 +900,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/web/index.html" class="md-nav__link ">
+            <a href="../../web/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -964,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/mysql-in-ubuntu.html" class="md-nav__link">
+      <a href="../../web/deploy/mysql-in-ubuntu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -984,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/nginx-intro.html" class="md-nav__link">
+      <a href="../../web/deploy/nginx-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/postgre-in-docker.html" class="md-nav__link">
+      <a href="../../web/deploy/postgre-in-docker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1024,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/docker-intro.html" class="md-nav__link">
+      <a href="../../web/deploy/docker-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/dockerfile-intro.html" class="md-nav__link">
+      <a href="../../web/deploy/dockerfile-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/espanso-intro.html" class="md-nav__link">
+      <a href="../../web/deploy/espanso-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1084,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/systemctl-intro.html" class="md-nav__link">
+      <a href="../../web/deploy/systemctl-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/win-ssh-config.html" class="md-nav__link">
+      <a href="../../web/deploy/win-ssh-config.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1124,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/deploy/init-dev-env.html" class="md-nav__link">
+      <a href="../../web/deploy/init-dev-env.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/dev/golang-optional-pattern.html" class="md-nav__link">
+      <a href="../../web/dev/golang-optional-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/dev/go-project-compiler.html" class="md-nav__link">
+      <a href="../../web/dev/go-project-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/dev/golang-tencent-SMS.html" class="md-nav__link">
+      <a href="../../web/dev/golang-tencent-SMS.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1262,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/dev/gorm-struct-label.html" class="md-nav__link">
+      <a href="../../web/dev/gorm-struct-label.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1282,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/dev/goland-set-goimports.html" class="md-nav__link">
+      <a href="../../web/dev/goland-set-goimports.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/web/dev/add-color-to-your-terminal.html" class="md-nav__link">
+      <a href="../../web/dev/add-color-to-your-terminal.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1366,7 +1390,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/rsc/index.html" class="md-nav__link ">
+            <a href="../../rsc/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1420,7 +1444,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/rsc/ml/index.html" class="md-nav__link ">
+            <a href="../../rsc/ml/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1452,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/rsc/ml/ollama-first-try.html" class="md-nav__link">
+      <a href="../../rsc/ml/ollama-first-try.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1500,7 +1524,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/rsc/sec/index.html" class="md-nav__link ">
+            <a href="../../rsc/sec/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1575,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
+      <a href="../../rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1695,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/exp/miec-fyp-guideline.html" class="md-nav__link">
+      <a href="../../note/exp/miec-fyp-guideline.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1785,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS211-Note.html" class="md-nav__link">
+      <a href="../../note/lec/CS211-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1805,7 +1829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS240-Note.html" class="md-nav__link">
+      <a href="../../note/lec/CS240-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1825,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS253-Note.html" class="md-nav__link">
+      <a href="../../note/lec/CS253-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1845,7 +1869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS253-Note.html" class="md-nav__link">
+      <a href="../../note/lec/CS253-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1865,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS253FZ-2021-Exam.html" class="md-nav__link">
+      <a href="../../note/lec/CS253FZ-2021-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1885,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS253FZ-2022-Exam.html" class="md-nav__link">
+      <a href="../../note/lec/CS253FZ-2022-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1905,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS264-SoftwareDesign.html" class="md-nav__link">
+      <a href="../../note/lec/CS264-SoftwareDesign.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1925,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS310-Exam.html" class="md-nav__link">
+      <a href="../../note/lec/CS310-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1945,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS310-ProgrammeLanguagesAndCompilers.html" class="md-nav__link">
+      <a href="../../note/lec/CS310-ProgrammeLanguagesAndCompilers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1965,7 +1989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS320-ComputerNetwork.html" class="md-nav__link">
+      <a href="../../note/lec/CS320-ComputerNetwork.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1985,7 +2009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS357-SoftwareVerification.html" class="md-nav__link">
+      <a href="../../note/lec/CS357-SoftwareVerification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2005,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/lec/CS370-ComputationAndComplexity.html" class="md-nav__link">
+      <a href="../../note/lec/CS370-ComputationAndComplexity.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2038,6 +2062,8 @@
       
   
   
+    
+  
   
     
     
@@ -2057,17 +2083,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/oth/index.html" class="md-nav__link ">
+            <a href="../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2084,7 +2110,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Others
@@ -2097,6 +2123,8 @@
                 
   
   
+    
+  
   
     
     
@@ -2117,17 +2145,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/changelog/index.html" class="md-nav__link ">
+            <a href="../../changelog/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2144,7 +2172,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_2">
             <span class="md-nav__icon md-icon"></span>
             Blog Build
@@ -2157,7 +2185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/oth/blog/Markdown-Grammar.html" class="md-nav__link">
+      <a href="Markdown-Grammar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2177,7 +2205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/oth/blog/Build-your-personal-MkDocs-Site.html" class="md-nav__link">
+      <a href="Build-your-personal-MkDocs-Site.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2197,7 +2225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/oth/blog/Mkdocs-work-with-supabase.html" class="md-nav__link">
+      <a href="Mkdocs-work-with-supabase.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2215,9 +2243,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/oth/blog/Integrate-Umami-with-MkDocs-Site.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    向 MkDocs 站点集成统计服务
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Integrate-Umami-with-MkDocs-Site.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2226,6 +2272,31 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-introduction" class="md-nav__link">
+    Basic Introduction
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2289,7 +2360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/oth/template/IssueSubmission.html" class="md-nav__link">
+      <a href="../template/IssueSubmission.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2309,7 +2380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/oth/template/MeetingMinutes.html" class="md-nav__link">
+      <a href="../template/MeetingMinutes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2356,6 +2427,21 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-introduction" class="md-nav__link">
+    Basic Introduction
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2366,8 +2452,124 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Umami</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">MkDocs</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Tool</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Vercel</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Supabase</span>
+    
+  
+</nav>
 
+
+  
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/oth/blog/Integrate-Umami-with-MkDocs-Site.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/oth/blog/Integrate-Umami-with-MkDocs-Site.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+    </a>
+  
+
+
+  <h1>向 MkDocs 站点集成统计服务</h1>
+
+<p>通过免费服务 Vercel 和 Supabase，将 Umami 和你的 MkDocs 站点进行集成，获取隐私性优于 Google Analysis 的站点访问统计服务！</p>
+<!--more-->
+
+<h2 id="basic-introduction">Basic Introduction<a class="headerlink" href="#basic-introduction" title="Permanent link">#</a></h2>
+<p><a href="https://umami.is/">Umami</a> is a simple, fast, privacy-focused alternative to Google Analytics. Umami makes it easy to collect, analyze, and understand your web data — while maintaining <strong>visitor privacy</strong> and <strong>data ownership</strong>. </p>
+<p>本文的方案是使用 <a href="https://vercel.com/">Vercel</a> 部署 Umami 应用，并集成 <a href="https://supabase.com">Supabase</a> 作为数据储存的 MkDocs 站点数据统计整合方案。整个方案主打的就是一个免费 笑（其实就是不怎么用 Google Analysis 自己部署了一个开源版本就想用了 XD</p>
+<p>Umami 官方在他们的 <a href="https://umami.is/docs">文档</a> 中提供了很多部署方案，包括且不限于从源码安装，使用 Docker-compose 和 Docker 镜像。</p>
+<p>直接看 <a href="https://umami.is/docs/running-on-vercel">Docs: Running on Vercel – Umami</a> 这一章节，官方甚至写了一键部署我哭死，大胆点击 Deploy 按钮即可</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316080233265.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316080233265" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316080233265.png" /></a></p>
+<p>在仓库名位置写入自定的仓库名，Vercel 将会在你的 Github 上创建同名仓库，你可以自选 Private 或是 Public，一般私有就行，然后点击 Create。在第二步 Configure Project 中，Umami 会要求你填写字段 <code>DATABASE_URL</code>。这是因为 Umami 需要一个 PostgreSQL 或 MySQL 作为数据库。</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316082251637.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316082251637" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316082251637.png" /></a></p>
+<p>这时候就要用到 <a href="https://supabase.com/">Supabase</a> 了（虽然官方提示可以用 Vercel 提供的 Vercel Postgres 数据库，但是笔者没试过。</p>
+<p><a href="https://github.com/supabase/supabase">Supabase</a> 同样是一个开源项目，号称 The open source Firebase alternative。注册并登陆后创建一个新项目即可，命名自定，密码记住，Host 的位置自行选择，笔者使用的是美国西（听起来像火车站乐，进入项目页面选择右上角的绿色按钮 Connect，或者 Database 页面里也有，自己翻去吧。</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316083029612.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316083029612" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316083029612.png" /></a></p>
+<p>Supabase 弹出一个窗口，选择 URI 的链接点击 Copy 即可，注意将里面的那个 [YOUR-PASSWORD] 改成你创建项目时设置的那个密码。</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316083232854.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316083232854" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316083232854.png" /></a></p>
+<p>回到 Vercel，将链接复制到 <code>DATASET_URL</code> 的值中即可，点击 Deploy 部署，等待一两分钟后即完成部署。</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316080858125.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316080858125" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316080858125.png" /></a></p>
+<p>如果你想要为这个 Vercel 服务配置个人域名，点击 <code>Domains</code> 按钮进入配置页。我使用的是我的一个三级域名，直接输入你预期的域名后点击 Add，然后第一次解析肯定不成功，因为你的域名还没配置解析。复制 Vercel 提供的 DNS (二级域名是一个 DNS 的 IP 地址 A<sub>~ddress</sub>~，三级域名是一个域名 CNAME)，如下图</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316081231299.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316081231299" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316081231299.png" /></a></p>
+<p>去到你的域名服务商，例如我的是阿里云，去到域名解析功能，添加一条即可，</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316081710546.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316081710546" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316081710546.png" /></a></p>
+<p>回到 Vercel，转一会就成功了</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316080945489.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316080945489" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316080945489.png" /></a></p>
+<p>进入你的 Umami 网站，登录管理员账号，默认账号为 <code>admin</code>，密码为 <code>umami</code>，在 Umami 的官方文档里有写。</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316083710607.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316083710607" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316083710607.png" /></a></p>
+<p>进入后第一时间将管理员密码修改，进入 <code>Setttings &gt; Users</code>，对管理员条目点击 Edit 修改密码。然后创建一个普通用户账户，身份设置为 User，用于你自己的日常使用。</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316083836294.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316083836294" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316083836294.png" /></a></p>
+<p>登出管理员后，登入你自己的新用户中，在 <code>Setting &gt; Website</code> 页面中添加你要管理的站点，添加后的效果如下，</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316084243174.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316084243174" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316084243174.png" /></a></p>
+<p>点击 <code>Add website</code>，输入站点的名字和域名，</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316084341384.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316084341384" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316084341384.png" /></a></p>
+<p>然后对刚创建的条目点击 <code>Edit</code> 进行编辑。在 <code>Tracking code</code> 菜单下复制 HTML 标签，下一步就是将这个标签按 Umami 要求插入到你个人网站的 <code>&lt;head&gt;&lt;/head&gt;</code> 块中。</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316084641805.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316084641805" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316084641805.png" /></a></p>
+<p>笔者使用的博客方案是 MkDocs 的 Material 主题，需要在博客根目录下的 <code>overrides/</code> 中进行模板覆盖。创建一个<code>main.html</code> (或者 <code>base.html</code> 应该也行，因为 Material 主题的 <code>main.html</code> 是继承的 <code>base.html</code> 的) 在里面复制上原本 <code>base.html</code> 的内容并在 <code>&lt;head&gt;...&lt;/head&gt;</code> 中添加上刚刚 Umami 生成的追踪脚本。</p>
+<p>由于 MkDocs 是一个 Python 工具，并且需要安装一些 Python 包，所以笔者的博客目录下是使用 <code>poetry</code> 来管理环境的，所以你可以和我一样通过以下指令找到当前项目所在的 Python 环境</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>poetry<span class="w"> </span>env<span class="w"> </span>list<span class="w"> </span>--full-path
+</code></pre></div></td></tr></table></div>
+<p>复制地址并进入 <code>./Lib/site-packages/</code>，找到 <code>material/</code> 包，打开 <code>templates/</code>，即可找到你现在环境使用的 <code>base.html</code> 的内容，修改并复制过去即可完成修改。重新部署站点后内容即会被添加到 <code>&lt;head&gt;...&lt;/head&gt;</code> 标签之中。关于更多样式覆盖和修改的内容，可以参考 <a href="https://squidfunk.github.io/mkdocs-material/customization/#overriding-partials">Customization - Material for MkDocs (squidfunk.github.io)</a>。</p>
+<p>最终效果如下，</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316085832195.png" data-type="image" data-width="80%" data-height="auto" data-desc-position="bottom"><img alt="image-20240316085832195" src="https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/image-20240316085832195.png" /></a></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2024</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2024</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2384,6 +2586,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="Mkdocs-work-with-supabase.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Adcanced your MkDocs site">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Adcanced your MkDocs site
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../changelog/index.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Changelog">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Changelog
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2412,10 +2652,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -2425,10 +2665,10 @@
       
         <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
