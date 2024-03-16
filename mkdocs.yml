@@ -249,6 +249,7 @@ nav:
     - Markdown 语法测试: oth/blog/Markdown-Grammar.md
     - Mkdocs 建站指南: oth/blog/Build-your-personal-MkDocs-Site.md
     - Adcanced your MkDocs site: oth/blog/Mkdocs-work-with-supabase.md
+    - 向 MkDocs 站点集成统计服务: oth/blog/Integrate-Umami-with-MkDocs-Site.md
     - Changelog: changelog/index.md
   - Templates of PaperWork: 
     - Issue Submission in Github: oth/template/IssueSubmission.md
