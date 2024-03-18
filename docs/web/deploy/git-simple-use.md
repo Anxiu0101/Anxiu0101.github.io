@@ -29,3 +29,6 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
+
+
+[git 远程仓库回退的两种方式_git回退远程仓库-CSDN博客](https://blog.csdn.net/chushoufengli/article/details/101683839)
