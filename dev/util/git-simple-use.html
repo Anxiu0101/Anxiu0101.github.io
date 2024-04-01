@@ -12,13 +12,13 @@
         <meta name="author" content="Anxiu">
       
       
-        <link rel="canonical" href="https://anxiu0101.github.io/web/deploy/init-dev-env.html">
+        <link rel="canonical" href="https://anxiu0101.github.io/dev/util/git-simple-use.html">
       
       
-        <link rel="prev" href="win-ssh-config.html">
+        <link rel="prev" href="espanso-intro.html">
       
       
-        <link rel="next" href="../dev/golang-optional-pattern.html">
+        <link rel="next" href="mysql-in-ubuntu.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Configuration Set of Dev Tools - Anxiu's Note</title>
+        <title>Git simple use - Anxiu's Note</title>
       
     
     
@@ -71,6 +71,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-0MED3RPS23"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-0MED3RPS23",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-0MED3RPS23",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -109,7 +119,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#initialize-develop-environment-in-ubuntu" class="md-skip">
+        <a href="#git" class="md-skip">
           跳转至
         </a>
       
@@ -143,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuration Set of Dev Tools
+              Git simple use
             
           </span>
         </div>
@@ -885,6 +895,8 @@
       
         
       
+        
+      
     
     
     
@@ -932,8 +944,6 @@
                 
   
   
-    
-  
   
     
     
@@ -941,6 +951,116 @@
         
       
         
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Deploy & Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Deploy & Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/systemctl-intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systemctl Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/win-ssh-config.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config ssh in Win
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/init-dev-env.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration Set of Dev Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
       
         
       
@@ -965,86 +1085,26 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Deploy & Tools
+    Tools & Configuration
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
-            Deploy & Tools
+            Tools & Configuration
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="mysql-in-ubuntu.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Config MySQL in Ubuntu
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nginx-intro.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Nginx Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="postgre-in-docker.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Config PostgreSQL in Docker
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1110,46 +1170,6 @@
                 
   
   
-  
-    <li class="md-nav__item">
-      <a href="systemctl-intro.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Systemctl Introduction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="win-ssh-config.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Config ssh in Win
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1158,25 +1178,23 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Configuration Set of Dev Tools
+    Git simple use
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="init-dev-env.html" class="md-nav__link md-nav__link--active">
+      <a href="git-simple-use.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Configuration Set of Dev Tools
+    Git simple use
   </span>
   
 
@@ -1188,8 +1206,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1198,70 +1214,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#languages-installation" class="md-nav__link">
-    Languages Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Languages Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#go" class="md-nav__link">
-    Go
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust" class="md-nav__link">
-    Rust
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodejs" class="md-nav__link">
-    Node.js
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development-tools" class="md-nav__link">
-    Development Tools
-  </a>
-  
-    <nav class="md-nav" aria-label="Development Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zsh" class="md-nav__link">
-    Zsh
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#git" class="md-nav__link">
-    Git
+    Git 贡献提交规范
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vscode" class="md-nav__link">
-    VSCode
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1269,6 +1224,66 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mysql-in-ubuntu.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config MySQL in Ubuntu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nginx-intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nginx Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="postgre-in-docker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config PostgreSQL in Docker
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1311,10 +1326,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1325,8 +1340,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -1338,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/golang-optional-pattern.html" class="md-nav__link">
+      <a href="../web/golang-optional-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1358,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/go-project-compiler.html" class="md-nav__link">
+      <a href="../web/go-project-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/golang-tencent-SMS.html" class="md-nav__link">
+      <a href="../web/golang-tencent-SMS.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1398,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/gorm-struct-label.html" class="md-nav__link">
+      <a href="../web/gorm-struct-label.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1418,7 +1433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/goland-set-goimports.html" class="md-nav__link">
+      <a href="../web/goland-set-goimports.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1438,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev/add-color-to-your-terminal.html" class="md-nav__link">
+      <a href="../web/add-color-to-your-terminal.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1795,6 +1810,8 @@
       
         
       
+        
+      
     
     
     
@@ -1836,6 +1853,26 @@
   
   <span class="md-ellipsis">
     FYP Simple Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../note/exp/resume-simple-note.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Long Term Driven Resume Optimization
   </span>
   
 
@@ -2491,8 +2528,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2501,70 +2536,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#languages-installation" class="md-nav__link">
-    Languages Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Languages Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#go" class="md-nav__link">
-    Go
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust" class="md-nav__link">
-    Rust
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nodejs" class="md-nav__link">
-    Node.js
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development-tools" class="md-nav__link">
-    Development Tools
-  </a>
-  
-    <nav class="md-nav" aria-label="Development Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zsh" class="md-nav__link">
-    Zsh
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#git" class="md-nav__link">
-    Git
+    Git 贡献提交规范
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vscode" class="md-nav__link">
-    VSCode
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2583,7 +2557,7 @@
                   
 
   
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/web/deploy/init-dev-env.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/dev/util/git-simple-use.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -2592,31 +2566,27 @@
     
       
     
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/web/deploy/init-dev-env.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/dev/util/git-simple-use.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-<h1 id="initialize-develop-environment-in-ubuntu">Initialize Develop Environment in Ubuntu<a class="headerlink" href="#initialize-develop-environment-in-ubuntu" title="Permanent link">#</a></h1>
-<p><a href="https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment">设置 WSL 开发环境 | Microsoft Learn</a></p>
-<p>查看系统版本，</p>
+  <h1>Git simple use</h1>
+
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>$<span class="w"> </span>lsb_release<span class="w"> </span>-a
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>No<span class="w"> </span>LSB<span class="w"> </span>modules<span class="w"> </span>are<span class="w"> </span>available.
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>Distributor<span class="w"> </span>ID:<span class="w"> </span>Ubuntu
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>Description:<span class="w">    </span>Ubuntu<span class="w"> </span><span class="m">22</span>.04.3<span class="w"> </span>LTS
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>Release:<span class="w">        </span><span class="m">22</span>.04
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>Codename:<span class="w">       </span>jammy
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:Anxiu0101/Anxiu0101.github.io.git
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>//<span class="w"> </span>clone<span class="w"> </span>指定分支
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>gh-pages<span class="w"> </span>git@github.com:Anxiu0101/Anxiu0101.github.io.git
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>master<span class="w"> </span>--allow-unrelated-histories
 </code></pre></div></td></tr></table></div>
-<h2 id="languages-installation">Languages Installation<a class="headerlink" href="#languages-installation" title="Permanent link">#</a></h2>
-<h3 id="go">Go<a class="headerlink" href="#go" title="Permanent link">#</a></h3>
-<p>从官方二级制包中安装，</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -2633,184 +2603,102 @@
 <span class="normal"><a href="#__codelineno-1-14">14</a></span>
 <span class="normal"><a href="#__codelineno-1-15">15</a></span>
 <span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>//<span class="w"> </span>更新本地包索引
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>//<span class="w"> </span>下载版本对应的包
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>wget<span class="w"> </span>https://go.dev/dl/go1.21.2.linux-amd64.tar.gz
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>//<span class="w"> </span>将文件内容解压到<span class="w"> </span>/usr/local<span class="w"> </span>目录
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>sudo<span class="w"> </span>tar<span class="w"> </span>-C<span class="w"> </span>/usr/local<span class="w"> </span>-xzf<span class="w"> </span>go1.21.2.linux-amd64.tar.gz
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>//<span class="w"> </span>查看<span class="w"> </span>/usr/local/go<span class="w"> </span>目录的内容
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>ls<span class="w"> </span>-al<span class="w"> </span>/usr/local/go
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>//<span class="w"> </span>将<span class="w"> </span>Go<span class="w"> </span>二进制文件添加到<span class="w"> </span><span class="nv">$PATH</span><span class="w"> </span>环境变量中
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>//<span class="w"> </span>打开<span class="w"> </span>.bashrc<span class="w"> </span>或者<span class="w"> </span>.bash_profile<span class="w"> </span>文件
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>nano<span class="w"> </span>~/.bash_profile
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>//<span class="w"> </span>写入<span class="w"> </span>Path，更改并保存
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/go/bin
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>//<span class="w"> </span>重新加载<span class="w"> </span>.bashrc<span class="w"> </span>或者<span class="w"> </span>.bash_profile<span class="w"> </span>文件
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nb">source</span><span class="w"> </span>~/.bash_profile
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>//<span class="w"> </span>验证安装
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>go<span class="w"> </span>version
+<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>git<span class="w"> </span>status
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1"># Sample</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>PS<span class="w"> </span>E:<span class="se">\D</span>esktop<span class="se">\B</span>logEnv<span class="se">\B</span>logMkdocs&gt;<span class="w"> </span>git<span class="w"> </span>status
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>On<span class="w"> </span>branch<span class="w"> </span>master
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>ahead<span class="w"> </span>of<span class="w"> </span><span class="s1">&#39;origin/master&#39;</span><span class="w"> </span>by<span class="w"> </span><span class="m">1</span><span class="w"> </span>commit.
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git push&quot;</span><span class="w"> </span>to<span class="w"> </span>publish<span class="w"> </span>your<span class="w"> </span><span class="nb">local</span><span class="w"> </span>commits<span class="o">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Changes<span class="w"> </span>not<span class="w"> </span>staged<span class="w"> </span><span class="k">for</span><span class="w"> </span>commit:
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add/rm &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git restore &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>discard<span class="w"> </span>changes<span class="w"> </span><span class="k">in</span><span class="w"> </span>working<span class="w"> </span>directory<span class="o">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span>deleted:<span class="w">    </span>docs/web/deploy/git.md
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>Untracked<span class="w"> </span>files:
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add &lt;file&gt;...&quot;</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span>docs/web/deploy/git-simple-use.md
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>no<span class="w"> </span>changes<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>and/or<span class="w"> </span><span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="rust">Rust<a class="headerlink" href="#rust" title="Permanent link">#</a></h3>
-<p>官网给出了针对 WSL 用户的安装指令：</p>
-<blockquote>
-<p>If you’re a Windows Subsystem for Linux user run the following in your terminal, then follow the on-screen instructions to install Rust.
-<a href="https://www.rust-lang.org/tools/install">Install Rust - Rust Programming Language (rust-lang.org)</a></p>
-</blockquote>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://sh.rustup.rs<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-</code></pre></div></td></tr></table></div>
-<h3 id="nodejs">Node.js<a class="headerlink" href="#nodejs" title="Permanent link">#</a></h3>
-<p>通过 apt 直接安装</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>npm
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>//<span class="w"> </span>验证安装
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>nodejs<span class="w"> </span>--version
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>npm<span class="w"> </span>--version
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>//<span class="w"> </span>卸载指令
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>--purge<span class="w"> </span>remove<span class="w"> </span>nodejs<span class="w"> </span>npm
-</code></pre></div></td></tr></table></div>
-<p>但是 apt 源中分发的应用版本不一定是最新的，所以如果你找不到你需要的版本，还是通过官方的二进制包进行安装是比较合理且便于调整的选择。</p>
-<blockquote>
-<p>原本以为直接放在 <code>/usr/local/nodejs</code> 底下就行，但是看看 Linux 的文件层级发现还有更好的方式，是放在 <code>/opt/</code> 目录下，然后将二进制文件目录也就是 <code>/bin</code> 软链接到 <code>/usr/local/bin</code> 下更加合适。</p>
-<p><a href="https://developer.aliyun.com/article/891091">Ubuntu 20.04.3 LTS - 安装 Node.js v16.14.2-阿里云开发者社区 (aliyun.com)</a></p>
-</blockquote>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>wget<span class="w"> </span>https://nodejs.org/dist/v20.10.0/node-v20.10.0-linux-x64.tar.xz
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>sudo<span class="w"> </span>tar<span class="w"> </span>-C<span class="w"> </span>/usr/local<span class="w"> </span>-xf<span class="w"> </span>node-v20.10.0-linux-x64.tar.xz
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="nb">cd</span><span class="w"> </span>usr/local
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>mv<span class="w"> </span>node-v20.10.0-linux-x64/<span class="w"> </span>nodejs/
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nb">cd</span><span class="w"> </span>/home/&lt;user&gt;
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>nano<span class="w"> </span>~/.bash_profile
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="nb">source</span><span class="w"> </span>~/.bash_profile
-</code></pre></div></td></tr></table></div>
-<blockquote>
-<p>在 node 20 版本里（我并未确认先前版本的情况，仅讨论我使用 node v20 时的结果）解压二级制包后实际可以看到 <code>node/bin</code> 下直接就是一个只想 <code>/usr/bin</code> 的，你可以直接运行起它并且将它软链接到 <code>/usr/local/bin</code> 即可
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>anxiu@Anxiu-Desktop:~/node-v20.10.0-linux-x64$ ls -l /bin
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>lrwxrwxrwx 1 root root 7 Nov 23 05:36 /bin -&gt; usr/bin
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>./bin/node -v
-</code></pre></div></td></tr></table></div></p>
-</blockquote>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span>
-<span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span>
-<span class="normal"><a href="#__codelineno-6-15">15</a></span>
-<span class="normal"><a href="#__codelineno-6-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>tar<span class="w"> </span>xf<span class="w"> </span>node-v20.10.0-linux-x64.tar.xz
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>node-v20.10.0-linux-x64/
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>ls<span class="w"> </span>-l<span class="w"> </span>/bin
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nb">cd</span><span class="w"> </span>..
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>sudo<span class="w"> </span>mv<span class="w"> </span>node-v20.10.0-linux-x64<span class="w"> </span>/opt/
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/opt/node-v20.10.0-linux-x64/bin/node<span class="w"> </span>/usr/local/bin/
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/opt/node-v20.10.0-linux-x64/bin/npm<span class="w"> </span>/usr/local/bin/
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="sb">````</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>我个人更加喜欢用<span class="w"> </span>yarn<span class="w"> </span>所以附上<span class="w"> </span>yarn1<span class="w"> </span>的安装
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="o">[</span>How<span class="w"> </span>to<span class="w"> </span>Install<span class="w"> </span>Yarn<span class="w"> </span>on<span class="w"> </span>Ubuntu<span class="w"> </span><span class="o">{</span>With<span class="w"> </span>Screenshots<span class="o">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>phoenixNAP<span class="w"> </span>KB<span class="o">](</span>https://phoenixnap.com/kb/how-to-install-yarn-ubuntu#:~:text<span class="o">=</span>Install<span class="w"> </span>Yarn<span class="w"> </span>Using<span class="w"> </span>Ubuntu<span class="w"> </span><span class="m">1</span><span class="w"> </span>Configure<span class="w"> </span>the<span class="w"> </span>Yarn,key%3Acurl<span class="w"> </span>-sS<span class="w"> </span>https%3A%2F%2Fdl.yarnpkg.<span class="w"> </span><span class="m">2</span><span class="w"> </span>Install<span class="w"> </span>Yarn<span class="w"> </span>See<span class="w"> </span>More.<span class="o">)</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="sb">```</span>shell
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a>npm<span class="w"> </span>install<span class="w"> </span>--global<span class="w"> </span>yarn
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a>yarn<span class="w"> </span>--version
-</code></pre></div></td></tr></table></div>
-<p><a href="https://developer.aliyun.com/article/760687">如何在 Ubuntu 20.04 上安装 Node.js 和 npm-阿里云开发者社区 (aliyun.com)</a></p>
-<h2 id="development-tools">Development Tools<a class="headerlink" href="#development-tools" title="Permanent link">#</a></h2>
-<h3 id="zsh">Zsh<a class="headerlink" href="#zsh" title="Permanent link">#</a></h3>
-<blockquote>
-<p><a href="https://zhuanlan.zhihu.com/p/340851697">Windows Subsystem for Linux（WSL）的安装、美化和增强 - 知乎 (zhihu.com)</a></p>
-</blockquote>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>zsh
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>//<span class="w"> </span><span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">&quot;afowler&quot;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>sudo<span class="w"> </span>vim<span class="w"> </span>~/.zshrc
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
-</code></pre></div></td></tr></table></div>
-<p>语法高亮</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-syntax-highlighting.git
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source </span><span class="si">${</span><span class="p">(q-)PWD</span><span class="si">}</span><span class="s2">/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span>/.zshrc
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nb">source</span><span class="w"> </span>./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-</code></pre></div></td></tr></table></div>
-<p>自动补全插件</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-users/zsh-autosuggestions<span class="w"> </span><span class="si">${</span><span class="nv">ZSH_CUSTOM</span><span class="k">:-</span><span class="p">~/.oh-my-zsh/custom</span><span class="si">}</span>/plugins/zsh-autosuggestions
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>//<span class="w"> </span><span class="nv">plugins</span><span class="o">=(</span>zsh-autosuggestions<span class="o">)</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>sudo<span class="w"> </span>vim<span class="w"> </span>~/.zshrc
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
-</code></pre></div></td></tr></table></div>
-<h3 id="git">Git<a class="headerlink" href="#git" title="Permanent link">#</a></h3>
-<p>The vital important tool for programming development must be the version control tools, the Git.
-Since WSL doesn't need to install git if the host have been installed.
-Config the username and email, </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span>
-<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;username&quot;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;user.name@exmaple.com&quot;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;user.name@exmaple.com&quot;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>cat<span class="w"> </span>~/.ssh/id_rsa.pub
-</code></pre></div></td></tr></table></div>
-<p>Put the public key to you Github. If you use the default config, the ssh key will in the <code>/home/user/.ssh/id_rsa.pub</code>. </p>
-<h3 id="vscode">VSCode<a class="headerlink" href="#vscode" title="Permanent link">#</a></h3>
-<p>笔者使用的是 Windows 下的 WSL2 Ubuntu，所以可以直接通过指令 code . 安装并打开项目目录。</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>anxiu@Anxiu-Desktop:~/project/campus-hub/campus-hub-vitepress$<span class="w"> </span>code<span class="w"> </span>.
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Installing<span class="w"> </span>VS<span class="w"> </span>Code<span class="w"> </span>Server<span class="w"> </span><span class="k">for</span><span class="w"> </span>x64<span class="w"> </span><span class="o">(</span>1a5daa3a0231a0fbba4f14db7ec463cf99d7768e<span class="o">)</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>Downloading:<span class="w"> </span><span class="m">100</span>%
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a>Unpacking:<span class="w"> </span><span class="m">100</span>%
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>Unpacked<span class="w"> </span><span class="m">1522</span><span class="w"> </span>files<span class="w"> </span>and<span class="w"> </span>folders<span class="w"> </span>to<span class="w"> </span>/home/anxiu/.vscode-server/bin/1a5daa3a0231a0fbba4f14db7ec463cf99d7768e.
-</code></pre></div></td></tr></table></div>
-<p>好用，赞</p>
+<p><a href="https://blog.csdn.net/chushoufengli/article/details/101683839">git 远程仓库回退的两种方式_git回退远程仓库-CSDN博客</a></p>
+<h2 id="git"><code>Git</code> 贡献提交规范<a class="headerlink" href="#git" title="Permanent link">#</a></h2>
+<p>参考 <a href="https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md">vue</a> 规范 (<a href="https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular">Angular</a>)</p>
+<ul>
+<li><code>feat</code> 增加新功能</li>
+<li><code>fix</code> 修复问题/BUG</li>
+<li><code>style</code> 代码风格相关无影响运行结果的</li>
+<li><code>perf</code> 优化/性能提升</li>
+<li><code>refactor</code> 重构</li>
+<li><code>revert</code> 撤销修改</li>
+<li><code>test</code> 测试相关</li>
+<li><code>docs</code> 文档/注释</li>
+<li><code>chore</code> 依赖更新/脚手架配置修改等</li>
+<li><code>workflow</code> 工作流改进</li>
+<li><code>ci</code> 持续集成</li>
+<li><code>types</code> 类型定义文件更改</li>
+<li><code>wip</code> 开发中</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 1, 2024</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 16, 2024</span>
       
     
   </small>
 </div>
 
 
+  
 
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
 
                 
@@ -2835,7 +2723,7 @@ Config the username and email, </p>
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="win-ssh-config.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Config ssh in Win">
+          <a href="espanso-intro.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Espanso simple use">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2845,20 +2733,20 @@ Config the username and email, </p>
                 上一页
               </span>
               <div class="md-ellipsis">
-                Config ssh in Win
+                Espanso simple use
               </div>
             </div>
           </a>
         
         
           
-          <a href="../dev/golang-optional-pattern.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Golang Optional Pattern">
+          <a href="mysql-in-ubuntu.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Config MySQL in Ubuntu">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Golang Optional Pattern
+                Config MySQL in Ubuntu
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2882,6 +2770,51 @@ Config the username and email, </p>
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Anxiu0101" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://rss.anxiu.cloud" target="_blank" rel="noopener" title="rss.anxiu.cloud" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64zm0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0zm32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.researchgate.net/profile/Yuchen-Fang-13" target="_blank" rel="noopener" title="www.researchgate.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:anxiu.fyc@foxmail.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M121 32c-29.4 0-55 20-62.1 48.5l-57 227.9C.6 313.5 0 318.7 0 323.9V416c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-92.1c0-5.2-.6-10.4-1.9-15.5l-57-227.9C446 52 420.4 32 391 32H121zm0 64h270l48 192h-51.2c-12.1 0-23.2 6.8-28.6 17.7l-14.3 28.6c-5.4 10.8-16.5 17.7-28.6 17.7H195.8c-12.1 0-23.2-6.8-28.6-17.7l-14.3-28.6c-5.4-10.8-16.5-17.7-28.6-17.7H73l48-192z"/></svg>
     </a>
   
 </div>
