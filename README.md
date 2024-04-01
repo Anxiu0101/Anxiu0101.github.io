@@ -32,8 +32,6 @@
 - [x] 解决 meta 标题以及首行标题的问题
 - [ ] 修复字数统计插件错误
 
-Got it! Here's the updated version using a more narrative approach:
-
 ## Quick Start
 
 Make sure you have [poetry](https://python-poetry.org/docs/) installed, which is a handy Python package manager tool.

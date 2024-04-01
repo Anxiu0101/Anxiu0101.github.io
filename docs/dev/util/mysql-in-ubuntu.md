@@ -177,3 +177,4 @@ mysql > flush privileges;
 
 
 
+[SQL for Data Analysis Cheat Sheet | LearnSQL.com](https://learnsql.com/blog/sql-for-data-analysis-cheat-sheet/)

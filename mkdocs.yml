@@ -125,6 +125,8 @@ extra:
   link:
     - icon: fontawesome/solid/home
       link: https://anxiu0101.github.io/note
+  head:
+    - <script defer src="https://analysis.anxiu.cloud/script.js" data-website-id="190c3086-6d0e-40ec-bcc7-be1f64a8e907"></script>
 
 extra_css:
   - stylesheets/tasklist.css
@@ -174,10 +176,6 @@ plugins:
   - changelog:
       file: changelog.yml
 
-extra:
-  head:
-    - <script defer src="https://analysis.anxiu.cloud/script.js" data-website-id="190c3086-6d0e-40ec-bcc7-be1f64a8e907"></script>
-
 nav:
 - index.md
 - writing-online.md
@@ -195,38 +193,46 @@ nav:
   - Algorithm:
       - Raft Algorithm: cs/algorithm/raft.md
 - Web-Dev:
-    - web/index.md
+    - dev/index.md
+# — 部署记录与 Linux 系统笔记 ——————————————————————————————————————
+    - Deploy & Linux:
+        - Systemctl Introduction: dev/deploy/systemctl-intro.md
+        - Config ssh in Win: dev/deploy/win-ssh-config.md
+        - Configuration Set of Dev Tools: dev/deploy/init-dev-env.md
 # — 部署记录与一些开发工具的使用 —————————————————————————————————————
-    - Deploy & Tools:
-        - Config MySQL in Ubuntu: web/deploy/mysql-in-ubuntu.md
-        - Nginx Introduction: web/deploy/nginx-intro.md
-        - Config PostgreSQL in Docker: web/deploy/postgre-in-docker.md
-        - Docker Introduction: web/deploy/docker-intro.md
-        - Dockerfile Introduction: web/deploy/dockerfile-intro.md
-        - Espanso simple use: web/deploy/espanso-intro.md
-        - Systemctl Introduction: web/deploy/systemctl-intro.md
-        - Config ssh in Win: web/deploy/win-ssh-config.md
-        - Configuration Set of Dev Tools: web/deploy/init-dev-env.md
+    - Tools & Configuration:
+        - Docker Introduction: dev/util/docker-intro.md
+        - Dockerfile Introduction: dev/util/dockerfile-intro.md
+        - Espanso simple use: dev/util/espanso-intro.md
+        - Git simple use: dev/util/git-simple-use.md
+        - Config MySQL in Ubuntu: dev/util/mysql-in-ubuntu.md
+        - Nginx Introduction: dev/util/nginx-intro.md
+        - Config PostgreSQL in Docker: dev/util/postgre-in-docker.md
 # — 开发记录 ——————————————————————————————————————————————————————
     - Development:
-        - Golang Optional Pattern: web/dev/golang-optional-pattern.md
-        - Compiler a Go Project: web/dev/go-project-compiler.md
-        - Use tencent SMS in Go: web/dev/golang-tencent-SMS.md
-        - Gorm struct label Guide: web/dev/gorm-struct-label.md
-        - A regular Dev-Env in go programing: web/dev/goland-set-goimports.md
-        - Add Color to your Terminal: web/dev/add-color-to-your-terminal.md
+        - Golang Optional Pattern: dev/web/golang-optional-pattern.md
+        - Compiler a Go Project: dev/web/go-project-compiler.md
+        - Use tencent SMS in Go: dev/web/golang-tencent-SMS.md
+        - Gorm struct label Guide: dev/web/gorm-struct-label.md
+        - A regular Dev-Env in go programing: dev/web/goland-set-goimports.md
+        - Add Color to your Terminal: dev/web/add-color-to-your-terminal.md
 - Research:
   - rsc/index.md
+# — 机器学习与数据科学 ———————————————————————————————————————————————
   - Machine Learning:
     - rsc/ml/index.md
     - rsc/ml/ollama-first-try.md
   - Security:
     - rsc/sec/index.md
+# — 科研实践相关内容 —————————————————————————————————————————————————
   - Experience:
     - rsc/exp/use-zotero-in-your-research.md
-- Note: 
+- Note:
+# — 个人的一些经验贴 —————————————————————————————————————————————————
   - Experience: 
     - FYP Simple Note: note/exp/miec-fyp-guideline.md
+    - note/exp/resume-simple-note.md
+# — MIEC 课程笔记 ———————————————————————————————————————————————————
   - Lecture Note:
     - CS211 Note: note/lec/CS211-Note.md
     - CS240 Note: note/lec/CS240-Note.md

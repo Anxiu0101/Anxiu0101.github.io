@@ -92,3 +92,5 @@ psql -h 127.0.0.1 -U postgres
 - `\d` 查看表结构
 
 - `\di` 查看索引
+
+[SQL for Data Analysis Cheat Sheet | LearnSQL.com](https://learnsql.com/blog/sql-for-data-analysis-cheat-sheet/)

@@ -41,6 +41,8 @@ source ~/.bash_profile
 go version
 ```
 
+[ubuntu21.10/go 1.17.6: 配置go mod及proxy_ubuntu go 代理-CSDN博客](https://blog.csdn.net/weixin_43881017/article/details/122792746)
+
 ### Rust
 
 官网给出了针对 WSL 用户的安装指令：
@@ -153,7 +155,7 @@ source ~/.zshrc
 
 
 
-
+[Ubuntu 下 Oh My Zsh 的最佳实践「安装及配置」 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/38061286)
 
 
 

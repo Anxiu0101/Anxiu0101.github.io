@@ -48,7 +48,7 @@ FROM [--platform=<platform>] <image>[@<digest>] [AS <name>]
 
   ```dockerfile
   RUN ["可执行文件", "参数1", "参数2"]
-  # 例如：RUN ["./test.php", "dev", "offline"] 等价于 RUN ./test.php dev offline
+  # 例如：RUN ["./test.php", "web", "offline"] 等价于 RUN ./test.php web offline
   ```
   
   
