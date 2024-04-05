@@ -208,6 +208,7 @@ nav:
         - Config MySQL in Ubuntu: dev/util/mysql-in-ubuntu.md
         - Nginx Introduction: dev/util/nginx-intro.md
         - Config PostgreSQL in Docker: dev/util/postgre-in-docker.md
+        - Buf Introduction: dev/util/simplify-protobuf-management-via-buf.md
 # — 开发记录 ——————————————————————————————————————————————————————
     - Development:
         - Golang Optional Pattern: dev/web/golang-optional-pattern.md
