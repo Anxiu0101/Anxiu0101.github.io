@@ -143,3 +143,7 @@ p 浮动页，将图形放置在一只允许 有浮动对象的页面上.
 [Latex使用说明教程---ACM模板实测_\begin{acks}-CSDN博客](https://blog.csdn.net/qq_31813549/article/details/89154767)
 
 [ACM MM 投稿论文模板修改成投稿模式 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/491172953)
+
+![image-20240421002625815](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202404210026949.png)
+
+[LaTeX - 如何在图片说明（caption）中使用脚注（footnote）-CSDN博客](https://blog.csdn.net/iteye_17686/article/details/82336270)

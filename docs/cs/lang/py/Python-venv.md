@@ -8,9 +8,7 @@ comments: true
 
 `venv`  是 python 中搭建虚拟环境的一个工具，是 python virtual environments 特性中的一部分，有时也会被缩写成 `virtualenv` 
 
-```ad-note
-Python virtual environments allow you to install Python packages in an isolated location from the rest of your system instead of installing them system-wide. Let’s look at how to use the Python venv, short for Python virtual environment, also abbreviated as _virtualenv_.
-```
+> Python virtual environments allow you to install Python packages in an isolated location from the rest of your system instead of installing them system-wide. Let’s look at how to use the Python venv, short for Python virtual environment, also abbreviated as _virtualenv_.
 
 个人理解上，它的作用类似于前端项目中的 `node_module`，将依赖包安装到项目依赖路径下而不是系统依赖中。
 
