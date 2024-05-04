@@ -134,7 +134,8 @@ That's creating some interesting projects!
 
 本站共有 {{ pages }} 个页面，{{ words }} 个字，{{ codes }} 行代码。
 
-[:octicons-info-16: 关于我](./assets/cv/CV.pdf) /
+[:octicons-info-16: 关于我](./assets/cv) /
+[🔓 Sample Resource](./assets/sample-data.pdf)
 [:material-clock-time-two-outline: 最近更新](changelog/index.md) /
 [:material-chart-line: 站点统计](javascript:toggle_statistics();)
 
