@@ -1,4 +1,8 @@
-
+个人钟情于 ACM 风格的 Latex 模板，通常使用以下两个模板：
+```tex
+\documentclass[acmsmall,11pt]{acmart}   % Single Column
+\documentclass[sigconf,11pt]{acmart}    % Double Column
+```
 
 ## 文字格式
 

@@ -185,6 +185,7 @@ nav:
   - Program Lang:
     - Python:
       - Python Virtual Environment: cs/lang/py/Python-venv.md
+      - Poetry Manage Deps: cs/lang/py/Python-Deps-Management.md
     - Golang:
       - Interface in Go: cs/lang/go/interface-in-go.md
     - Julia:
@@ -199,6 +200,7 @@ nav:
         - Systemctl Introduction: dev/deploy/systemctl-intro.md
         - Config ssh in Win: dev/deploy/win-ssh-config.md
         - Configuration Set of Dev Tools: dev/deploy/init-dev-env.md
+        - ZSH Configuration: dev/deploy/zsh-simple-use.md
 # — 部署记录与一些开发工具的使用 —————————————————————————————————————
     - Tools & Configuration:
         - Docker Introduction: dev/util/docker-intro.md
@@ -217,6 +219,7 @@ nav:
         - Gorm struct label Guide: dev/web/gorm-struct-label.md
         - A regular Dev-Env in go programing: dev/web/goland-set-goimports.md
         - Add Color to your Terminal: dev/web/add-color-to-your-terminal.md
+        - Log lib logrus Usage: dev/web/golang-log-lib-logrus.md
 - Research:
   - rsc/index.md
 # — 机器学习与数据科学 ———————————————————————————————————————————————
@@ -225,6 +228,7 @@ nav:
     - rsc/ml/ollama-first-try.md
   - Security:
     - rsc/sec/index.md
+    - PromSec(KDD24) Note: rsc/sec/promsec-kdd2024.md
 # — 科研实践相关内容 —————————————————————————————————————————————————
   - Experience:
     - rsc/exp/use-zotero-in-your-research.md
@@ -232,7 +236,7 @@ nav:
 # — 个人的一些经验贴 —————————————————————————————————————————————————
   - Experience: 
     - FYP Simple Note: note/exp/miec-fyp-guideline.md
-    - note/exp/resume-simple-note.md
+    - Resume Sample Note: note/exp/resume-simple-note.md
 # — MIEC 课程笔记 ———————————————————————————————————————————————————
   - Lecture Note:
     - CS211 Note: note/lec/CS211-Note.md

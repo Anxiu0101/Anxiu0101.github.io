@@ -1,3 +1,7 @@
+一些 git 工具使用介绍。
+
+## Basic Command
+
 ```shell
 git clone git@github.com:Anxiu0101/Anxiu0101.github.io.git
 
@@ -34,8 +38,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [git 远程仓库回退的两种方式_git回退远程仓库-CSDN博客](https://blog.csdn.net/chushoufengli/article/details/101683839)
 
 ## `Git` 贡献提交规范
-
-
 
 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范 ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
 

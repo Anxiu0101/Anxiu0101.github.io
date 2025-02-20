@@ -8,22 +8,11 @@ feature: /post-images/
 isTop: false
 ---
 
-
-
-
-
-
-
-
-
 这是我个人 logrus 的一个自定义配置，放在自己的模板仓库里，写一些小项目的时候用的比较顺手。
 
 `logrus` is a structured logger for Go (golang), completely API compatible with the standard library logger.
 
 logrus 的日志级别包括：
-
-。。。
-
 
 
 JSON format output
@@ -34,7 +23,7 @@ page split.
 
 
 
-# 通过 Hook 实现行号记录
+## 通过 Hook 实现行号记录
 
 [Golang日志之logrus的使用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/375086909)
 
@@ -42,7 +31,7 @@ page split.
 [Golang日志之logrus的使用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/375086909)
 [sirupsen/logrus: Structured, pluggable logging for Go. (github.com)](https://github.com/sirupsen/logrus)
 
-# 通过中间件增加自定义字段
+## 通过中间件增加自定义字段
 
 
 

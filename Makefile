@@ -14,4 +14,10 @@ build:
 update:
 	poetry run mkdocs gh-deploy
 
+.PHONY: create
+create:
+	powershell -ExecutionPolicy Bypass -File ./create.ps1 $(fileName)
+# make create fileName=example-file.md
+
+
 # Service: MkDocs Static Website Generator.
