@@ -272,5 +272,11 @@ https://www.cnblogs.com/yang877/p/5860798.html
 
 ## Reference
 
+### Technical Documents
+
 - [MkDocs中文文档 (hellowac.github.io)](https://hellowac.github.io/mkdocs-docs-zh/)
 - [MkDocs 文档 (wdk-docs.github.io)](https://wdk-docs.github.io/mkdocs-docs/)
+
+### Use Case
+
+- https://github.com/langchain-ai/langgraphjs/tree/main/docs
