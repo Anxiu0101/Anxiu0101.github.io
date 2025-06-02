@@ -560,6 +560,8 @@
       
         
       
+        
+      
     
     
     
@@ -799,6 +801,74 @@
   
   <span class="md-ellipsis">
     First try with Julia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            React
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/lang/js/nextjs-purecomponent-and-memoization.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pure Component and Memoization
   </span>
   
 
@@ -1074,6 +1144,13 @@
         <li class="md-nav__item">
   <a href="#service" class="md-nav__link">
     .service 文件配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-journalctl-review-service-log" class="md-nav__link">
+    Using journalctl review service log
   </a>
   
 </li>
@@ -2685,6 +2762,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#using-journalctl-review-service-log" class="md-nav__link">
+    Using journalctl review service log
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2738,11 +2822,15 @@
 <h2 id="systemd">Systemd 介绍<a class="headerlink" href="#systemd" title="Permanent link">#</a></h2>
 <p><a href="https://blog.csdn.net/shliang310/article/details/122576783">https://blog.csdn.net/shliang310/article/details/122576783</a></p>
 <h2 id="systemctl-in-ubuntu">Systemctl in Ubuntu<a class="headerlink" href="#systemctl-in-ubuntu" title="Permanent link">#</a></h2>
-<p>Ubuntu 中 <code>.service</code> 文件路径: <code>/etc/systemd/system</code>，但实际部分是从 <code>/lib/systemd/system</code> 中软连接的。</p>
+<p>Ubuntu 中 <code>.service</code> 文件路径: <code>/etc/systemd/system</code>，但实际上部分服务是从 <code>/lib/systemd/system</code> 中软连接的。</p>
 <p><a href="https://blog.csdn.net/qq_44947550/article/details/119052871">https://blog.csdn.net/qq_44947550/article/details/119052871</a></p>
 <h2 id="service"><code>.service</code> 文件配置<a class="headerlink" href="#service" title="Permanent link">#</a></h2>
 <p><a href="https://blog.csdn.net/qq_41035283/article/details/122793745">https://blog.csdn.net/qq_41035283/article/details/122793745</a></p>
 <p>更改完 <code>/service</code> 文件后使用 <code>systemctl daemon-reload</code> 刷新 Systemctl 服务配置。</p>
+<h2 id="using-journalctl-review-service-log">Using <code>journalctl</code> review service log<a class="headerlink" href="#using-journalctl-review-service-log" title="Permanent link">#</a></h2>
+<p><code>journalctl -u &lt;service_name&gt; -f</code></p>
+<p><code>-u</code> 指定服务名字，在这里全称是 <code>unit</code>。</p>
+<p><a href="https://askubuntu.com/questions/659267/how-do-i-override-or-configure-systemd-services">https://askubuntu.com/questions/659267/how-do-i-override-or-configure-systemd-services</a></p>
 
   <hr>
 <div class="md-source-file">
