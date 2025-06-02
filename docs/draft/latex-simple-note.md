@@ -151,3 +151,5 @@ p 浮动页，将图形放置在一只允许 有浮动对象的页面上.
 ![image-20240421002625815](https://raw.githubusercontent.com/Anxiu0101/PicgoImg/master/202404210026949.png)
 
 [LaTeX - 如何在图片说明（caption）中使用脚注（footnote）-CSDN博客](https://blog.csdn.net/iteye_17686/article/details/82336270)
+
+https://ht.acm.org/ht2024/reference-styles-for-acm-papers

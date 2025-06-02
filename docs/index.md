@@ -8,8 +8,8 @@ hide:
 
 ![cover](.\assets\images\cover.png)
 
-Gopher, also interesting in **ML/IOT/Security** Tech.<br/>
-Currently studying at MIEC, **FZU**.<br/>
+Gopher, also interesting in **LLM/IOT/Security** Tech.<br/>
+Graduated from MIEC, FZU. Currently studying at University of Bristol, M.Sc. Project.<br/>
 That's creating some interesting projects!
 
 <style>

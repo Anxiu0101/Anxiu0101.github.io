@@ -19,6 +19,49 @@ comments: false
 ### React
 
 
+### Different Import
+
+在现代 TypeScript + React + Vite/Webpack 项目中，存在几种常见的 Import 方式：
+
+```typescript
+import { XXComponent } from '@/components/xx-componnet';
+
+import XXComponent from '@/components/xx-componnet';
+
+import type XXComponent from '@/components/xx-componnet';
+```
+
+第一种和第二种的区别较小，主要是 default 导出的区别。对于第一种引用，被引用组件是通过类似于以下代码导出的
+
+```typescript
+export const XXComponent = () => { ... };
+// or
+export function XXComponent() { ... }
+```
+ 
+该文件可能还导出了其他内容，但是这里只取名字为 XXComponent 的对象。我们称这种方法为 **命名导出（Named Export）**。
+
+而默认导出则在 `export` 时携带了 `default` 关键字，例如如下代码，
+
+```typescript
+export default function XXComponent() { ... }
+// or 
+const XXComponent = () => { ... };
+export default XXComponent;
+```
+
+这时这个组件只会通过默认名导出一个主模块对象或组件。
+
+| 区别点               | 命名导出 `{}`                 | 默认导出                  |
+| ----------------- | ------------------------- | --------------------- |
+| 语法结构              | `import { A } from './x'` | `import A from './x'` |
+| 一个文件是否能导出多个？      | ✅ 可以多个命名导出                | ⚠️ 只能有一个默认导出          |
+| 对 Tree Shaking 支持 | ✅ 更容易优化                   | 较差，尤其是大型默认导出对象        |
+| 导入名是否必须匹配？        | ✅ 必须匹配导出名                 | ❌ 不需要匹配导出时的变量名        |
+| 常用于               | 多工具函数、多组件导出               | 单一组件、类库入口             |
+
+- 对于页面组件、主要 UI 组件：通常使用 default export，便于 lazy 加载或 app/router 自动识别。
+- 对于工具方法、类型定义、多个组件集合：建议使用 named export，保持模块结构清晰，方便 IDE 自动提示。
 
 ### Typescript
 
