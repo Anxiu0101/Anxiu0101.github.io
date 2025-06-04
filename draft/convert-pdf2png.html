@@ -12,28 +12,24 @@
         <meta name="author" content="Anxiu">
       
       
-        <link rel="canonical" href="https://anxiu0101.github.io/dev/deploy/systemctl-intro.html">
+        <link rel="canonical" href="https://anxiu0101.github.io/draft/convert-pdf2png.html">
       
       
-        <link rel="prev" href="../index.html">
       
       
-        <link rel="next" href="win-ssh-config.html">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
     
     
       
-        <title>Systemctl 介绍 - Anxiu's Note</title>
+        <title>Convert Pdf2png - Anxiu's Note</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6a10b989.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -54,21 +50,21 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../css/timeline.css">
     
-      <link rel="stylesheet" href="../../stylesheets/tasklist.css">
+      <link rel="stylesheet" href="../stylesheets/tasklist.css">
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="../../stylesheets/card.css">
+      <link rel="stylesheet" href="../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../stylesheets/font.css">
+      <link rel="stylesheet" href="../stylesheets/font.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +82,7 @@
     
     
     <script defer src="https://analysis.anxiu.cloud/script.js" data-website-id="190c3086-6d0e-40ec-bcc7-be1f64a8e907"></script>
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -97,7 +93,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -119,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systemd" class="md-skip">
+        <a href="#main-content" class="md-skip">
           跳转至
         </a>
       
@@ -133,7 +129,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+    <a href="../index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -153,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systemctl 介绍
+              Convert Pdf2png
             
           </span>
         </div>
@@ -264,7 +260,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         
   
     
@@ -281,7 +277,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../writing-online.html" class="md-tabs__link">
+      <a href="../writing-online.html" class="md-tabs__link">
         
   
     
@@ -300,7 +296,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cs/index.html" class="md-tabs__link">
+        <a href="../cs/index.html" class="md-tabs__link">
           
   
     
@@ -316,13 +312,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../dev/index.html" class="md-tabs__link">
           
   
     
@@ -342,7 +336,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../rsc/index.html" class="md-tabs__link">
+        <a href="../rsc/index.html" class="md-tabs__link">
           
   
     
@@ -368,7 +362,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../note/exp/miec-fyp-guideline.html" class="md-tabs__link">
+        <a href="../note/exp/miec-fyp-guideline.html" class="md-tabs__link">
           
   
     
@@ -391,7 +385,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../oth/index.html" class="md-tabs__link">
+        <a href="../oth/index.html" class="md-tabs__link">
           
   
     
@@ -426,7 +420,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+    <a href="../index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -455,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../writing-online.html" class="md-nav__link">
+      <a href="../writing-online.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +514,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/index.html" class="md-nav__link ">
+            <a href="../cs/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -640,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/py/Python-venv.html" class="md-nav__link">
+      <a href="../cs/lang/py/Python-venv.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -660,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/py/Python-Deps-Management.html" class="md-nav__link">
+      <a href="../cs/lang/py/Python-Deps-Management.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/go/interface-in-go.html" class="md-nav__link">
+      <a href="../cs/lang/go/interface-in-go.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/jl/julia-first-practice.html" class="md-nav__link">
+      <a href="../cs/lang/jl/julia-first-practice.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/js/nextjs-purecomponent-and-memoization.html" class="md-nav__link">
+      <a href="../cs/lang/js/nextjs-purecomponent-and-memoization.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithm/raft.html" class="md-nav__link">
+      <a href="../cs/algorithm/raft.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,8 +967,6 @@
       
   
   
-    
-  
   
     
     
@@ -996,17 +988,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../dev/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1023,7 +1015,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Web-Dev
@@ -1036,8 +1028,6 @@
                 
   
   
-    
-  
   
     
     
@@ -1054,12 +1044,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -1073,7 +1063,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Deploy & Linux
@@ -1084,27 +1074,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Systemctl Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="systemctl-intro.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dev/deploy/systemctl-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1113,52 +1085,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#systemd" class="md-nav__link">
-    Systemd 介绍
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#systemctl-in-ubuntu" class="md-nav__link">
-    Systemctl in Ubuntu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#service" class="md-nav__link">
-    .service 文件配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-journalctl-review-service-log" class="md-nav__link">
-    Using journalctl review service log
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1170,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="win-ssh-config.html" class="md-nav__link">
+      <a href="../dev/deploy/win-ssh-config.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1190,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="init-dev-env.html" class="md-nav__link">
+      <a href="../dev/deploy/init-dev-env.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1210,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zsh-simple-use.html" class="md-nav__link">
+      <a href="../dev/deploy/zsh-simple-use.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1292,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/docker-intro.html" class="md-nav__link">
+      <a href="../dev/util/docker-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/dockerfile-intro.html" class="md-nav__link">
+      <a href="../dev/util/dockerfile-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1332,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/espanso-intro.html" class="md-nav__link">
+      <a href="../dev/util/espanso-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1352,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/git-simple-use.html" class="md-nav__link">
+      <a href="../dev/util/git-simple-use.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1372,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/mysql-in-ubuntu.html" class="md-nav__link">
+      <a href="../dev/util/mysql-in-ubuntu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1392,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/nginx-intro.html" class="md-nav__link">
+      <a href="../dev/util/nginx-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/postgre-in-docker.html" class="md-nav__link">
+      <a href="../dev/util/postgre-in-docker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/simplify-protobuf-management-via-buf.html" class="md-nav__link">
+      <a href="../dev/util/simplify-protobuf-management-via-buf.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1512,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/golang-optional-pattern.html" class="md-nav__link">
+      <a href="../dev/web/golang-optional-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/go-project-compiler.html" class="md-nav__link">
+      <a href="../dev/web/go-project-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1552,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/golang-tencent-SMS.html" class="md-nav__link">
+      <a href="../dev/web/golang-tencent-SMS.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1572,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/gorm-struct-label.html" class="md-nav__link">
+      <a href="../dev/web/gorm-struct-label.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1592,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/goland-set-goimports.html" class="md-nav__link">
+      <a href="../dev/web/goland-set-goimports.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1612,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/add-color-to-your-terminal.html" class="md-nav__link">
+      <a href="../dev/web/add-color-to-your-terminal.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1632,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/golang-log-lib-logrus.html" class="md-nav__link">
+      <a href="../dev/web/golang-log-lib-logrus.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1696,7 +1622,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/index.html" class="md-nav__link ">
+            <a href="../rsc/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1750,7 +1676,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/ml/index.html" class="md-nav__link ">
+            <a href="../rsc/ml/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1782,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/ml/ollama-first-try.html" class="md-nav__link">
+      <a href="../rsc/ml/ollama-first-try.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1832,7 +1758,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/sec/index.html" class="md-nav__link ">
+            <a href="../rsc/sec/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1864,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/sec/promsec-kdd2024.html" class="md-nav__link">
+      <a href="../rsc/sec/promsec-kdd2024.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1932,7 +1858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
+      <a href="../rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2054,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/exp/miec-fyp-guideline.html" class="md-nav__link">
+      <a href="../note/exp/miec-fyp-guideline.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2074,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/exp/resume-simple-note.html" class="md-nav__link">
+      <a href="../note/exp/resume-simple-note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2164,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS211-Note.html" class="md-nav__link">
+      <a href="../note/lec/CS211-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2184,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS240-Note.html" class="md-nav__link">
+      <a href="../note/lec/CS240-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2204,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS253-Note.html" class="md-nav__link">
+      <a href="../note/lec/CS253-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2224,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS253-Note.html" class="md-nav__link">
+      <a href="../note/lec/CS253-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2244,7 +2170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS253FZ-2021-Exam.html" class="md-nav__link">
+      <a href="../note/lec/CS253FZ-2021-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2264,7 +2190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS253FZ-2022-Exam.html" class="md-nav__link">
+      <a href="../note/lec/CS253FZ-2022-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2284,7 +2210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS264-SoftwareDesign.html" class="md-nav__link">
+      <a href="../note/lec/CS264-SoftwareDesign.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2304,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS310-Exam.html" class="md-nav__link">
+      <a href="../note/lec/CS310-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2324,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS310-ProgrammeLanguagesAndCompilers.html" class="md-nav__link">
+      <a href="../note/lec/CS310-ProgrammeLanguagesAndCompilers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2344,7 +2270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS320-ComputerNetwork.html" class="md-nav__link">
+      <a href="../note/lec/CS320-ComputerNetwork.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2364,7 +2290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS357-SoftwareVerification.html" class="md-nav__link">
+      <a href="../note/lec/CS357-SoftwareVerification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2384,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS370-ComputationAndComplexity.html" class="md-nav__link">
+      <a href="../note/lec/CS370-ComputationAndComplexity.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2446,7 +2372,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../oth/index.html" class="md-nav__link ">
+            <a href="../oth/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2506,7 +2432,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../changelog/index.html" class="md-nav__link ">
+            <a href="../changelog/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2536,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Markdown-Grammar.html" class="md-nav__link">
+      <a href="../oth/blog/Markdown-Grammar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2556,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Build-your-personal-MkDocs-Site.html" class="md-nav__link">
+      <a href="../oth/blog/Build-your-personal-MkDocs-Site.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2576,7 +2502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Mkdocs-work-with-supabase.html" class="md-nav__link">
+      <a href="../oth/blog/Mkdocs-work-with-supabase.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2596,7 +2522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Integrate-Umami-with-MkDocs-Site.html" class="md-nav__link">
+      <a href="../oth/blog/Integrate-Umami-with-MkDocs-Site.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2668,7 +2594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/template/IssueSubmission.html" class="md-nav__link">
+      <a href="../oth/template/IssueSubmission.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2688,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/template/MeetingMinutes.html" class="md-nav__link">
+      <a href="../oth/template/MeetingMinutes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2742,29 +2668,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#systemd" class="md-nav__link">
-    Systemd 介绍
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#systemctl-in-ubuntu" class="md-nav__link">
-    Systemctl in Ubuntu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#service" class="md-nav__link">
-    .service 文件配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-journalctl-review-service-log" class="md-nav__link">
-    Using journalctl review service log
+  <a href="#main-content" class="md-nav__link">
+    Main Content
   </a>
   
 </li>
@@ -2782,26 +2687,9 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-<nav class="md-tags" >
-  
-    
-    
-    
-      <span class="md-tag">Linux</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">Tool</span>
-    
-  
-</nav>
-
 
   
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/dev/deploy/systemctl-intro.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/draft/convert-pdf2png.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -2810,38 +2698,41 @@
     
       
     
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/dev/deploy/systemctl-intro.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/draft/convert-pdf2png.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-  <h1>Systemctl Introduction</h1>
+  <h1>Convert Pdf2png</h1>
 
-<h2 id="systemd">Systemd 介绍<a class="headerlink" href="#systemd" title="Permanent link">#</a></h2>
-<p><a href="https://blog.csdn.net/shliang310/article/details/122576783">https://blog.csdn.net/shliang310/article/details/122576783</a></p>
-<h2 id="systemctl-in-ubuntu">Systemctl in Ubuntu<a class="headerlink" href="#systemctl-in-ubuntu" title="Permanent link">#</a></h2>
-<p>Ubuntu 中 <code>.service</code> 文件路径: <code>/etc/systemd/system</code>，但实际上部分服务是从 <code>/lib/systemd/system</code> 中软连接的。</p>
-<p><a href="https://blog.csdn.net/qq_44947550/article/details/119052871">https://blog.csdn.net/qq_44947550/article/details/119052871</a></p>
-<h2 id="service"><code>.service</code> 文件配置<a class="headerlink" href="#service" title="Permanent link">#</a></h2>
-<p><a href="https://blog.csdn.net/qq_41035283/article/details/122793745">https://blog.csdn.net/qq_41035283/article/details/122793745</a></p>
-<p>更改完 <code>/service</code> 文件后使用 <code>systemctl daemon-reload</code> 刷新 Systemctl 服务配置。</p>
-<h2 id="using-journalctl-review-service-log">Using <code>journalctl</code> review service log<a class="headerlink" href="#using-journalctl-review-service-log" title="Permanent link">#</a></h2>
-<p><code>journalctl -u &lt;service_name&gt; -f</code></p>
-<p><code>-u</code> 指定服务名字，在这里全称是 <code>unit</code>。</p>
-<p><a href="https://askubuntu.com/questions/659267/how-do-i-override-or-configure-systemd-services">https://askubuntu.com/questions/659267/how-do-i-override-or-configure-systemd-services</a></p>
+<!--more-->
+
+<h2 id="main-content">Main Content<a class="headerlink" href="#main-content" title="Permanent link">#</a></h2>
+<blockquote>
+<p>[!cite]
+</p>
+</blockquote>
+<p>Using python package <code>pdf2image</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">pdf2image</span> <span class="kn">import</span> <span class="n">convert_from_path</span>         
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">pages</span> <span class="o">=</span> <span class="n">convert_from_path</span><span class="p">(</span><span class="s2">&quot;target.pdf&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>            
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">pages</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;out.png&quot;</span><span class="p">,</span> <span class="s2">&quot;PNG&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><a href="https://stackoverflow.com/questions/6233400/how-do-you-convert-pdfs-to-pngs-with-ghostscript?utm_source=chatgpt.com">https://stackoverflow.com/questions/6233400/how-do-you-convert-pdfs-to-pngs-with-ghostscript?utm_source=chatgpt.com</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 2, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2025</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2025</span>
       
     
   </small>
@@ -2910,44 +2801,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Index">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                Index
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="win-ssh-config.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Config ssh in Win">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                Config ssh in Win
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -3021,10 +2874,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -3034,7 +2887,7 @@
       
         <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
       

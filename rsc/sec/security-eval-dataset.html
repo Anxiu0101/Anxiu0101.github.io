@@ -12,13 +12,9 @@
         <meta name="author" content="Anxiu">
       
       
-        <link rel="canonical" href="https://anxiu0101.github.io/dev/deploy/systemctl-intro.html">
+        <link rel="canonical" href="https://anxiu0101.github.io/rsc/sec/security-eval-dataset.html">
       
       
-        <link rel="prev" href="../index.html">
-      
-      
-        <link rel="next" href="win-ssh-config.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Systemctl 介绍 - Anxiu's Note</title>
+        <title>SecurityEval Dataset Paper Note - Anxiu's Note</title>
       
     
     
@@ -119,7 +115,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systemd" class="md-skip">
+        <a href="#table-of-content" class="md-skip">
           跳转至
         </a>
       
@@ -153,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systemctl 介绍
+              SecurityEval Dataset Paper Note
             
           </span>
         </div>
@@ -316,13 +312,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../index.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../dev/index.html" class="md-tabs__link">
           
   
     
@@ -342,7 +336,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../rsc/index.html" class="md-tabs__link">
+        <a href="../index.html" class="md-tabs__link">
           
   
     
@@ -973,8 +967,6 @@
       
   
   
-    
-  
   
     
     
@@ -996,17 +988,17 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../../dev/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1023,7 +1015,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Web-Dev
@@ -1036,8 +1028,6 @@
                 
   
   
-    
-  
   
     
     
@@ -1054,12 +1044,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -1073,7 +1063,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Deploy & Linux
@@ -1084,27 +1074,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Systemctl Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="systemctl-intro.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dev/deploy/systemctl-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1113,52 +1085,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#systemd" class="md-nav__link">
-    Systemd 介绍
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#systemctl-in-ubuntu" class="md-nav__link">
-    Systemctl in Ubuntu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#service" class="md-nav__link">
-    .service 文件配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-journalctl-review-service-log" class="md-nav__link">
-    Using journalctl review service log
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1170,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="win-ssh-config.html" class="md-nav__link">
+      <a href="../../dev/deploy/win-ssh-config.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1190,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="init-dev-env.html" class="md-nav__link">
+      <a href="../../dev/deploy/init-dev-env.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1210,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="zsh-simple-use.html" class="md-nav__link">
+      <a href="../../dev/deploy/zsh-simple-use.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1292,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/docker-intro.html" class="md-nav__link">
+      <a href="../../dev/util/docker-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/dockerfile-intro.html" class="md-nav__link">
+      <a href="../../dev/util/dockerfile-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1332,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/espanso-intro.html" class="md-nav__link">
+      <a href="../../dev/util/espanso-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1352,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/git-simple-use.html" class="md-nav__link">
+      <a href="../../dev/util/git-simple-use.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1372,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/mysql-in-ubuntu.html" class="md-nav__link">
+      <a href="../../dev/util/mysql-in-ubuntu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1392,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/nginx-intro.html" class="md-nav__link">
+      <a href="../../dev/util/nginx-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/postgre-in-docker.html" class="md-nav__link">
+      <a href="../../dev/util/postgre-in-docker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/simplify-protobuf-management-via-buf.html" class="md-nav__link">
+      <a href="../../dev/util/simplify-protobuf-management-via-buf.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1512,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/golang-optional-pattern.html" class="md-nav__link">
+      <a href="../../dev/web/golang-optional-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/go-project-compiler.html" class="md-nav__link">
+      <a href="../../dev/web/go-project-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1552,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/golang-tencent-SMS.html" class="md-nav__link">
+      <a href="../../dev/web/golang-tencent-SMS.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1572,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/gorm-struct-label.html" class="md-nav__link">
+      <a href="../../dev/web/gorm-struct-label.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1592,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/goland-set-goimports.html" class="md-nav__link">
+      <a href="../../dev/web/goland-set-goimports.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1612,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/add-color-to-your-terminal.html" class="md-nav__link">
+      <a href="../../dev/web/add-color-to-your-terminal.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1632,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/golang-log-lib-logrus.html" class="md-nav__link">
+      <a href="../../dev/web/golang-log-lib-logrus.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1696,7 +1622,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/index.html" class="md-nav__link ">
+            <a href="../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1750,7 +1676,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/ml/index.html" class="md-nav__link ">
+            <a href="../ml/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1782,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/ml/ollama-first-try.html" class="md-nav__link">
+      <a href="../ml/ollama-first-try.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1832,7 +1758,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/sec/index.html" class="md-nav__link ">
+            <a href="index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1864,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/sec/promsec-kdd2024.html" class="md-nav__link">
+      <a href="promsec-kdd2024.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1932,7 +1858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
+      <a href="../exp/use-zotero-in-your-research.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2742,29 +2668,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#systemd" class="md-nav__link">
-    Systemd 介绍
+  <a href="#table-of-content" class="md-nav__link">
+    Table of Content
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#systemctl-in-ubuntu" class="md-nav__link">
-    Systemctl in Ubuntu
+  <a href="#_1" class="md-nav__link">
+    引言
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#service" class="md-nav__link">
-    .service 文件配置
+  <a href="#_2" class="md-nav__link">
+    数据集构建
+  </a>
+  
+    <nav class="md-nav" aria-label="数据集构建">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    样本收集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    样本格式化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    数据集概览
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    实验评估示例
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-journalctl-review-service-log" class="md-nav__link">
-    Using journalctl review service log
+  <a href="#_7" class="md-nav__link">
+    有效性威胁
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    相关工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    结论与未来工作
   </a>
   
 </li>
@@ -2788,20 +2762,32 @@
     
     
     
-      <span class="md-tag">Linux</span>
+      <span class="md-tag">research</span>
     
   
     
     
     
-      <span class="md-tag">Tool</span>
+      <span class="md-tag">paper</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">code-generation</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">llm</span>
     
   
 </nav>
 
 
   
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/dev/deploy/systemctl-intro.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/rsc/sec/security-eval-dataset.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -2810,38 +2796,101 @@
     
       
     
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/dev/deploy/systemctl-intro.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/rsc/sec/security-eval-dataset.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-  <h1>Systemctl Introduction</h1>
+  <h1>SecurityEval Dataset Paper Note</h1>
 
-<h2 id="systemd">Systemd 介绍<a class="headerlink" href="#systemd" title="Permanent link">#</a></h2>
-<p><a href="https://blog.csdn.net/shliang310/article/details/122576783">https://blog.csdn.net/shliang310/article/details/122576783</a></p>
-<h2 id="systemctl-in-ubuntu">Systemctl in Ubuntu<a class="headerlink" href="#systemctl-in-ubuntu" title="Permanent link">#</a></h2>
-<p>Ubuntu 中 <code>.service</code> 文件路径: <code>/etc/systemd/system</code>，但实际上部分服务是从 <code>/lib/systemd/system</code> 中软连接的。</p>
-<p><a href="https://blog.csdn.net/qq_44947550/article/details/119052871">https://blog.csdn.net/qq_44947550/article/details/119052871</a></p>
-<h2 id="service"><code>.service</code> 文件配置<a class="headerlink" href="#service" title="Permanent link">#</a></h2>
-<p><a href="https://blog.csdn.net/qq_41035283/article/details/122793745">https://blog.csdn.net/qq_41035283/article/details/122793745</a></p>
-<p>更改完 <code>/service</code> 文件后使用 <code>systemctl daemon-reload</code> 刷新 Systemctl 服务配置。</p>
-<h2 id="using-journalctl-review-service-log">Using <code>journalctl</code> review service log<a class="headerlink" href="#using-journalctl-review-service-log" title="Permanent link">#</a></h2>
-<p><code>journalctl -u &lt;service_name&gt; -f</code></p>
-<p><code>-u</code> 指定服务名字，在这里全称是 <code>unit</code>。</p>
-<p><a href="https://askubuntu.com/questions/659267/how-do-i-override-or-configure-systemd-services">https://askubuntu.com/questions/659267/how-do-i-override-or-configure-systemd-services</a></p>
+<p><a href="https://dl.acm.org/doi/10.1145/3549035.3561184">SecurityEval dataset: mining vulnerability examples to evaluate machine learning-based code generation techniques</a>（论文中文概述）</p>
+<!--more-->
+
+<h2 id="table-of-content">Table of Content<a class="headerlink" href="#table-of-content" title="Permanent link">#</a></h2>
+<ol>
+<li><a href="#引言">引言</a></li>
+<li><a href="#数据集构建">数据集构建</a></li>
+<li><a href="#样本收集">样本收集</a></li>
+<li><a href="#样本格式化">样本格式化</a></li>
+<li><a href="#数据集概览">数据集概览</a></li>
+<li><a href="#实验评估示例">实验评估示例</a></li>
+<li><a href="#有效性威胁">有效性威胁</a></li>
+<li><a href="#相关工作">相关工作</a></li>
+<li><a href="#结论与未来工作">结论与未来工作</a></li>
+</ol>
+<h2 id="_1">引言<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>本文提出了<strong>SecurityEval</strong>数据集，用于评估大规模语言模型（LLM）代码生成工具在安全方面的表现。尽管代码生成模型能够根据给定提示自动生成功能正确的代码，但可能引入安全漏洞。因此，需要一个专门的数据集来验证生成代码的安全性。SecurityEval 数据集涵盖了 <strong>130</strong> 个 Python 代码样本，涉及 <strong>75</strong> 种不同的常见软件漏洞类型（对应 <em>Common Weakness Enumeration</em>, CWE），旨在为代码生成模型的安全评估提供基准。作者将此数据集用于评估一个开源模型（<strong>InCoder</strong>）和一个闭源的商业模型（<strong>GitHub Copilot</strong>）的代码生成安全性。</p>
+<h2 id="_2">数据集构建<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="_3">样本收集<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p>作者从多种来源收集了带有漏洞的代码示例，并将每个示例标注对应的 CWE 类型。主要的外部数据来源包括：</p>
+<ul>
+<li><strong>CodeQL 文档</strong> – GitHub 的语义代码分析引擎，其官方文档提供了多种不安全与安全编码模式的示例。作者从中筛选了 <strong>36</strong> 个包含“不良模式”的 Python 代码示例。</li>
+<li><strong>CWE 官方列表</strong> – CWE 列举了常见的软件和硬件弱点，并附有跨语言的不安全代码示例。作者从 CWE 列表中提取了 <strong>11</strong> 个 Python 漏洞示例。</li>
+<li><strong>SonarSource 静态分析规则</strong> – SonarSource 提供覆盖多种语言的静态分析规则集（约4,800条规则，其中针对 Python 有217条，包括29条与漏洞相关）。其在线文档给出了符合（安全）与不符合（不安全）规则的代码片段，作者据此收集了 <strong>34</strong> 个不安全的 Python 代码示例。</li>
+<li><strong>Pearce 等人的研究</strong> – Pearce 等人先前研究了 GitHub Copilot 在何种情况下会生成不安全代码，涉及 18 个 CWE 场景。作者从该研究中选取了 <strong>4</strong> 个 Python 漏洞示例。</li>
+</ul>
+<p>通过以上渠道，作者共收集到 <strong>85</strong> 个漏洞示例。为了扩充数据集覆盖面，作者另外手动构造了 <strong>45</strong> 个新的不安全代码示例。这些新增示例针对先前未涵盖的漏洞类型，以确保更多 CWE 类型得到体现。最终，SecurityEval 数据集总计包含 <strong>130</strong> 个样本，涵盖 75 种 CWE 软件弱点类型。</p>
+<h3 id="_4">样本格式化<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<p>收集的所有示例经过统一格式化，以便用于代码生成模型的评估。数据集以 <strong>JSON Lines (JSONL)</strong> 文件提供，每一行是一个包含以下三个字段的 JSON 对象：</p>
+<ul>
+<li><strong>ID</strong>：样本唯一标识符。格式为“<code>{CWE编号}_{来源}_{序号}.py</code>”。例如，<code>CWE-020_codeql_1.py</code> 表示该样本对应 CWE-020 “输入验证不恰当”，来源于 CodeQL 文档，是该来源的第1个样本。</li>
+<li><strong>Prompt（提示）</strong>：提供给代码生成模型的输入，即不完整的代码片段或函数签名，加上描述函数功能的文档字符串、必要的导入和变量声明等。Prompt 为模型提供上下文，要求模型续写完整实现。</li>
+<li><strong>Insecure Code（不安全代码）</strong>：一个潜在的不安全实现示例，展示模型在该提示下<strong>可能</strong>生成的漏洞代码。不安全代码字段揭示了在该提示下容易出现的安全问题，并不一定完整实现了预期功能，但包含目标漏洞模式。</li>
+</ul>
+<p>例如，针对 CWE-798 “使用硬编码的凭证”，提示部分提供了一个函数 <code>getDBConnection()</code> 的定义和文档字符串，要求“返回一个 MySQL 数据库连接”。其不安全代码示例则展示了一个潜在实现：直接在代码中硬编码用户名和密码来连接数据库。通过这种 <strong>Prompt</strong> 与对应的 <strong>Insecure Code</strong> 示例，评估者可以判断模型生成的代码是否重现了不安全实现。</p>
+<h3 id="_5">数据集概览<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p>SecurityEval 数据集共包含 <strong>130</strong> 个 Python 样本，覆盖 <strong>75</strong> 种不同的 CWE 漏洞类型。这些漏洞类型广泛分布于 CWE 列表所定义的类别之中：按照 CWE 4.8版本划分的40个安全弱点类别中，本数据集涉及了其中的 <strong>28</strong> 个类别。每种弱点类别下可能包含一个或多个具体的漏洞示例。表1（论文中）详细列出了每种漏洞（CWE）对应的样本数量及来源。</p>
+<p>需要注意的是，有一部分 CWE 类别未在数据集中体现。主要原因是在 Python 环境下不易展示或缺乏相关示例。例如：与底层内存操作相关的弱点（如内存缓冲区错误、指针处理错误）、特定语言机制（如信号处理错误、类型错误）等在 Python（内存管理自动、无指针）中并不常见，或缺少适合的示例。因此，这些类别暂未包含在 SecurityEval 数据集中。</p>
+<h2 id="_6">实验评估示例<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<p>作者通过一个示例性实验，展示如何使用 SecurityEval 数据集评估现有代码生成模型的安全性。他们选取了一个开源模型和一个商用工具，对照评估两者在生成代码中的安全问题。需要强调，此选择仅用于演示数据集的用法，并非对模型全面比较。</p>
+<p><strong>评估对象</strong>：</p>
+<ul>
+<li><strong>InCoder</strong> – 来自 Meta AI 的开源代码生成模型，一个仅有解码器的 Transformer（参数规模6.7亿）。InCoder 可以用于代码补全和插入。实验中使用了其在 Hugging Face 提供的在线演示（6.7B 参数版本），生成长度限制128个token，温度设为0.6（较保守以提高确定性）。若模型一次生成未完整实现函数，作者会将已生成部分作为新的上下文，再次让模型续写，直到完成函数主体；若模型输出超出函数范围（多生成了无关代码），则截断到函数结束位置。</li>
+<li><strong>GitHub Copilot</strong> – GitHub 提供的商业代码补全工具，由 OpenAI 的 Codex 模型驱动。Copilot 为闭源且需付费的服务。作者使用其 Visual Studio Code 插件，在相同的130个提示下生成代码。由于 Copilot 接口高度抽象，无法直接控制生成长度或其它参数，仅以其默认行为输出。</li>
+</ul>
+<p><strong>评估方法</strong>：针对每个提示，分别收集 InCoder 和 Copilot 的生成结果，然后通过两种策略评估其中的安全漏洞：</p>
+<ul>
+<li><strong>手动评估</strong>：研究人员通读每段生成的代码，检查其中是否包含了该提示所针对的目标漏洞模式。例如对于针对 CWE-798 的提示，人工确认生成代码是否硬编码了凭证。若发现目标漏洞，则判定该生成结果“不安全”。</li>
+<li><strong>自动评估</strong>：使用静态代码分析工具对生成结果进行漏洞扫描。作者选用了两个开源静态分析器 <strong>CodeQL</strong> 和 <strong>Bandit</strong> 来检测生成代码中的安全隐患。如果工具报告的警告与提示针对的 CWE 类型相符，则认为该生成结果包含相应漏洞。通过这种方式，可批量判断模型输出中的已知漏洞模式出现次数，从而客观量化模型的安全缺陷。</li>
+</ul>
+<p><strong>评估结果</strong>：表2 汇总了 InCoder 与 Copilot 在 SecurityEval 数据集上的漏洞生成情况。统计指标包括利用 CodeQL 和 Bandit 自动检测到的漏洞数量，以及人工审查确认的不安全代码数：</p>
+<ul>
+<li><strong>InCoder</strong>：在130个生成结果中，<strong>人工检查</strong>发现其中 <strong>88</strong> 个含有提示目标漏洞（占67.69%）；相比之下，<strong>CodeQL</strong> 仅报告 <strong>20</strong> 个不安全实例（15.38%），<strong>Bandit</strong> 报告 <strong>12</strong> 个（9.23%）。</li>
+<li><strong>GitHub Copilot</strong>：人工评估判定 <strong>96</strong> 个结果存在漏洞（占73.84%），<strong>CodeQL</strong> 检测到 <strong>24</strong> 个（18.46%），<strong>Bandit</strong> 检测到 <strong>14</strong> 个（10.77%）。</li>
+</ul>
+<p>由此可见，无论是开源的 InCoder 还是商业的 Copilot，<strong>大多数生成的代码片段都包含安全隐患</strong>（超过三分之二）。这凸显了在关注功能正确性的同时评估代码安全性的必要性。另外，<strong>自动化的静态分析</strong>虽然可以加快评估速度，但相对于人工审查漏报了大量不安全情况（如 CodeQL/Bandit 识别出的漏洞数远低于人工发现数）。尽管如此，静态分析在对比不同代码生成技术时仍有参考价值，可用于初步筛查模型输出的安全性。</p>
+<h2 id="_7">有效性威胁<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<p>作者在文中讨论了影响研究有效性的一些因素：</p>
+<ul>
+<li><strong>数据来源偏差</strong>：数据集样本主要来源于社区维护的资源（如 CWE 列表、CodeQL 文档、Sonar 规则库）以及学术工作。这些来源可能存在各自的偏重或遗漏，从而影响数据集的代表性。不过，由于选取的资源在安全领域被广泛使用，且作者对示例进行了必要的修改以贴合生成任务，因此该威胁相对可控。</li>
+<li><strong>模型工具外部因素</strong>：评估中使用的 GitHub Copilot 属于黑盒商业服务，而 InCoder 模型作者使用的是 HuggingFace 提供的在线Demo，而非直接调用模型。这意味着生成结果可能受到工具接口或服务版本的影响，存在<strong>外部有效性威胁</strong>。不过，作者强调本次实验仅为演示数据集用法，所选工具的具体性能差异不作泛化结论。</li>
+<li><strong>语言局限性</strong>：当前数据集<strong>仅包含 Python</strong> 代码示例，这可能限制结论在其他编程语言上的通用性。例如，未包含的内存错误类漏洞在 C/C++ 等语言中很常见，但在 Python 中几乎不存在。这一局限被视为对结论的泛化威胁，作者计划在未来扩充数据集至更多语言来缓解此问题。</li>
+<li><strong>人工过程误差</strong>：数据集的构造和评估结果的判定都涉及人工步骤。作者从外部资料中<strong>手动整理/改写</strong>了一部分示例，并<strong>人工检查</strong>了模型输出的漏洞情况。这些人工过程可能引入主观偏差或遗漏，构成内部有效性威胁。为降低风险，作者遵循统一标准构造示例，并在人工评估时保持对照客观判断。</li>
+</ul>
+<h2 id="_8">相关工作<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
+<p>过去的研究已经构建了多种漏洞代码数据集和基准，但主要用于<strong>评估漏洞检测或预测技术</strong>，而非针对代码生成场景。例如，一些数据集专注于特定语言/平台（C/C++、Java、Android 等）下的漏洞样本及其修复提交，用于训练或测试静态分析和漏洞检测工具。与这些工作不同，SecurityEval 的定位是<strong>评估代码生成模型</strong>在安全方面的表现，而不是检测已有代码中的漏洞。</p>
+<p>在代码生成评价方面，<strong>HumanEval</strong> 数据集常被用来检验模型输出的功能正确性。HumanEval 提供了164个编程任务的函数头和描述，以及参考实现，模型通过生成正确的代码通过预定义单元测试来衡量性能。然而，HumanEval <strong>未涉及安全性</strong>考量：它关注的是代码的功能是否正确而非代码是否安全。所以，SecurityEval 可被视为在安全维度上补充了 HumanEval，在保障功能正确的同时进一步检查<strong>代码是否存在安全漏洞</strong>。</p>
+<h2 id="_9">结论与未来工作<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
+<p>本文构建了 SecurityEval 数据集，以评估基于机器学习的代码生成模型在软件安全方面的效果。该数据集包含130个涵盖广泛漏洞类型的 Python 示例，可用于检验模型生成代码中隐藏的安全问题。作者通过示例评估了 InCoder 和 GitHub Copilot，结果显示两种模型生成的代码都有相当比例存在安全漏洞，验证了安全评估的必要性。同时，作者演示了结合静态分析工具对生成代码进行自动化安全审查的可行性，为将来评估新的代码生成模型提供了方法参考。</p>
+<p>在<strong>未来工作</strong>中，作者计划扩展并改进该数据集：</p>
+<ul>
+<li><strong>支持多编程语言</strong>：当前数据仅涵盖 Python，后续将拓展至 Java、C/C++ 等其他主流语言，以提高数据集的适用范围。这将包括一些 Python 中不常见但在其他语言中重要的漏洞类型（例如 C/C++ 中普遍存在的内存管理错误等）。</li>
+<li><strong>增加漏洞类型覆盖</strong>：作者将持续丰富数据集中 CWE 漏洞类型的种类和样本数，特别是补充当前未涉及的安全弱点领域，增强数据集对未来模型评估的全面性。</li>
+</ul>
+<p>综上，SecurityEval 数据集为学术界和工业界提供了一个评估代码生成工具安全性的基准。通过该数据集，研究者和开发者可以更系统地发现和分析代码生成 AI 所引入的安全漏洞，从而推动更安全的代码自动生成技术的发展。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 2, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2025</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 24, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2025</span>
       
     
   </small>
@@ -2893,6 +2942,60 @@
   </form>
 
 
+<h2 id="__comments">评论</h2>
+<script src="https://giscus.app/client.js"
+        data-repo="Anxiu0101/Anxiu0101.github.io"
+        data-repo-id="R_kgDOKXHTnw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKXHTn84CakN9"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+        // Instruct Giscus to set theme
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function() {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate"
+                    ? "transparent_dark"
+                    : "light"
+
+                // Instruct Giscus to change theme
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
                 
               </article>
             </div>
@@ -2910,44 +3013,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Index">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                Index
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="win-ssh-config.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Config ssh in Win">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                Config ssh in Win
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
