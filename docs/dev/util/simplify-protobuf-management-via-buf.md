@@ -6,7 +6,7 @@ categories: [util]
 published: true
 ---
 
-这是我在 [个人项目](github.com/Campus-Hub/server-micro) 中使用 buf 工具进行配置的一个简单介绍，Buf BSR 仓库地址为 [Docs · anxiu/campus-hub-idl (buf.build)](https://buf.build/anxiu/campus-hub-idl)。由于并没有找到太多资料，如有不足之处欢迎交流。
+这是我在 [个人项目](https://github.com/Campus-Hub/server-micro) 中使用 buf 工具进行配置的一个简单介绍，Buf BSR 仓库地址为 [Docs · anxiu/campus-hub-idl (buf.build)](https://buf.build/anxiu/campus-hub-idl)。由于并没有找到太多资料，如有不足之处欢迎交流。
 
 <!--content-->
 
