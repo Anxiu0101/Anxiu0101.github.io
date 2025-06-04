@@ -233,6 +233,7 @@ nav:
     - PromSec(KDD24) Note: rsc/sec/promsec-kdd2024.md
     - SecurityEval Dataset Note: rsc/sec/security-eval-dataset.md
     - Purple Llama CyberSecEval Note: rsc/sec/cyber-sec-eval-note.md
+    - LLMSecEval Note: rsc/sec/llm-sec-eval-note.md
 # — 科研实践相关内容 —————————————————————————————————————————————————
   - Experience:
     - rsc/exp/use-zotero-in-your-research.md
