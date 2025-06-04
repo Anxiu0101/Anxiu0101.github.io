@@ -10,9 +10,8 @@ comments: false
 
 ## Main Content
 
-> [!cite]
->
-> const KbButton = memo(PureKbButton) 这个是起到什么作用？Pure 开头的对象名称有什么特别的意义？
+!!! cite
+	`const KbButton = memo(PureKbButton)` 这个是起到什么作用？Pure 开头的对象名称有什么特别的意义？
 
 Thought for 5 seconds
 
@@ -79,7 +78,6 @@ export const KbButton = memo(KbButtonInner);
 - 你在项目里看到的 `AttachmentsButton`, `SendButton`, `StopButton` 也都用了相同套路：
    先写 `PureXxxButton` → 再 `memo` → 得到真正导出的 `XxxButton`。
 
->[!tip]
->
->- [memo – React](https://react.dev/reference/react/memo)
->- [What is Memoization? How and When to Memoize in JavaScript and React](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/)
+!!! tip
+	- [memo – React](https://react.dev/reference/react/memo)
+	- [What is Memoization? How and When to Memoize in JavaScript and React](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/)

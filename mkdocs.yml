@@ -203,7 +203,7 @@ nav:
         - Config ssh in Win: dev/deploy/win-ssh-config.md
         - Configuration Set of Dev Tools: dev/deploy/init-dev-env.md
         - ZSH Configuration: dev/deploy/zsh-simple-use.md
-# — 部署记录与一些开发工具的使用 —————————————————————————————————————
+# — 部署记录与一些开发工具的使用 ————————————————————————————————————
     - Tools & Configuration:
         - Docker Introduction: dev/util/docker-intro.md
         - Dockerfile Introduction: dev/util/dockerfile-intro.md
@@ -214,14 +214,16 @@ nav:
         - Config PostgreSQL in Docker: dev/util/postgre-in-docker.md
         - Buf Introduction: dev/util/simplify-protobuf-management-via-buf.md
 # — 开发记录 ——————————————————————————————————————————————————————
-    - Development:
-        - Golang Optional Pattern: dev/web/golang-optional-pattern.md
-        - Compiler a Go Project: dev/web/go-project-compiler.md
-        - Use tencent SMS in Go: dev/web/golang-tencent-SMS.md
-        - Gorm struct label Guide: dev/web/gorm-struct-label.md
-        - A regular Dev-Env in go programing: dev/web/goland-set-goimports.md
-        - Add Color to your Terminal: dev/web/add-color-to-your-terminal.md
-        - Log lib logrus Usage: dev/web/golang-log-lib-logrus.md
+    - Golang Development:
+      - Golang Optional Pattern: dev/web/go/golang-optional-pattern.md
+      - Compiler a Go Project: dev/web/go/go-project-compiler.md
+      - Use tencent SMS in Go: dev/web/go/golang-tencent-SMS.md
+      - Gorm struct label Guide: dev/web/go/gorm-struct-label.md
+      - A regular Dev-Env in go programing: dev/web/go/goland-set-goimports.md
+      - Add Color to your Terminal: dev/web/go/add-color-to-your-terminal.md
+      - Log lib logrus Usage: dev/web/go/golang-log-lib-logrus.md
+    - React Development:
+      - dev/web/react/index.md
 - Research:
   - rsc/index.md
 # — 机器学习与数据科学 ———————————————————————————————————————————————
