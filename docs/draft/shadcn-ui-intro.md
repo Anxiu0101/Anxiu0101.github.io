@@ -15,4 +15,7 @@ comments: false
 
 - A powerful data table filter component
   https://ui.bazza.dev/
-
+- One theme custmize tool for shadcn-ui
+  https://tweakcn.com/editor/theme
+- shadcn friendly motion lib
+  https://motion-primitives.com/docs
