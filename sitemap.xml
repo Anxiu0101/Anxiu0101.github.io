@@ -126,47 +126,52 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/add-color-to-your-terminal.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/add-color-to-your-terminal.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/before-learn-dev.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/before-learn-dev.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/first-react-project.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/first-react-project.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/go-project-compiler.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/go-project-compiler.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/goland-set-goimports.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/goland-set-goimports.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/golang-log-lib-logrus.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/golang-log-lib-logrus.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/golang-optional-pattern.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/golang-optional-pattern.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/golang-tencent-SMS.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/golang-tencent-SMS.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://anxiu0101.github.io/dev/web/gorm-struct-label.html</loc>
+         <loc>https://anxiu0101.github.io/dev/web/go/gorm-struct-label.html</loc>
+         <lastmod>2025-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://anxiu0101.github.io/dev/web/react/index.html</loc>
          <lastmod>2025-06-04</lastmod>
          <changefreq>daily</changefreq>
     </url>

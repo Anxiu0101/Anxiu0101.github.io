@@ -12,28 +12,28 @@
         <meta name="author" content="Anxiu">
       
       
-        <link rel="canonical" href="https://anxiu0101.github.io/dev/web/golang-log-lib-logrus.html">
+        <link rel="canonical" href="https://anxiu0101.github.io/dev/web/go/add-color-to-your-terminal.html">
       
       
-        <link rel="prev" href="add-color-to-your-terminal.html">
+        <link rel="prev" href="goland-set-goimports.html">
       
       
-        <link rel="next" href="../../rsc/index.html">
+        <link rel="next" href="golang-log-lib-logrus.html">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
     
     
       
-        <title>Using and setup logrus lib to your go web project - Anxiu's Note</title>
+        <title>Add Color to your Terminal - Anxiu's Note</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6a10b989.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -54,21 +54,21 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../../../css/timeline.css">
     
-      <link rel="stylesheet" href="../../stylesheets/tasklist.css">
+      <link rel="stylesheet" href="../../../stylesheets/tasklist.css">
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="../../stylesheets/card.css">
+      <link rel="stylesheet" href="../../../stylesheets/card.css">
     
-      <link rel="stylesheet" href="../../stylesheets/font.css">
+      <link rel="stylesheet" href="../../../stylesheets/font.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +86,7 @@
     
     
     <script defer src="https://analysis.anxiu.cloud/script.js" data-website-id="190c3086-6d0e-40ec-bcc7-be1f64a8e907"></script>
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -97,7 +97,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -119,7 +119,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hook" class="md-skip">
+        <a href="#ansi" class="md-skip">
           跳转至
         </a>
       
@@ -133,7 +133,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+    <a href="../../../index.html" title="Anxiu&#39;s Note" class="md-header__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -153,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using and setup logrus lib to your go web project
+              Add Color to your Terminal
             
           </span>
         </div>
@@ -264,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../index.html" class="md-tabs__link">
+      <a href="../../../index.html" class="md-tabs__link">
         
   
     
@@ -281,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../writing-online.html" class="md-tabs__link">
+      <a href="../../../writing-online.html" class="md-tabs__link">
         
   
     
@@ -300,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cs/index.html" class="md-tabs__link">
+        <a href="../../../cs/index.html" class="md-tabs__link">
           
   
     
@@ -322,7 +322,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../index.html" class="md-tabs__link">
+        <a href="../../index.html" class="md-tabs__link">
           
   
     
@@ -342,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../rsc/index.html" class="md-tabs__link">
+        <a href="../../../rsc/index.html" class="md-tabs__link">
           
   
     
@@ -368,7 +368,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../note/exp/miec-fyp-guideline.html" class="md-tabs__link">
+        <a href="../../../note/exp/miec-fyp-guideline.html" class="md-tabs__link">
           
   
     
@@ -391,7 +391,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../oth/index.html" class="md-tabs__link">
+        <a href="../../../oth/index.html" class="md-tabs__link">
           
   
     
@@ -426,7 +426,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
+    <a href="../../../index.html" title="Anxiu&#39;s Note" class="md-nav__button md-logo" aria-label="Anxiu's Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -455,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../writing-online.html" class="md-nav__link">
+      <a href="../../../writing-online.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +520,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cs/index.html" class="md-nav__link ">
+            <a href="../../../cs/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -640,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/py/Python-venv.html" class="md-nav__link">
+      <a href="../../../cs/lang/py/Python-venv.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -660,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/py/Python-Deps-Management.html" class="md-nav__link">
+      <a href="../../../cs/lang/py/Python-Deps-Management.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/go/interface-in-go.html" class="md-nav__link">
+      <a href="../../../cs/lang/go/interface-in-go.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/jl/julia-first-practice.html" class="md-nav__link">
+      <a href="../../../cs/lang/jl/julia-first-practice.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/lang/js/nextjs-purecomponent-and-memoization.html" class="md-nav__link">
+      <a href="../../../cs/lang/js/nextjs-purecomponent-and-memoization.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/algorithm/raft.html" class="md-nav__link">
+      <a href="../../../cs/algorithm/raft.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,6 +989,8 @@
       
         
       
+        
+      
     
     
     
@@ -1006,7 +1008,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../index.html" class="md-nav__link ">
+            <a href="../../index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1084,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploy/systemctl-intro.html" class="md-nav__link">
+      <a href="../../deploy/systemctl-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploy/win-ssh-config.html" class="md-nav__link">
+      <a href="../../deploy/win-ssh-config.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1124,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploy/init-dev-env.html" class="md-nav__link">
+      <a href="../../deploy/init-dev-env.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1144,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploy/zsh-simple-use.html" class="md-nav__link">
+      <a href="../../deploy/zsh-simple-use.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1226,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/docker-intro.html" class="md-nav__link">
+      <a href="../../util/docker-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1246,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/dockerfile-intro.html" class="md-nav__link">
+      <a href="../../util/dockerfile-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1266,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/espanso-intro.html" class="md-nav__link">
+      <a href="../../util/espanso-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/git-simple-use.html" class="md-nav__link">
+      <a href="../../util/git-simple-use.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1306,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/mysql-in-ubuntu.html" class="md-nav__link">
+      <a href="../../util/mysql-in-ubuntu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1326,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/nginx-intro.html" class="md-nav__link">
+      <a href="../../util/nginx-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/postgre-in-docker.html" class="md-nav__link">
+      <a href="../../util/postgre-in-docker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1366,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/simplify-protobuf-management-via-buf.html" class="md-nav__link">
+      <a href="../../util/simplify-protobuf-management-via-buf.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1428,7 +1430,7 @@
             
   
   <span class="md-ellipsis">
-    Development
+    Golang Development
   </span>
   
 
@@ -1438,7 +1440,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
-            Development
+            Golang Development
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1546,9 +1548,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="add-color-to-your-terminal.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="add-color-to-your-terminal.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1557,6 +1568,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1566,27 +1578,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Log lib logrus Usage
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="golang-log-lib-logrus.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="golang-log-lib-logrus.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1595,48 +1589,64 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hook" class="md-nav__link">
-    通过 Hook 实现行号记录
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    通过中间件增加自定义字段
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    颜色打印
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../react/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    React Development
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            React Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
           </ul>
@@ -1689,7 +1699,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/index.html" class="md-nav__link ">
+            <a href="../../../rsc/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1743,7 +1753,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/ml/index.html" class="md-nav__link ">
+            <a href="../../../rsc/ml/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1775,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/ml/ollama-first-try.html" class="md-nav__link">
+      <a href="../../../rsc/ml/ollama-first-try.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1831,7 +1841,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../rsc/sec/index.html" class="md-nav__link ">
+            <a href="../../../rsc/sec/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1863,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/sec/promsec-kdd2024.html" class="md-nav__link">
+      <a href="../../../rsc/sec/promsec-kdd2024.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1883,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/sec/security-eval-dataset.html" class="md-nav__link">
+      <a href="../../../rsc/sec/security-eval-dataset.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1903,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/sec/cyber-sec-eval-note.html" class="md-nav__link">
+      <a href="../../../rsc/sec/cyber-sec-eval-note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1923,7 +1933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/sec/llm-sec-eval-note.html" class="md-nav__link">
+      <a href="../../../rsc/sec/llm-sec-eval-note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1991,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
+      <a href="../../../rsc/exp/use-zotero-in-your-research.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2113,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/exp/miec-fyp-guideline.html" class="md-nav__link">
+      <a href="../../../note/exp/miec-fyp-guideline.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2133,7 +2143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/exp/resume-simple-note.html" class="md-nav__link">
+      <a href="../../../note/exp/resume-simple-note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2223,7 +2233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS211-Note.html" class="md-nav__link">
+      <a href="../../../note/lec/CS211-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2243,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS240-Note.html" class="md-nav__link">
+      <a href="../../../note/lec/CS240-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2263,7 +2273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS253-Note.html" class="md-nav__link">
+      <a href="../../../note/lec/CS253-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2283,7 +2293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS253-Note.html" class="md-nav__link">
+      <a href="../../../note/lec/CS253-Note.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2303,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS253FZ-2021-Exam.html" class="md-nav__link">
+      <a href="../../../note/lec/CS253FZ-2021-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2323,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS253FZ-2022-Exam.html" class="md-nav__link">
+      <a href="../../../note/lec/CS253FZ-2022-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2343,7 +2353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS264-SoftwareDesign.html" class="md-nav__link">
+      <a href="../../../note/lec/CS264-SoftwareDesign.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2363,7 +2373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS310-Exam.html" class="md-nav__link">
+      <a href="../../../note/lec/CS310-Exam.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2383,7 +2393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS310-ProgrammeLanguagesAndCompilers.html" class="md-nav__link">
+      <a href="../../../note/lec/CS310-ProgrammeLanguagesAndCompilers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2403,7 +2413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS320-ComputerNetwork.html" class="md-nav__link">
+      <a href="../../../note/lec/CS320-ComputerNetwork.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2423,7 +2433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS357-SoftwareVerification.html" class="md-nav__link">
+      <a href="../../../note/lec/CS357-SoftwareVerification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2443,7 +2453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../note/lec/CS370-ComputationAndComplexity.html" class="md-nav__link">
+      <a href="../../../note/lec/CS370-ComputationAndComplexity.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2505,7 +2515,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../oth/index.html" class="md-nav__link ">
+            <a href="../../../oth/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2565,7 +2575,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../changelog/index.html" class="md-nav__link ">
+            <a href="../../../changelog/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2595,7 +2605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Markdown-Grammar.html" class="md-nav__link">
+      <a href="../../../oth/blog/Markdown-Grammar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2615,7 +2625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Build-your-personal-MkDocs-Site.html" class="md-nav__link">
+      <a href="../../../oth/blog/Build-your-personal-MkDocs-Site.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2635,7 +2645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Mkdocs-work-with-supabase.html" class="md-nav__link">
+      <a href="../../../oth/blog/Mkdocs-work-with-supabase.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2655,7 +2665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/blog/Integrate-Umami-with-MkDocs-Site.html" class="md-nav__link">
+      <a href="../../../oth/blog/Integrate-Umami-with-MkDocs-Site.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +2737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/template/IssueSubmission.html" class="md-nav__link">
+      <a href="../../../oth/template/IssueSubmission.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2747,7 +2757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oth/template/MeetingMinutes.html" class="md-nav__link">
+      <a href="../../../oth/template/MeetingMinutes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2793,35 +2803,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hook" class="md-nav__link">
-    通过 Hook 实现行号记录
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    通过中间件增加自定义字段
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    颜色打印
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2834,26 +2817,9 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-<nav class="md-tags" >
-  
-    
-    
-    
-      <span class="md-tag">Code</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">Golang</span>
-    
-  
-</nav>
-
 
   
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/dev/web/golang-log-lib-logrus.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/edit/master/docs/dev/web/go/add-color-to-your-terminal.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -2862,118 +2828,35 @@
     
       
     
-    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/dev/web/golang-log-lib-logrus.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/Anxiu0101/Anxiu0101.github.io/raw/master/docs/dev/web/go/add-color-to-your-terminal.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-  <h1>Log lib logrus Usage</h1>
-
-<p>这是我个人 logrus 的一个自定义配置，放在自己的模板仓库里，写一些小项目的时候用的比较顺手。</p>
-<p><code>logrus</code> is a structured logger for Go (golang), completely API compatible with the standard library logger.</p>
-<p>logrus 的日志级别包括：</p>
-<p>JSON format output</p>
-<p>Text format output setting</p>
-<p>page split.</p>
-<h2 id="hook">通过 Hook 实现行号记录<a class="headerlink" href="#hook" title="Permanent link">#</a></h2>
-<p><a href="https://zhuanlan.zhihu.com/p/375086909">Golang日志之logrus的使用 - 知乎 (zhihu.com)</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/115342221">关于收集，标准化和集中化处理Golang日志的一些建议 - 知乎 (zhihu.com)</a>
-<a href="https://zhuanlan.zhihu.com/p/375086909">Golang日志之logrus的使用 - 知乎 (zhihu.com)</a>
-<a href="https://github.com/sirupsen/logrus">sirupsen/logrus: Structured, pluggable logging for Go. (github.com)</a></p>
-<h2 id="_1">通过中间件增加自定义字段<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Go</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// LoggerMiddleware Log with important fields.</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">func</span><span class="w"> </span><span class="nx">LoggerMiddleware</span><span class="p">()</span><span class="w"> </span><span class="nx">gin</span><span class="p">.</span><span class="nx">HandlerFunc</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="nx">startTime</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="c1">// Call the remaining handlers for this request</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="nx">c</span><span class="p">.</span><span class="nx">Next</span><span class="p">()</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="nx">stopTime</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Since</span><span class="p">(</span><span class="nx">startTime</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="nx">spendTime</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;%d ms&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">Ceil</span><span class="p">(</span><span class="nb">float64</span><span class="p">(</span><span class="nx">stopTime</span><span class="p">.</span><span class="nx">Nanoseconds</span><span class="p">()</span><span class="o">/</span><span class="mi">1000000</span><span class="p">))))</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="nx">statusCode</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">Writer</span><span class="p">.</span><span class="nx">Status</span><span class="p">()</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="nx">dataSize</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">Writer</span><span class="p">.</span><span class="nx">Size</span><span class="p">()</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">dataSize</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="nx">dataSize</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nx">method</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">Request</span><span class="p">.</span><span class="nx">Method</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="nx">uri</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">Request</span><span class="p">.</span><span class="nx">RequestURI</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="nx">Log</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Logger</span><span class="p">.</span><span class="nx">WithFields</span><span class="p">(</span><span class="nx">logrus</span><span class="p">.</span><span class="nx">Fields</span><span class="p">{</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">            </span><span class="s">&quot;spend_time&quot;</span><span class="p">:</span><span class="w"> </span><span class="nx">spendTime</span><span class="p">,</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">            </span><span class="s">&quot;path&quot;</span><span class="p">:</span><span class="w">       </span><span class="nx">uri</span><span class="p">,</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="s">&quot;method&quot;</span><span class="p">:</span><span class="w">     </span><span class="nx">method</span><span class="p">,</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="s">&quot;status&quot;</span><span class="p">:</span><span class="w">     </span><span class="nx">statusCode</span><span class="p">,</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="p">})</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="c1">// create inner error</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nx">Errors</span><span class="p">)</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="nx">Log</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nx">Errors</span><span class="p">.</span><span class="nx">ByType</span><span class="p">(</span><span class="nx">gin</span><span class="p">.</span><span class="nx">ErrorTypePrivate</span><span class="p">))</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">statusCode</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nx">errno</span><span class="p">.</span><span class="nx">Error</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">            </span><span class="nx">Log</span><span class="p">.</span><span class="nx">Error</span><span class="p">()</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">statusCode</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nx">errno</span><span class="p">.</span><span class="nx">InvalidParams</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">            </span><span class="nx">Log</span><span class="p">.</span><span class="nx">Warn</span><span class="p">()</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">            </span><span class="nx">Log</span><span class="p">.</span><span class="nx">Info</span><span class="p">()</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="p">}</span>
+<h1 id="ansi">ANSI 颜色代码<a class="headerlink" href="#ansi" title="Permanent link">#</a></h1>
+<p>现代终端继承了用于“元”特征的 ANSI 转义序列。这些是特殊的字符序列，终端将其解释为操作而不是字符。例如，此序列将清除屏幕，直到下一个提示符：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>$<span class="w"> </span><span class="nb">printf</span><span class="w"> </span><span class="s1">&#39;\033[2J&#39;</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="_2">颜色打印<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p><a href="https://www.cnblogs.com/opangle/p/4082692.html">控制台终端输出颜色 - opangle - 博客园 (cnblogs.com)</a></p>
+它不会清除你的历史信息；它只是清除终端仿真器中的屏幕，因此它是一个安全且具有示范性的 ANSI 转义序列。</p>
+<p>ANSI 还具有设置终端颜色的序列。例如，键入此代码会将后续文本更改为绿色：</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>$<span class="w"> </span><span class="nb">printf</span><span class="w"> </span><span class="s1">&#39;\033[32m&#39;</span>
+</code></pre></div></td></tr></table></div>
+只要你对相同的计算机使用同一个颜色，就可以使用颜色来帮助你记住你登录的系统。例如，如果你经常通过 SSH 连接到服务器，则可以将服务器的提示符设置为绿色，以帮助你一目了然地将其与本地的提示符区分开来。 要设置绿色提示符，请在提示符前使用 ANSI 代码设置为绿色，并使用代表正常默认颜色的代码结束：
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">PowerShell</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">export</span> <span class="n">PS1</span><span class="p">=`</span><span class="n">printf</span> <span class="s2">&quot;\033[32m$ \033[39m&quot;</span><span class="p">`</span>
+</code></pre></div></td></tr></table></div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 21, 2025</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 5, 2025</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 15, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 6, 2023</span>
       
     
   </small>
@@ -3047,7 +2930,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="add-color-to-your-terminal.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: Add Color to your Terminal">
+          <a href="goland-set-goimports.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: A regular Dev-Env in go programing">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3057,20 +2940,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Add Color to your Terminal
+                A regular Dev-Env in go programing
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../rsc/index.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Academic Research">
+          <a href="golang-log-lib-logrus.html" class="md-footer__link md-footer__link--next" aria-label="下一页: Log lib logrus Usage">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Academic Research
+                Log lib logrus Usage
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3153,10 +3036,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -3166,7 +3049,7 @@
       
         <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
       
