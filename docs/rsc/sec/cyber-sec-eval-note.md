@@ -2,7 +2,7 @@
 title: 'Purple Llama CyberSecEval Note'
 date: 2025-06-04 14:43:24
 tags: []
-published: false
+published: true
 comments: false
 ---
 
