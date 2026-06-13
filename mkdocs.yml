@@ -140,7 +140,7 @@ extra_css:
 #  - stylesheets/changelog_extra.css
 
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://polyfill-fastly.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
   - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js # mermaid support
   - https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js
