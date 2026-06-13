@@ -1,4 +1,10 @@
-# Julia 初尝试
+---
+title: Julia 初尝试
+date: 2024-08-04 22:29:37
+tags: [Code, Julia]
+published: true
+comments: false
+---
 
 > [!note]
 >
